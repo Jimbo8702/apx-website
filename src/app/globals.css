@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #0c0c0e;
+  --color-panel: #141417;
+  --color-panel-2: #1b1b1f;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-ink: #f3efe9;
+  --color-muted: #a3a09b;
+  --color-crimson: #bb2222;
+  --color-crimson-soft: #d63a3a;
+  --color-gold: #e8b84a;
+  --font-display: var(--font-bricolage), sans-serif;
+  --font-sans: var(--font-hanken), sans-serif;
+  --shadow-card: 0 24px 60px -28px rgba(0, 0, 0, 0.85);
+  --breakpoint-nav: 920px;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Long-form article styling for the rendered legal markdown (see
+   components/sections/legal-page.tsx). Covers every element the policy
+   docs use: p, strong, a, h2, h3, ul, ol, li, hr. */
+@layer components {
+  .legal-prose > * + * {
+    margin-top: 1rem;
+  }
+  .legal-prose p,
+  .legal-prose li {
+    color: var(--color-muted);
+    line-height: 1.7;
+  }
+  .legal-prose h2 {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+  }
+  .legal-prose h3 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  .legal-prose strong {
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+  .legal-prose a {
+    color: var(--color-crimson-soft);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .legal-prose a:hover {
+    color: var(--color-ink);
+  }
+  .legal-prose ul {
+    list-style: disc;
+    padding-left: 1.4em;
+  }
+  .legal-prose ol {
+    list-style: decimal;
+    padding-left: 1.4em;
+  }
+  .legal-prose li {
+    margin-top: 0.4rem;
+  }
+  .legal-prose hr {
+    margin: 2.5rem 0;
+    border: 0;
+    border-top: 1px solid var(--color-line);
+  }
+}

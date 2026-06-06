@@ -1,0 +1,227 @@
+import { pageMetadata } from "@/lib/page-metadata";
+import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
+import astonMartinInterior from "@public/media/images/image_4.jpg";
+import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
+import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
+import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
+import { ServiceHero } from "@/app/services/_components/service-hero";
+import { ServiceProcess } from "@/app/services/_components/service-process";
+import { JsonLd } from "@/components/json-ld";
+import { Quote } from "@/components/sections/quote";
+import { ServiceAreas } from "@/components/sections/service-areas";
+import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
+import { AreaServices, type AreaServiceCard } from "../_components/area-services";
+
+const META = {
+  title: "Mobile Detailing in Old Tappan, NJ",
+  description:
+    "Mobile car detailing, ceramic coating, and paint correction in Old Tappan, NJ. APX comes to your driveway and handles the whole family fleet in a single visit.",
+  path: "/areas/old-tappan",
+};
+
+export const metadata = pageMetadata(META);
+
+const SERVICE_CARDS: AreaServiceCard[] = [
+  {
+    title: "Ceramic Coating",
+    image: rollsRoyceCeramic,
+    alt: "Black Rolls-Royce Ghost with a deep-gloss ceramic coated finish",
+    bullets: [
+      "One durable layer per household car",
+      "Beads off rain and pollen",
+      "2, 5, and 10 year terms",
+    ],
+    cta: "See packages & pricing →",
+    href: "/services/ceramic-coating",
+  },
+  {
+    title: "Detailing",
+    image: astonMartinInterior,
+    alt: "Deep-cleaned red leather interior of an Aston Martin V8 Vantage after a full detail",
+    bullets: [
+      "Daily drivers and weekend cars alike",
+      "Inside and out, all by hand",
+      "Protection locked in before we go",
+    ],
+    cta: "See packages & pricing →",
+    href: "/services/detailing",
+  },
+  {
+    title: "Paint Correction",
+    image: bmwX5Corrected,
+    alt: "Dark blue BMW X5 with mirror-finish corrected paint",
+    bullets: [
+      "Erase swirls and light scratches",
+      "Correction depth to match wear",
+      "The prep a coating needs",
+    ],
+    cta: "See correction levels →",
+    href: "/services/paint-correction",
+  },
+  {
+    title: "Maintenance Plans",
+    image: lotusEmiraDriveway,
+    alt: "Black Lotus Emira kept in showroom condition on a brick paver driveway",
+    bullets: [
+      "Cover the whole fleet on one schedule",
+      "Every car stays fresh between visits",
+      "Plan clients jump the queue",
+    ],
+    cta: "See plans →",
+    href: "/services/maintenance-plans",
+  },
+];
+
+const STEPS = [
+  {
+    title: "We arrive at your Old Tappan home",
+    text: "Pick a time online or over the phone and Matt and the APX team pull into your driveway. Tell us how many vehicles are on the list and we'll map the visit so each one gets its turn.",
+  },
+  {
+    title: "Our setup rides along",
+    text: "Water, power, and every product ride in the van, so your hoses and outlets stay put. The room on a residential lot means we can move from one car to the next without breaking stride.",
+  },
+  {
+    title: "Every vehicle is handed back ready",
+    text: "We walk each finished car with you, go over aftercare for any coating or interior work, and pull away with the entire fleet looking sharp and parked right where it belongs.",
+  },
+];
+
+// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+const REVIEWS: Review[] = [
+  {
+    quote:
+      "“Three cars knocked out in one afternoon without any of us leaving the house. The convenience of doing the whole family's vehicles at once is hard to beat.”",
+    initials: "VA",
+    name: "Vince A.",
+    town: "Old Tappan, NJ",
+    color: "#7a1f1f",
+  },
+  {
+    quote:
+      "“My SUV and my husband's sedan both came out flawless on the same visit. They planned the day around our cars and never rushed a single panel.”",
+    initials: "SR",
+    name: "Susan R.",
+    town: "Old Tappan, NJ",
+    color: "#1f4d7a",
+  },
+  {
+    quote:
+      "“The kids' minivan was a lost cause until they got into it. Doing it alongside my own car in one stop saved me a whole weekend of errands.”",
+    initials: "TH",
+    name: "Tariq H.",
+    town: "Old Tappan, NJ",
+    color: "#2f6e4a",
+  },
+  {
+    quote:
+      "“Had them coat my coupe and detail the daily on the same morning. Two very different jobs handled back to back without a hiccup.”",
+    initials: "MD",
+    name: "Margo D.",
+    town: "Northvale, NJ",
+    color: "#5a2f6e",
+  },
+  {
+    quote:
+      "“They came out to our place and worked through both of our cars while we got the kids ready for the day. Couldn't have been smoother.”",
+    initials: "EL",
+    name: "Eddie L.",
+    town: "Norwood, NJ",
+    color: "#6a4d1f",
+  },
+  {
+    quote:
+      "“Booked them for a correction on the wife's car and a quick refresh on mine. Friendly crew, immaculate results, and zero hassle on our end.”",
+    initials: "CF",
+    name: "Christine F.",
+    town: "Harrington Park, NJ",
+    color: "#7a1f1f",
+  },
+];
+
+const FAQS: Faq[] = [
+  {
+    question: "Will I pay extra for you to drive out to Old Tappan?",
+    answer:
+      "No. APX runs out of nearby Dumont, and Old Tappan falls squarely inside the area we cover, so there's no travel line on your invoice. Neighboring towns like Northvale, Norwood, and Harrington Park are included the same way.",
+  },
+  {
+    question: "Can you take care of several cars in one appointment?",
+    answer:
+      "Absolutely, and it's one of the main reasons families in Old Tappan call us. Tell us how many vehicles and what each one needs, the daily drivers plus the weekend car, and we'll block out the time to do them all in a single stop.",
+  },
+  {
+    question: "Where do you park to work on the cars?",
+    answer:
+      "Your driveway is usually perfect, and the bigger lots out here give us plenty of elbow room to stage two or three vehicles at once. We keep everything organized and leave the space neat when we're done.",
+  },
+  {
+    question: "Should I set anything up before you arrive?",
+    answer:
+      "Not at all. The van supplies its own water and power, so we're set the moment we pull in. You're welcome to offer your spigot, but it's never something we ask for.",
+  },
+  {
+    question: "How early should I lock in a date for the family fleet?",
+    answer:
+      "A few days of lead time covers most detail and maintenance bookings, and multi-car days are easier to slot when we hear from you a little sooner. Coatings and correction are best reserved about a week ahead. Send us the details and we'll confirm same day.",
+  },
+];
+
+export default function OldTappanPage() {
+  return (
+    <main>
+      <JsonLd data={webPageSchema(META)} />
+      <JsonLd
+        data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: META.title }])}
+      />
+      <JsonLd
+        data={serviceSchema({
+          name: META.title,
+          description: META.description,
+          path: META.path,
+          serviceType: "Mobile Detailing",
+          areaServed: ["Old Tappan"],
+        })}
+      />
+      <ServiceHero
+        eyebrow="Old Tappan, NJ"
+        title={
+          <>
+            Mobile detailing in Old Tappan, <span className="text-crimson-soft">every car in one visit.</span>
+          </>
+        }
+        copy="Old Tappan runs on multi-car households, and we work that way too. Ceramic coating, paint correction, and detailing for every vehicle in the driveway, all in one scheduled visit."
+        image={{
+          // Placeholder pending a real Old Tappan job photo from the owner.
+          src: rollsRoyceCeramic,
+          alt: "Black Rolls-Royce Ghost with a deep-gloss finish in an Old Tappan driveway",
+          tag: "Old Tappan, NJ · Fully mobile",
+        }}
+      />
+      <AreaServices
+        eyebrow="What we do"
+        heading="Detailing, ceramic coating, and paint correction in Old Tappan"
+        copy="Each service is done by hand at your home with professional-grade, non-toxic products. Choose one to see the full packages and pricing."
+        cards={SERVICE_CARDS}
+      />
+      <ServiceProcess
+        eyebrow="How it works"
+        heading="One visit for the whole Old Tappan driveway"
+        steps={STEPS}
+      />
+      <Testimonials
+        heading="What Old Tappan families tell us"
+        subtext="Words from households here and in the towns just up the road."
+        reviews={REVIEWS}
+      />
+      <ServiceFaq heading="Common questions" faqs={FAQS} />
+      <ServiceAreas
+        eyebrow="Nearby areas"
+        heading="Looking after Old Tappan and the towns around it"
+        copy="Home base is a short hop away in Dumont, so Old Tappan and its neighbors are easy reach for us. We also serve Northvale, Norwood, Harrington Park, and Woodcliff Lake. Want to check your street is covered? Pop your zip into the quote form and we'll get back to you that day."
+      />
+      <Quote />
+    </main>
+  );
+}
