@@ -1,5 +1,5 @@
 import { pageMetadata } from "@/lib/page-metadata";
-import porsche911Cabriolet from "@public/media/images/blue-porsche-911-turbo-s-cabriolet-front.jpeg";
+import apxTransitVan from "@public/media/images/apx-ford-transit-branded-van.jpeg";
 import { ServiceHero } from "@/app/services/_components/service-hero";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
@@ -36,8 +36,8 @@ export default function AboutPage() {
         }
         copy="APX Car Solutions is a small, owner-led mobile detailing team based in Dumont, New Jersey. We bring ceramic coatings, paint correction, and high-end detailing straight to your driveway, with the kind of care a volume shop can't match."
         image={{
-          src: porsche911Cabriolet,
-          alt: "Navy Porsche 911 Turbo S cabriolet freshly detailed by APX in a client's driveway",
+          src: apxTransitVan,
+          alt: "APX Car Solutions branded detailing van parked on a tree-lined Bergen County street",
           tag: "Bergen County · Fully mobile",
         }}
       />

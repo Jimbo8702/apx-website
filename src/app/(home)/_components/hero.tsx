@@ -40,7 +40,7 @@ export function Hero() {
               <GoogleIcon size={32} className="shrink-0" aria-label="Google" />
               <div>
                 <Stars />
-                <span className="text-muted text-[.82rem]">150+ reviews · Google &amp; Yelp</span>
+                <span className="text-muted text-[.82rem]">140+ reviews · Google</span>
               </div>
             </div>
             <div className="w-px h-[38px] bg-line max-sm:hidden" />

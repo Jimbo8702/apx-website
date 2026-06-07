@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
-import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
+import alfaGiuliaBrownInterior from "@public/media/images/alfa-romeo-giulia-brown-leather-interior.jpeg";
 import teslaModelY from "@public/media/images/gray-tesla-model-y-rear-2.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“We park under big oaks and the sap was relentless. After the ceramic coating, a quick rinse and it's gone. Wish I'd done it years ago.”",
-    initials: "RB",
-    name: "Rachel B.",
-    town: "Demarest, NJ",
-    color: "#2f6e4a",
-  },
-  {
-    quote:
-      "“Two SUVs done back to back right in our driveway while the kids napped. The pollen film and bird mess were completely gone by the time they finished.”",
-    initials: "TN",
-    name: "Tom N.",
-    town: "Demarest, NJ",
+    quote: "“My experience with Matt at APX was very professional. Matt took the time to explain all of his services in detail. As well he asked what areas of the vehicle I thought would need more attention. Not only that , Matt was able to fit me into his schedule knowing I was pressed for time because I'd be leaving for a road trip. After having the vehicle with him he realized that indeed he needed a little more time to get the car right so he communicated with me to let me know what had to be done and how much longer his team would need . Professional equipment,service and communication is hard to find these days. I found all three with APX and was very pleased with the results.”",
+    initials: "BN",
+    name: "Bart Nativo",
+    date: "September 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“My weekend car only comes out of the garage on nice days, so a detailer who comes to me is perfect. The paint correction brought back a shine I forgot it had.”",
-    initials: "DW",
-    name: "Derek W.",
-    town: "Haworth, NJ",
+    quote: "“Detailed Car inside and out. Car was very dirty. Car now looks brand new. Fantastic job!”",
+    initials: "D",
+    name: "danvan590",
+    date: "May 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“They set up along our shaded driveway and never needed a thing from us. No hose, no outlet, just a finished car a few hours later.”",
-    initials: "MK",
-    name: "Megan K.",
-    town: "Cresskill, NJ",
+    quote: "“Matt and his team came on a same day call. More than pleased with the work they provided. Will definitely be reaching out again in the future. Along with great work, pricing, job details etc were all communicated!!!”",
+    initials: "CR",
+    name: "Cyclenatti. rich",
+    date: "July 2025",
+    color: "#2f6e4a",
+  },
+  {
+    quote: "“He treats and disinfects the leather very well unlike most detailers , has a great attitude and a great deal on the paint protection”",
+    initials: "MS",
+    name: "Meme Scrap",
+    date: "April 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Booked the monthly plan for both family cars. They turn up on schedule and stay ahead of the tree gunk that used to bake into the clear coat all summer.”",
-    initials: "AP",
-    name: "Anthony P.",
-    town: "Alpine, NJ",
+    quote: "“Had my car detailed by APX mobile detailing and my car looks like new. Matt was friendly, knowledgeable and paid attention to detail while working on the car. Prices were great and best of all I did not have to drop my car off anywhere. Would highly recommend APX!”",
+    initials: "G",
+    name: "G",
+    date: "April 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“Full interior and exterior the week before a trade-in appraisal. The number went up noticeably, and Matt's crew was easy to deal with start to finish.”",
-    initials: "LF",
-    name: "Laura F.",
-    town: "Tenafly, NJ",
-    color: "#2f6e4a",
+    quote: "“I highly recommend APX Mobile Detailing. Quick response, polite, and on time. Excellent job detailing interior and exterior of my car. I will definitely use them again.”",
+    initials: "JA",
+    name: "John Arlin",
+    date: "July 2025",
+    color: "#7a1f1f",
   },
 ];
 
@@ -195,8 +189,8 @@ export default function DemarestPage() {
         copy="The trees lining Demarest's streets drop sap, pollen, and worse on cars parked outside. APX comes to your driveway with everything on board to clean, correct, and protect your paint."
         image={{
           // Placeholder pending a real Demarest job photo from the owner.
-          src: lotusEmiraDriveway,
-          alt: "Black Lotus Emira kept showroom-ready on a brick paver driveway in Demarest",
+          src: alfaGiuliaBrownInterior,
+          alt: "Brown leather seats and center console of an Alfa Romeo Giulia deep cleaned in Demarest",
           tag: "Demarest, NJ · Fully mobile",
         }}
       />
@@ -212,8 +206,8 @@ export default function DemarestPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Demarest drivers say"
-        subtext="Notes from homeowners in Demarest and the towns around it."
+        heading="Google reviews from the Demarest area"
+        subtext="What clients across our service area say after an APX visit."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

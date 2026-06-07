@@ -1,9 +1,9 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
-import audiQ5Interior from "@public/media/images/image_13.jpg";
+import whiteAudiEtronGt from "@public/media/images/white-audi-etron-gt-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
 import { ServiceProcess } from "@/app/services/_components/service-process";
@@ -89,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“My car sits in a mall lot five days a week and it showed. A correction and coating later, the swirls are gone and door dings wipe off the surface now.”",
-    initials: "JB",
-    name: "Jason B.",
-    town: "Paramus, NJ",
+    quote: "“Had my Ram truck detailed by these guys. They were able to get my appoint scheduled quickly, completed the work as they said they would and did it all at a very fair price. Detail of my truck both inside and out came out top-notch. I had some very particular requests and they were able to handle all of them. Highly recommend. Will continue to use them in the future.”",
+    initials: "SH",
+    name: "Steven Hegel",
+    date: "March 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Cart rash and bird mess were eating my clear coat. Since they coated it, a quick rinse takes care of what the parking lot throws at it.”",
-    initials: "OM",
-    name: "Olivia M.",
-    town: "Paramus, NJ",
+    quote: "“Very professional and great work.”",
+    initials: "AA",
+    name: "Ademola Adeniyi",
+    date: "January 2026",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“They came to my office lot on a workday and I drove home in a car that looked brand new. No time off, no shop drop-off, exactly what I needed.”",
-    initials: "KS",
-    name: "Ken S.",
-    town: "Paramus, NJ",
+    quote: "“APX was Amazing, never have had a better service from someone in this area. Cleaned my car to perfection, got a stain out and took their time to work on my vehicle.”",
+    initials: "LL",
+    name: "Leonardo LaSpisa",
+    date: "June 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Years of retail-lot sun had dulled my hood. The paint correction brought back a gloss I genuinely forgot the car had.”",
-    initials: "DR",
-    name: "Dina R.",
-    town: "Maywood, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“Everything ran straight from their van in my driveway. Spotless wash, sharp interior, and they left the area cleaner than they found it.”",
-    initials: "PT",
-    name: "Pavel T.",
-    town: "Fair Lawn, NJ",
+    quote: "“My truck looks amazing, did a great job. I would recommend to everyone else, thank you.”",
+    initials: "MR",
+    name: "Matt Rajner",
+    date: "October 2024",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Booked a full detail before a trade-in and the dealer bumped their offer. The crew was professional from the first call to the last panel.”",
-    initials: "WH",
-    name: "Wendy H.",
-    town: "Ridgewood, NJ",
+    quote: "“APX did a great job detailing my Family's car. It had been sitting in our driveway for a while and when we decided to sell it, APX came and worked miracles to clean the car, detail and get us ready for a sale.”",
+    initials: "KM",
+    name: "Kevin Milgram",
+    date: "June 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“They detailed my jeep and did an incredible job. Very careful and took their time to make sure nothing was missed. Highly recommend”",
+    initials: "CG",
+    name: "Charlea Graf",
+    date: "September 2024",
     color: "#7a1f1f",
   },
 ];
@@ -195,8 +189,8 @@ export default function ParamusPage() {
         copy="Paramus cars live in parking lots, and lot life leaves marks. Ceramic coating, paint correction, and detailing that defend your finish against door dings, cart rash, and baking sun."
         image={{
           // Placeholder pending a real Paramus job photo from the owner.
-          src: audiQ5Interior,
-          alt: "Spotless beige leather Audi Q5 interior with wood trim after a deep-clean detail in Paramus",
+          src: whiteAudiEtronGt,
+          alt: "White Audi e-tron GT washed and detailed in a Paramus parking lot",
           tag: "Paramus, NJ · Fully mobile",
         }}
       />
@@ -212,8 +206,8 @@ export default function ParamusPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Paramus drivers report"
-        subtext="Notes from owners here and across the towns nearby."
+        heading="Reviews from drivers around Paramus"
+        subtext="Words from APX clients across the service area, via Google."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

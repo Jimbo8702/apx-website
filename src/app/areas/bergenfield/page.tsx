@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import dodgeCharger from "@public/media/images/silver-dodge-charger-scat-pack-rear.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Between work and the kids I never have time to deal with the car. They came to the house, knocked it out in the driveway, and I didn't have to move my whole day around.”",
-    initials: "RT",
-    name: "Rachel T.",
-    town: "Bergenfield, NJ",
-    color: "#1f4d7a",
-  },
-  {
-    quote:
-      "“I work from home and they detailed both cars while I was on calls. Came outside at lunch and they looked showroom new. Easiest service I've booked all year.”",
-    initials: "ME",
-    name: "Marcus E.",
-    town: "Bergenfield, NJ",
+    quote: "“I recently had my Mazda CX-30 detailed by APX Mobile Detailing, and I couldn't be more impressed with their exceptional work. The team's attention to detail was remarkable - they transformed my vehicle’s appearance, leaving every surface spotless and looking better than new. Beyond the thorough detailing service, they also applied a ceramic coating to my car, which not only enhanced the paint's shine and depth but will provide long-lasting protection against the elements. The convenience of their mobile service meant I didn't have to disrupt my schedule, and the quality of their craftsmanship truly exceeded my expectations. I would highly recommend APX Mobile Detailing to anyone looking for professional, top-tier automotive care.”",
+    initials: "KS",
+    name: "Kyle Simmons",
+    date: "July 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“My commuter car takes a beating on the highway every day. The paint correction and coating they did made it look years younger. So worth protecting a car you actually use.”",
-    initials: "LC",
-    name: "Lena C.",
-    town: "Dumont, NJ",
+    quote: "“Matt and his team did an amazing job on my 2008 Accord. I'll be using them again. Highly recommend them.”",
+    initials: "OM",
+    name: "Omar Munoz",
+    date: "September 2025",
+    color: "#1f4d7a",
+  },
+  {
+    quote: "“My son and I built a custom motorcycle 25 years ago. It was beginning to look a bit tired. Matt and his tech came to my house and did a detail and ceramic application. The bike looks brand new. I could not be more pleased.”",
+    initials: "JQ",
+    name: "Jack Quigley",
+    date: "October 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“They set up in my office lot with zero fuss. No outlet, no hose, nothing needed from the building. Walked out at five and the SUV was spotless inside and out.”",
-    initials: "DO",
-    name: "Derek O.",
-    town: "New Milford, NJ",
+    quote: "“Great detailing and cleaning services provided for my car! Great customer service and value for your money! Definitely the best around!”",
+    initials: "PK",
+    name: "Peter Kretschmer",
+    date: "October 2024",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Signed up for monthly upkeep and it's the best call I've made. They show up on schedule and the car never has a chance to get grimy. I genuinely don't think about washing it anymore.”",
-    initials: "NF",
-    name: "Nadia F.",
-    town: "Tenafly, NJ",
+    quote: "“Matt and his team did such an amazing job on my black Ford Escape . The detail and time he put in on the interior of my car looks like the day I bought it. Between the great work he put in and how I didn't even have to leave the house made it worth every penny. Highly Recommend!!”",
+    initials: "JD",
+    name: "Joey Dale Music",
+    date: "February 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“Booked a full detail before a long road trip and the inside felt brand new the whole drive. Matt and the team clearly care about the work. Already scheduled the next one.”",
-    initials: "TW",
-    name: "Theo W.",
-    town: "Cresskill, NJ",
-    color: "#1f4d7a",
+    quote: "“Last week I scheduled an appointment with Matt and his team. I have an Audi Q5 that I wanted ceramic coated… I got the glass, rims and paint done and it came out amazing!!”",
+    initials: "RA",
+    name: "Rey Aldana",
+    date: "November 2025",
+    color: "#7a1f1f",
   },
 ];
 
@@ -212,8 +206,8 @@ export default function BergenfieldPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Bergenfield drivers say"
-        subtext="Notes from neighbors in Bergenfield and the towns around it."
+        heading="What drivers near Bergenfield say"
+        subtext="Pulled straight from our Google profile, from clients all over the service area."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

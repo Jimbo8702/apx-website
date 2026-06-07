@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import dodgeCharger from "@public/media/images/silver-dodge-charger-scat-pack-rear.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
@@ -89,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“My branded van is the first thing clients see at their door, so it has to look right. They keep it clean and the lettering crisp, visit after visit.”",
-    initials: "DT",
-    name: "Dave T.",
-    town: "Norwood, NJ",
+    quote: "“Huge shout-out to Matt at APX Detailing! He recently worked on two of my cars—one getting a full ceramic coating and the other a interior/exterior detail. Both came out looking flawless. Matt made the process seamless and sent regular photo/video updates, so I could see the progress. If you want a detailer who is professional, communicative, and does incredible work, APX is the place. Highly recommend!”",
+    initials: "KK",
+    name: "Ken Karwowski",
+    date: "February 2026",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Run my business from the house and they detailed both the work truck and our family SUV in one stop. Saved me an entire afternoon.”",
-    initials: "LG",
-    name: "Lauren G.",
-    town: "Norwood, NJ",
+    quote: "“Got two cars done with APX. Excellent job”",
+    initials: "NM",
+    name: "NAZAR MAKOHIN",
+    date: "May 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“We put the whole fleet on a plan with them. Crews show up to jobs in clean vehicles now and customers definitely notice the difference.”",
-    initials: "MR",
-    name: "Manny R.",
-    town: "Norwood, NJ",
+    quote: "“I highly recommend APX Mobile Detailing. Quick response, polite, and on time. Excellent job detailing interior and exterior of my car. I will definitely use them again.”",
+    initials: "JA",
+    name: "John Arlin",
+    date: "July 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“A correction cleared the ladder scuffs off my contractor truck and a coating keeps it looking sharp between job sites. Smart investment.”",
-    initials: "CS",
-    name: "Claire S.",
-    town: "Harrington Park, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“They handled our minivan in the driveway while I took calls inside. Kids' mess gone, no disruption to my workday at all.”",
-    initials: "OB",
-    name: "Owen B.",
-    town: "Old Tappan, NJ",
+    quote: "“Detailed Car inside and out. Car was very dirty. Car now looks brand new. Fantastic job!”",
+    initials: "D",
+    name: "danvan590",
+    date: "May 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“No need to take a vehicle off the road and haul it somewhere. They came to the shop and the van never missed a beat of work.”",
-    initials: "RP",
-    name: "Rita P.",
-    town: "Demarest, NJ",
+    quote: "“Matt and the team at APX were great, they helped us with a ceramic coating on our new Mercedes and the car looks fantastic! Very knowledgeable, friendly and you can feel his love for keeping cars looking at their best!”",
+    initials: "JN",
+    name: "Janel Nese",
+    date: "January 2026",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Got a ceramic coat for my sedan, car was washed thoroughly and the coating applied, came out amazing and very shiny. Highly Recommend”",
+    initials: "F",
+    name: "FlyingWithMar",
+    date: "April 2025",
     color: "#7a1f1f",
   },
 ];
@@ -212,8 +206,8 @@ export default function NorwoodPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="Norwood owners and businesses speak up"
-        subtext="From local shops and households here and in the bordering towns."
+        heading="Google feedback around Norwood"
+        subtext="Households and businesses on the work APX delivers."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

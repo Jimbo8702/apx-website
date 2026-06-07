@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
 import porscheCayenneDetail from "@public/media/images/silver-porsche-cayenne-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -89,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“I figured my short driveway ruled out mobile detailing. They fit right in, worked off the van, and the car came out flawless. No big lot needed.”",
-    initials: "RV",
-    name: "Ron V.",
-    town: "Maywood, NJ",
+    quote: "“I had an outstanding experience with Matt from start to finish. His professionalism and clear dedication to his craft really stood out to me. I had ceramic coating applied to my vehicle, and the entire process was smooth, hassle-free, and completed to perfection. Matt’s attention to detail and commitment to quality made all the difference. I’ll definitely be returning in the future for any additional services. Highly recommend!”",
+    initials: "LC",
+    name: "Lisa Cordova",
+    date: "October 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“We only have street parking and they handled it without a second thought. Set up neat at the curb and never blocked anyone in.”",
-    initials: "ND",
-    name: "Nicole D.",
-    town: "Maywood, NJ",
+    quote: "“Great work detailing my car!!! Highly recommend!! A++++✅”",
+    initials: "CS",
+    name: "carol sanchez",
+    date: "May 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“A full detail done in the one spot in front of my place. Tight quarters and they still got every inch of the car spotless.”",
-    initials: "AS",
-    name: "Art S.",
-    town: "Maywood, NJ",
+    quote: "“Matt did an excellent job very professional and definitely took care of my truck he did a full ceramic coat and detail and etc. An amazing job would highly recommend to anyone.”",
+    initials: "DT",
+    name: "Dominick Tulipani",
+    date: "March 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“They corrected and coated my sedan in a cramped shared driveway and left zero mess for the other tenants. Genuinely impressed.”",
-    initials: "PK",
-    name: "Patty K.",
-    town: "Hackensack, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“On a maintenance plan now even though I've got nowhere fancy to park. They make it work every visit and the car always looks sharp.”",
-    initials: "DM",
-    name: "Diego M.",
-    town: "Paramus, NJ",
+    quote: "“Brought my Chevy in to be detailed and they could not have done a better job! Car came out looking brand new.”",
+    initials: "KG",
+    name: "Katerina Grammatikos",
+    date: "January 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“No outdoor faucet, no outlet, barely any space, and they still pulled off a showroom finish. The van really does carry everything.”",
-    initials: "SB",
-    name: "Shana B.",
-    town: "Saddle Brook, NJ",
+    quote: "“Matt was a really great person to work with. Easy to book, everything was on time as scheduled and the process was easy and my car looks amazing. Would absolutely recommend anyone who cares about their car to have it detailed at APX.”",
+    initials: "HR",
+    name: "Hailey Ryan",
+    date: "August 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Recently got my car ceramic coated by APX Mobile Detailing. They did such an amazing job! Quality service, and they got my car done fast.”",
+    initials: "AE",
+    name: "Abraham Ehiosa",
+    date: "February 2025",
     color: "#7a1f1f",
   },
 ];
@@ -212,8 +206,8 @@ export default function MaywoodPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="Maywood drivers tell it straight"
-        subtext="Reviews from compact lots here and around the surrounding towns."
+        heading="Straight talk from the Maywood area"
+        subtext="Unedited Google reviews from APX clients around Bergen County."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

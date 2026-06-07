@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
-import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
+import blueBmwM2 from "@public/media/images/blue-bmw-m2-front-2.jpeg";
+import grayBmwM4 from "@public/media/images/gray-bmw-m4-front.jpeg";
 import { DropletIcon, ShieldIcon, SparklesIcon, SunIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
@@ -105,51 +105,45 @@ const STEPS = [
 
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Full front on my M4 after one winter chewed up the old bumper. Six months of Palisades Parkway commuting since and the nose still looks brand new.”",
-    initials: "VM",
-    name: "Victor M.",
-    town: "Tenafly, NJ",
-    color: "#1f4d7a",
-  },
-  {
-    quote:
-      "“Got the partial front package on my Accord. You genuinely cannot tell the film is there until a rock pings off it and leaves no mark. Money well spent.”",
-    initials: "CR",
-    name: "Caitlin R.",
-    town: "Dumont, NJ",
+    quote: "“Amazing professional service! The team are true experts when it comes to high-end luxury vehicles—extremely knowledgeable, precise, and detail-oriented. I’ll definitely be using their services again in the future!”",
+    initials: "C",
+    name: "Claudia",
+    date: "October 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“APX wrapped my 911 in full body film the week it was delivered. The install was meticulous, edges tucked everywhere, and the car still looks like it did on day one.”",
-    initials: "DS",
-    name: "Doug S.",
-    town: "Alpine, NJ",
+    quote: "“Look no further for the best in mobile detailing for high end cars. Matt is polite, punctual, detail oriented, and honest.”",
+    initials: "GA",
+    name: "Gil Altman",
+    date: "May 2025",
+    color: "#1f4d7a",
+  },
+  {
+    quote: "“Now, I understand why the name is Apex. These guys are at the top of their game, very professional. Completed the work efficiently, they also provided me with explanations on certain things and answered some questions that I had. Highly recommend!”",
+    initials: "NL",
+    name: "Nick Lardieri",
+    date: "May 2026",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Did film on the front and ceramic over the rest like they suggested. Best combo: the nose shrugs off highway debris and the whole car rinses clean in minutes.”",
-    initials: "HP",
-    name: "Hannah P.",
-    town: "Cresskill, NJ",
+    quote: "“Very professional. End results came out better than I expected, and I had high expectations to begin with. Thanks guys!!”",
+    initials: "GB",
+    name: "Gil Broitman",
+    date: "May 2026",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“I do 600 highway miles a week and the front of my truck used to be a bug graveyard. Now everything wipes off the film with one pass. Should have done it years ago.”",
-    initials: "MT",
-    name: "Marco T.",
-    town: "Bergenfield, NJ",
+    quote: "“Matt is a very respectful and diligent man. He made my car look brand new. Any one who gets Matt’s services will not be disappointed.”",
+    initials: "TO",
+    name: "Tyler Oliver",
+    date: "February 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“A branch left a scuff across my hood and I was sure it needed paint. APX told me to park it in the sun. Watched the mark fade out of the film by the afternoon. Wild.”",
-    initials: "BK",
-    name: "Bridget K.",
-    town: "Haworth, NJ",
+    quote: "“I recently had the pleasure of having my car detailed by Matt, and I must say, the results were exceptional. His attention to detail was remarkable, and he exhibited a commendable level of flexibility in accommodating all my specific requests. I wholeheartedly recommend his services to anyone seeking top-notch car detailing.”",
+    initials: "JD",
+    name: "Jess DiCostanzo",
+    date: "March 2025",
     color: "#7a1f1f",
   },
 ];
@@ -219,9 +213,9 @@ export default function PpfPage() {
         }
         copy="Self-healing urethane film installed with precision at your home or office. It stops rock chips, scratches, and road rash while staying nearly invisible, with coverage quoted to your exact vehicle."
         image={{
-          src: lotusEmiraDriveway,
-          alt: "Black Lotus Emira with a freshly protected front end parked on a paver driveway",
-          tag: "Paint protection film · Lotus Emira",
+          src: blueBmwM2,
+          alt: "Blue BMW M2 front end on a tree-lined street, the zone paint protection film covers",
+          tag: "Paint protection film · BMW M2",
         }}
       />
       <ServiceBenefits
@@ -232,9 +226,9 @@ export default function PpfPage() {
         ]}
         benefits={BENEFITS}
         image={{
-          src: rollsRoyceCeramic,
-          alt: "Front end of a black Rolls-Royce Ghost with flawless protected paint",
-          tag: "Protected front end · Rolls-Royce Ghost",
+          src: grayBmwM4,
+          alt: "Front end of a gray BMW M4 with flawless protected paint",
+          tag: "Protected front end · BMW M4",
         }}
       />
       <PricingTiers
@@ -252,8 +246,8 @@ export default function PpfPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="Drivers who stopped sweating rock chips"
-        subtext="What clients say after living with APX paint protection film."
+        heading="Why drivers trust APX with their paint"
+        subtext="Real Google reviews from APX clients. Film or coating, the standard of care is the same."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

@@ -1,9 +1,9 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
-import blackSedanCoated from "@public/media/images/image_12.jpg";
+import grayBmwM4 from "@public/media/images/gray-bmw-m4-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
 import { ServiceProcess } from "@/app/services/_components/service-process";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“I'm particular about my cars and these guys met the bar. The correction work on my coupe looked perfect even under the garage lights.”",
-    initials: "RT",
-    name: "Robert T.",
-    town: "Cresskill, NJ",
-    color: "#1f4d7a",
-  },
-  {
-    quote:
-      "“They pulled into the driveway, set up in the garage, and had the whole thing handled while I was on back-to-back calls. Couldn't have been easier.”",
-    initials: "LB",
-    name: "Lauren B.",
-    town: "Cresskill, NJ",
+    quote: "“Matt did an incredible job ceramic coating my Mazda! The car looks amazing! It’s super glossy and clean, like it just came off the lot. He was professional, prompt, and extremely detail-oriented throughout the whole process. What really sets Matt apart is his passion for what he does. You can tell he truly loves detailing, and it shows in the quality of his work. He treats every car like it’s his own and takes real pride in making sure everything is perfect. I’m beyond happy with how my car turned out. If you’re looking for top-tier detailing from someone who genuinely cares, Matt is the one to go to. Highly recommend! Now I get to go cruise down the road in style! Thanks Matt!!”",
+    initials: "CF",
+    name: "Carlo Francavilla",
+    date: "July 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Coated my daily and my weekend car the same morning. Both came back looking deeper and glossier than I expected. Genuinely impressive attention to detail.”",
-    initials: "MK",
-    name: "Marcus K.",
-    town: "Tenafly, NJ",
+    quote: "“Great communication Did a spectacular job on my new ride. I will be recommending them to my friends.”",
+    initials: "TB",
+    name: "Timothy Buccigrossi",
+    date: "January 2026",
+    color: "#1f4d7a",
+  },
+  {
+    quote: "“Matt and the team at APX were great, they helped us with a ceramic coating on our new Mercedes and the car looks fantastic! Very knowledgeable, friendly and you can feel his love for keeping cars looking at their best!”",
+    initials: "JN",
+    name: "Janel Nese",
+    date: "January 2026",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“No outdoor faucet at my place and it made zero difference. Everything they needed came off the van and the finish was spotless.”",
-    initials: "ES",
-    name: "Elena S.",
-    town: "Demarest, NJ",
+    quote: "“Got a ceramic coat for my sedan, car was washed thoroughly and the coating applied, came out amazing and very shiny. Highly Recommend”",
+    initials: "F",
+    name: "FlyingWithMar",
+    date: "April 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Booked them before listing my SUV and the photos looked like a dealership shoot. It sold fast and for more than I'd hoped.”",
-    initials: "GD",
-    name: "Greg D.",
-    town: "Alpine, NJ",
+    quote: "“Had my vehicle ceramic coated. Matt and Nick did an amazing job. They came to me, arrived two minutes early and completed the job on time. Their attention to detail was second to none, scheduling was a breeze and they over delivered. Would absolutely recommend and use again!”",
+    initials: "AM",
+    name: "A. Milena Goncalves",
+    date: "October 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“On a monthly plan now and it's the best decision I've made for the car. It always looks freshly done and I never lift a finger.”",
-    initials: "NF",
-    name: "Nina F.",
-    town: "Dumont, NJ",
-    color: "#1f4d7a",
+    quote: "“Matt and his team did a wonderful job detailing my car. He was professional, helpful, and made the whole experience easy and stress-free. I’m very happy with the results!”",
+    initials: "KB",
+    name: "Kaylee Babasade",
+    date: "July 2025",
+    color: "#7a1f1f",
   },
 ];
 
@@ -195,8 +189,8 @@ export default function CresskillPage() {
         copy="Cresskill drivers keep their cars sharp, and so do we. Ceramic coatings, paint correction, and full details handled at your place while you work, with water and power already on the van."
         image={{
           // Placeholder pending a real Cresskill job photo from the owner.
-          src: blackSedanCoated,
-          alt: "Black Audi S3 with a mirror-gloss finish after paint correction and ceramic coating in Cresskill",
+          src: grayBmwM4,
+          alt: "Gray BMW M4 with a flawless, freshly washed front end on a brick driveway in Cresskill",
           tag: "Cresskill, NJ · Fully mobile",
         }}
       />
@@ -212,8 +206,8 @@ export default function CresskillPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Cresskill owners say"
-        subtext="Notes from clients in Cresskill and the towns around it."
+        heading="Five-star feedback near Cresskill"
+        subtext="Verbatim Google reviews from APX clients around the county."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

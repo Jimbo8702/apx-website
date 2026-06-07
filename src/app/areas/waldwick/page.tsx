@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
 import porscheCayenneDetail from "@public/media/images/silver-porsche-cayenne-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -89,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“I'd never had a car detailed and felt a little lost. They walked me through the choices, picked the right package, and I'm so glad I called.”",
-    initials: "BS",
-    name: "Becky S.",
-    town: "Waldwick, NJ",
+    quote: "“Matt always delivers!! He came to my house and detailed the interior of my Chevy Trax. He did an amazing job and was super professional. I would definitely recommend him to anyone! Takes his time and throughly makes every look, feel, and smell brand new! Fair priced and worth every penny!”",
+    initials: "KE",
+    name: "Kayley Ebenhack",
+    date: "February 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“No pressure, no upsell, just an honest take on what my old wagon needed. The result blew me away for a first-timer like me.”",
-    initials: "DM",
-    name: "Drew M.",
-    town: "Waldwick, NJ",
+    quote: "“Did a phenomenal job.”",
+    initials: "JP",
+    name: "Justin Perez",
+    date: "October 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“They explained every step in plain language while they worked in our driveway. I finally understand what detailing even is now.”",
-    initials: "CN",
-    name: "Carol N.",
-    town: "Waldwick, NJ",
+    quote: "“Very thorough and detailed with his cleaning helped talked me through exactly what he would do before cleaning and executed to perfection”",
+    initials: "RG",
+    name: "Ryan Gilmartin",
+    date: "May 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Recommended the lighter service instead of the pricey one I asked about. Honest folks, and my colonial's driveway became a little detailing shop for the day.”",
-    initials: "VD",
-    name: "Vinny D.",
-    town: "Glen Rock, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“First detail in twelve years of owning the car. They made it painless and the interior smells and looks like new.”",
-    initials: "HL",
-    name: "Heather L.",
-    town: "Ridgewood, NJ",
+    quote: "“He cleaned my truck really good and made it look like new”",
+    initials: "AK",
+    name: "Adrian Kida",
+    date: "April 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Booked a starter detail and ended up on their maintenance plan because the experience was that easy. Friendly, clear, and thorough.”",
-    initials: "RT",
-    name: "Russ T.",
-    town: "Fair Lawn, NJ",
+    quote: "“I brought a car to detail at APX Mobile off word of mouth, and it turned our fantastic. Thinking about inquiring further business at the moment, and felt I should drop a review.”",
+    initials: "SN",
+    name: "Scott Noto",
+    date: "January 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“This was a great quality detail. Service was unmatched and very professional will be using their services again.”",
+    initials: "EF",
+    name: "Evan Frie",
+    date: "February 2025",
     color: "#7a1f1f",
   },
 ];
@@ -212,8 +206,8 @@ export default function WaldwickPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What first-time Waldwick clients say"
-        subtext="Notes from folks across Waldwick and nearby towns trying detailing for the first time."
+        heading="What drivers around Waldwick say"
+        subtext="First visits and repeat clients alike, straight from our Google reviews."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

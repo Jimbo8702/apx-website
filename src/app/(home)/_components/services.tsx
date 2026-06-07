@@ -1,6 +1,6 @@
 import Image from "next/image";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import porscheCayenneDetail from "@public/media/images/silver-porsche-cayenne-front.jpeg";
+import corvetteRedInterior from "@public/media/images/chevrolet-corvette-c8-red-interior.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { CheckIcon } from "@/components/icons";
 import { Container } from "@/components/ui/container";
@@ -21,8 +21,8 @@ const SERVICES = [
   },
   {
     title: "Detailing",
-    image: porscheCayenneDetail,
-    alt: "Silver Porsche Cayenne after a full detail with the APX van behind it",
+    image: corvetteRedInterior,
+    alt: "Red and white Chevrolet Corvette C8 interior after a deep interior detail",
     bullets: [
       "Interior, exterior & full detail packages",
       "Deep clean, sanitize & decontaminate",

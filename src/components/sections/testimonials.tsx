@@ -6,7 +6,7 @@ export type Review = {
   quote: string;
   initials: string;
   name: string;
-  town: string;
+  date: string;
   color: string;
 };
 
@@ -50,7 +50,7 @@ export function Testimonials({
                 </div>
                 <div>
                   <div className="font-bold text-[.95rem]">{review.name}</div>
-                  <div className="text-muted text-[.82rem]">{review.town}</div>
+                  <div className="text-muted text-[.82rem]">{review.date}</div>
                 </div>
               </div>
             </div>

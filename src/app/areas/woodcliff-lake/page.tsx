@@ -1,7 +1,8 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
+import porscheMacanSRedInterior from "@public/media/images/porsche-macan-s-red-leather-interior.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
@@ -88,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“They detailed my car in the office lot while I ran back-to-back meetings. I walked out to a spotless interior and never lost a minute of work.”",
-    initials: "GP",
-    name: "Gordon P.",
-    town: "Woodcliff Lake, NJ",
+    quote: "“Matt did a great job! The ceramic coating exceeded all expectations! They also did the interior for maximum protection! Very wee way to work with and got me back In My truck asap! Definitely plan on using them for all coatings and maintenance on my interior and exterior moving forward!”",
+    initials: "P",
+    name: "Paul",
+    date: "February 2026",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Coating done at the house by the reservoir on a Sunday. Polished work, polished result, and it fit my weekend perfectly.”",
-    initials: "LS",
-    name: "Lila S.",
-    town: "Woodcliff Lake, NJ",
+    quote: "“great, quick service”",
+    initials: "KN",
+    name: "Kaitlyn Neeb",
+    date: "January 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“Booked them through our office park and half the floor signed up after seeing my car. Professional and unbelievably convenient.”",
-    initials: "RM",
-    name: "Raj M.",
-    town: "Woodcliff Lake, NJ",
+    quote: "“Recently got my car ceramic coated by APX Mobile Detailing. They did such an amazing job! Quality service, and they got my car done fast.”",
+    initials: "AE",
+    name: "Abraham Ehiosa",
+    date: "February 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“A correction and coating on my sedan handled at home while I was on calls. The depth in the paint now turns heads in the parking garage.”",
-    initials: "CB",
-    name: "Connie B.",
-    town: "Park Ridge, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“On a standing plan that alternates between my office and my driveway. The car is always meeting-ready and I never schedule it twice.”",
-    initials: "BD",
-    name: "Blake D.",
-    town: "Hillsdale, NJ",
+    quote: "“Great work detailing my car!!! Highly recommend!! A++++✅”",
+    initials: "CS",
+    name: "carol sanchez",
+    date: "May 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“They turned my commuter back into something I'm proud to park out front. Quick to book and worth every minute.”",
-    initials: "FK",
-    name: "Farrah K.",
-    town: "Old Tappan, NJ",
+    quote: "“I booked an appointment for a 5 year ceramic coating and wheels coating with APX Mobile Detailing. Came out really well and I’m happy with the results. Will be using them again”",
+    initials: "J",
+    name: "Jacoby",
+    date: "July 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Matt and the team do amazing work. They ceramic coated my m240i and it came out amazing. Highly recommend them”",
+    initials: "MR",
+    name: "Moe Robert",
+    date: "May 2026",
     color: "#7a1f1f",
   },
 ];
@@ -194,8 +189,8 @@ export default function WoodcliffLakePage() {
         copy="Woodcliff Lake runs on tight calendars, and so do we. APX details your car in the office lot during the workday or at your reservoir-side home on weekends: coatings, correction, and details."
         image={{
           // Placeholder pending a real Woodcliff Lake job photo from the owner.
-          src: lotusEmiraDriveway,
-          alt: "Black Lotus Emira kept showroom-ready on a brick paver driveway in Woodcliff Lake",
+          src: porscheMacanSRedInterior,
+          alt: "Red leather interior of a Porsche Macan S detailed in Woodcliff Lake",
           tag: "Woodcliff Lake, NJ · Fully mobile",
         }}
       />
@@ -211,8 +206,8 @@ export default function WoodcliffLakePage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Woodcliff Lake professionals say"
-        subtext="Feedback from executives and homeowners across Woodcliff Lake and nearby towns."
+        heading="Google reviews around Woodcliff Lake"
+        subtext="What clients across the service area say about APX workmanship."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

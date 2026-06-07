@@ -1,4 +1,4 @@
-import handFinishingTruck from "@public/media/images/image_11.jpg";
+import foamWashWheelDetail from "@public/media/images/blue-sports-car-foam-wash-wheel-detail.jpeg";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Photo } from "@/components/ui/photo";
@@ -28,8 +28,8 @@ export function FounderStory() {
           <div className="relative -order-1 nav:order-none">
             {/* TODO: swap in a real photo of Matt / the APX setup when the owner provides one */}
             <Photo
-              src={handFinishingTruck}
-              alt="APX detailer hand-finishing the emblem and trim on a black Ford truck"
+              src={foamWashWheelDetail}
+              alt="Hand-washing a foam-covered wheel with a wash mitt on a mobile detail"
               tag="Hands-on, every job"
               sizes="(min-width: 920px) 50vw, 100vw"
               className="h-[340px] nav:h-[480px]"

@@ -1,9 +1,9 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
-import audiQ5Interior from "@public/media/images/image_13.jpg";
+import whiteMercedesCla from "@public/media/images/white-mercedes-benz-cla-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
 import { ServiceProcess } from "@/app/services/_components/service-process";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“My Accord lives on Route 208 and the front end was caked in bug guts and tar. After their wash and decon it looked like it had never seen a highway.”",
-    initials: "BK",
-    name: "Boris K.",
-    town: "Fair Lawn, NJ",
+    quote: "“Matt and his team came by and cleaned up my truck. And anyone who knows me knows i don’t just let anyone touch my vehicles. I felt confident my vehicle was going to be taken care of just by the way my questions were being answered. Top notch professional and I’m pretty anal and specific. Matt walked me through the process to ensure satisfaction. I couldn’t have been more happy with my full detail and ceramic coating. If your like me ask for his top shelf package. You will not be disappointed”",
+    initials: "SP",
+    name: "Samuel Pena",
+    date: "March 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“The brake dust on my wheels had basically welded itself on. They lifted every bit of it and sealed the wheels so it wipes right off now.”",
-    initials: "TM",
-    name: "Tara M.",
-    town: "Fair Lawn, NJ",
+    quote: "“The car looks fabulous and it’s amazing. I would recommend to my family and friends.”",
+    initials: "JR",
+    name: "Jacqueline Ramirez",
+    date: "May 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“Winter salt had my black sedan looking gray. One visit and a coating later, the slush slides off and I'm barely cleaning it through the season.”",
-    initials: "FR",
-    name: "Felix R.",
-    town: "Fair Lawn, NJ",
+    quote: "“Brought in my daughter's 2024 Audi RS 7 for a Luxury Detailing, I am so impressed by Matt's eye for details!! The car looks brand new! I will definitely be back with my vehicle. Thanks for your hard work!!”",
+    initials: "M",
+    name: "Milly",
+    date: "March 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“They knocked out a two-step correction in my driveway after years of highway sandblasting dulled the clear coat. The shine is honestly unreal.”",
-    initials: "JD",
-    name: "Joanne D.",
-    town: "Glen Rock, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“Put both commuter cars on a recurring plan and the road grime never gets a chance to build up anymore. Easiest decision I've made for them.”",
-    initials: "SW",
-    name: "Sam W.",
-    town: "Saddle Brook, NJ",
+    quote: "“Had my vehicle detailed by APX and everything came out great! Very affordable and fantastic customer service. Highly recommend!”",
+    initials: "N",
+    name: "NMedina90",
+    date: "January 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Came straight to my office lot at lunch and handled the whole detail while I worked. No detour off the highway, no waiting room. Brilliant setup.”",
-    initials: "IV",
-    name: "Irene V.",
-    town: "Ridgewood, NJ",
-    color: "#1f4d7a",
+    quote: "“Professional meticulous and very fair My cars look amazing and I will continue to work with Matt!! Arrived on time and hustle management is amazing! I had two cars done and he finished both cars, but in the timeframe that he told me it would take.”",
+    initials: "EH",
+    name: "Eileen Hannon",
+    date: "November 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Had a great experience with APX got my truck cleaned inside and out as well as a ceramic coating and my truck looks like new. Definitely would recommend them!!”",
+    initials: "MR",
+    name: "Matt Ruglio",
+    date: "March 2025",
+    color: "#7a1f1f",
   },
 ];
 
@@ -195,8 +189,8 @@ export default function FairLawnPage() {
         copy="Route 4 and 208 leave their mark in brake dust, tar, and salt spray. APX brings detailing, paint correction, and ceramic coating to your Fair Lawn driveway to wipe the daily grind away."
         image={{
           // Placeholder pending a real Fair Lawn job photo from the owner.
-          src: audiQ5Interior,
-          alt: "Detailed tan leather interior and wood trim of an Audi Q5 cleaned on site in Fair Lawn",
+          src: whiteMercedesCla,
+          alt: "White Mercedes-Benz CLA freshly washed and detailed in a Fair Lawn driveway",
           tag: "Fair Lawn, NJ · Fully mobile",
         }}
       />
@@ -212,8 +206,8 @@ export default function FairLawnPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Fair Lawn commuters report"
-        subtext="Notes from drivers in Fair Lawn and the towns up and down the line."
+        heading="Feedback from the Fair Lawn area"
+        subtext="Real reviews from real clients across our Bergen County coverage."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

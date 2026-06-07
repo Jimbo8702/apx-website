@@ -1,6 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
+import alfaGiuliaTanInterior from "@public/media/images/alfa-romeo-giulia-tan-leather-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -88,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Three kids and a dog had absolutely wrecked the back of our Odyssey. They got it looking like the showroom floor without me leaving the house once.”",
-    initials: "CJ",
-    name: "Carla J.",
-    town: "Emerson, NJ",
+    quote: "“Had my new truck ceramic coated by APX Mobile Detailing and couldn’t be happier with the experience. Matt was awesome from the very first interaction all the way through the completion of the job. He showed up with professional, top-of-the-line equipment and took the time to thoroughly explain the entire process to me. His attention to detail and professionalism really stood out. The truck came out amazing. I would highly recommend APX Mobile Detailing to anyone in Bergen County looking for high-quality detailing and ceramic coating services.”",
+    initials: "JH",
+    name: "john H",
+    date: "May 2026",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Soccer cleats, juice boxes, the works. The team dug every bit of it out of the seats and the trunk while I ran the morning carpool. Total lifesaver.”",
-    initials: "DS",
-    name: "Devin S.",
-    town: "Emerson, NJ",
+    quote: "“My truck looks amazing, did a great job. I would recommend to everyone else, thank you.”",
+    initials: "MR",
+    name: "Matt Rajner",
+    date: "October 2024",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“They squared up a fresh shopping-cart scuff on our Highlander right in the driveway. You'd never know it had been there. Friendly crew, careful work.”",
-    initials: "YP",
-    name: "Yolanda P.",
-    town: "Emerson, NJ",
+    quote: "“Just had APX Mobile do my Harley ! They knocked it out of the park! I am blown away by the job they did and time spent on it for the price ! Super professional and I can’t tell enough people to try them !!!”",
+    initials: "MR",
+    name: "mark roskowsky",
+    date: "April 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Booked a full detail on our minivan and they fit us in between two birthday parties. The cabin smelled new again and the kids actually noticed.”",
-    initials: "PG",
-    name: "Pete G.",
-    town: "Hillsdale, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“On a regular plan now so the SUV never gets that lived-in look again. They show up on time and the whole thing fits around our crazy schedule.”",
-    initials: "AT",
-    name: "Allison T.",
-    town: "Park Ridge, NJ",
+    quote: "“I work from home so it was nice getting the service done mobile. They did a ceramic coating on my mom’s car and did an amazing job”",
+    initials: "A",
+    name: "anastasia",
+    date: "November 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Coated my husband's wagon after years of road salt and sticky fingers. Water sheets right off it now and cleanup takes a fraction of the time.”",
-    initials: "ML",
-    name: "Marcy L.",
-    town: "Woodcliff Lake, NJ",
-    color: "#1f4d7a",
+    quote: "“matt made it effortless to schedule an appointment and get the car finished. fantastic work. would recommend to family and friends. he was very informative and took the time to answer all my questions, would definitely get work done by matt again.”",
+    initials: "SA",
+    name: "Steven Ang",
+    date: "November 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“APX was Amazing, never have had a better service from someone in this area. Cleaned my car to perfection, got a stain out and took their time to work on my vehicle.”",
+    initials: "LL",
+    name: "Leonardo LaSpisa",
+    date: "June 2025",
+    color: "#7a1f1f",
   },
 ];
 
@@ -194,8 +189,8 @@ export default function EmersonPage() {
         copy="Family life is hard on a vehicle. APX brings full detailing, paint correction, and ceramic coating to your Emerson driveway, so the SUV gets cleaned up while you keep the kids on schedule."
         image={{
           // Placeholder pending a real Emerson job photo from the owner.
-          src: astonMartinInterior,
-          alt: "Gray Tesla Model Y freshly detailed in an Emerson driveway with the APX van on site",
+          src: alfaGiuliaTanInterior,
+          alt: "Tan leather interior of an Alfa Romeo Giulia mid-detail in an Emerson driveway",
           tag: "Emerson, NJ · Fully mobile",
         }}
       />
@@ -211,8 +206,8 @@ export default function EmersonPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Emerson families tell us"
-        subtext="Words from parents around Emerson and the towns just up the road."
+        heading="What clients around Emerson tell us"
+        subtext="A few of the 140+ five-star Google reviews APX has earned nearby."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

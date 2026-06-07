@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import porsche911Coated from "@public/media/images/blue-porsche-911-turbo-s-cabriolet-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“They corrected and coated my M5 without a single shortcut. No filler, no rushed buffing, just clean paint that finally looks the way it should.”",
-    initials: "RT",
-    name: "Raymond T.",
-    town: "Tenafly, NJ",
-    color: "#1f4d7a",
-  },
-  {
-    quote:
-      "“I was nervous about anyone touching my Range Rover's paint. Their process was careful and well explained, and the depth of gloss afterward sold me completely.”",
-    initials: "LF",
-    name: "Lauren F.",
-    town: "Tenafly, NJ",
+    quote: "“I previously had a lexus and was looking to get a full detail and some things wrapped but I was a bit skeptical taking it to a lesser known place. However the way they handled everything and the product they left me with certainly turned me into a client. Definitely bringing my jeep here next!!!”",
+    initials: "NC",
+    name: "Nestor Coll",
+    date: "October 2024",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Had the full interior and exterior done before listing my Audi. The finish photographed beautifully and the buyer noticed right away. Worth every minute.”",
-    initials: "MG",
-    name: "Marcus G.",
-    town: "Cresskill, NJ",
+    quote: "“Very professional and great work.”",
+    initials: "AA",
+    name: "Ademola Adeniyi",
+    date: "January 2026",
+    color: "#1f4d7a",
+  },
+  {
+    quote: "“Matt is an amazing detailer… he detailed one of my Audis and it looked absolutely flawless. One of the best details and excellent service.”",
+    initials: "BP",
+    name: "Bella Polizzi",
+    date: "October 2024",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“They came to my office and set up in the lot without needing a thing from the building. Two hours later my Macan looked showroom fresh. Incredibly convenient.”",
-    initials: "EB",
-    name: "Elaine B.",
-    town: "Alpine, NJ",
+    quote: "“APX did a fantastic job Inside and out. Definitely recommend using them”",
+    initials: "SY",
+    name: "susan yirce",
+    date: "September 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“We keep both German cars on a maintenance plan now. They show up like clockwork and the paint has never looked anything but immaculate.”",
-    initials: "DV",
-    name: "Daniel V.",
-    town: "Demarest, NJ",
+    quote: "“Matt is a professional at what he does!!! He detailed my Honda Civic and I couldn't believe the after, what an amazing transformation!! my car looked like it just left the dealership!”",
+    initials: "KS",
+    name: "Katie Sullivan",
+    date: "January 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“Genuinely the most thorough detail I've ever had. They treated the car like it was their own and the swirl-free finish under the lights was unreal.”",
-    initials: "SN",
-    name: "Sophia N.",
-    town: "Bergenfield, NJ",
-    color: "#1f4d7a",
+    quote: "“I had my brand new Chevy Silverado ceramic coated for 2 years. The quality came out great and they do amazing work.”",
+    initials: "MP",
+    name: "Michael Prestigiacomo",
+    date: "February 2025",
+    color: "#7a1f1f",
   },
 ];
 
@@ -217,8 +211,8 @@ export default function TenaflyPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Tenafly owners say"
-        subtext="Notes from drivers in Tenafly and the surrounding towns."
+        heading="Five-star reviews near Tenafly"
+        subtext="Google feedback from APX clients across our Bergen County towns."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

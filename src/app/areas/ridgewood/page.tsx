@@ -1,9 +1,9 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
-import blackSedanCoated from "@public/media/images/image_12.jpg";
+import blueBmwM2 from "@public/media/images/blue-bmw-m2-front-2.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
 import { ServiceProcess } from "@/app/services/_components/service-process";
@@ -89,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Our home gets a lot of care and I wanted the car in the driveway to match it. They delivered a finish I'm genuinely proud to park out front.”",
-    initials: "WS",
-    name: "Whitney S.",
-    town: "Ridgewood, NJ",
+    quote: "“The guys showed up exactly on time to detail and coat my work truck in a specialized vehicle of their own, equipped with everything they would need. They carefully cleaned my truck and applied the coating as discussed, and took the time to explain what was done and how best to care for it. Very satisfied. Glad to recommend.”",
+    initials: "MF",
+    name: "Mayer Fertig",
+    date: "November 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“The detail was meticulous, right down to the trim and the wheels. The car looks like it belongs on our street again.”",
-    initials: "GM",
-    name: "George M.",
-    town: "Ridgewood, NJ",
+    quote: "“great, quick service”",
+    initials: "KN",
+    name: "Kaitlyn Neeb",
+    date: "January 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“A coating on my sedan and it has not looked this sharp in years. Pride of ownership restored, and they did it all in my driveway.”",
-    initials: "ED",
-    name: "Elise D.",
-    town: "Ridgewood, NJ",
+    quote: "“I would highly recommend APX mobile detailing for all of your car care needs. Matt and team did an amazing job on my car and they are extremely professional!”",
+    initials: "SP",
+    name: "Satyam Prasad",
+    date: "May 2026",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Careful, polite, and genuinely good at what they do. The correction work brought a depth back to my paint I'd given up on.”",
-    initials: "BT",
-    name: "Brad T.",
-    town: "Glen Rock, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“Everything came out of their van and they left the driveway spotless. The kind of service that respects your home as much as your car.”",
-    initials: "NF",
-    name: "Noreen F.",
-    town: "Waldwick, NJ",
+    quote: "“Matt did an amazing work on my vehicle. Looks like it came off the showroom floor”",
+    initials: "DF",
+    name: "Dan F",
+    date: "April 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Booked a full detail before guests came for the weekend. The car out front looked as put-together as the rest of the house.”",
-    initials: "SV",
-    name: "Sal V.",
-    town: "Fair Lawn, NJ",
+    quote: "“Brought in my daughter's 2024 Audi RS 7 for a Luxury Detailing, I am so impressed by Matt's eye for details!! The car looks brand new! I will definitely be back with my vehicle. Thanks for your hard work!!”",
+    initials: "M",
+    name: "Milly",
+    date: "March 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Had my vehicle detailed by APX and everything came out great! Very affordable and fantastic customer service. Highly recommend!”",
+    initials: "N",
+    name: "NMedina90",
+    date: "January 2025",
     color: "#7a1f1f",
   },
 ];
@@ -195,8 +189,8 @@ export default function RidgewoodPage() {
         copy="Ridgewood homes are kept with real care, and the cars parked out front should match. Detailing, ceramic coating, and paint correction that suit a finish on a well-kept village street."
         image={{
           // Placeholder pending a real Ridgewood job photo from the owner.
-          src: blackSedanCoated,
-          alt: "Black Audi S3 with a mirror-gloss finish parked in front of a well-kept Ridgewood home",
+          src: blueBmwM2,
+          alt: "Blue BMW M2 gleaming under the trees after a detail in Ridgewood",
           tag: "Ridgewood, NJ · Fully mobile",
         }}
       />
@@ -212,8 +206,8 @@ export default function RidgewoodPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Ridgewood homeowners say"
-        subtext="Words from residents here and the villages just over."
+        heading="Feedback from the Ridgewood area"
+        subtext="Five-star Google reviews from across the APX coverage map."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

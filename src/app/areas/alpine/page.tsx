@@ -1,9 +1,8 @@
 import { pageMetadata } from "@/lib/page-metadata";
-import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import rangeRoverApxVans from "@public/media/images/black-range-rover-front-fender-apx-van.jpeg";
+import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
-import blackSedanCoated from "@public/media/images/image_12.jpg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
 import { ServiceProcess } from "@/app/services/_components/service-process";
@@ -26,8 +25,8 @@ export const metadata = pageMetadata(META);
 const SERVICE_CARDS: AreaServiceCard[] = [
   {
     title: "Ceramic Coating",
-    image: blackSedanCoated,
-    alt: "Black Audi S3 rear panel showing a mirror-gloss ceramic coated finish",
+    image: rollsRoyceCeramic,
+    alt: "Black Rolls-Royce Ghost with a deep-gloss ceramic coated finish",
     bullets: [
       "Lasting depth and shine on the cars you cherish",
       "Long-term defense against the elements",
@@ -89,55 +88,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“They quietly handled three cars in my driveway over an afternoon and you'd never know anyone had been here. Discreet, careful, and the results are stunning.”",
-    initials: "RW",
-    name: "Robert W.",
-    town: "Alpine, NJ",
-    color: "#1f4d7a",
-  },
-  {
-    quote:
-      "“My weekend coupe almost never sees a public wash, so I'm picky about who touches it. Matt and the team earned my trust on the first visit.”",
-    initials: "EC",
-    name: "Elena C.",
-    town: "Alpine, NJ",
+    quote: "“I recently had my car detailed and ceramic coated by APX Car Solutions, and the results are amazing! Matt was professional, friendly, and extremely knowledgeable. He took the time to walk me through the entire process and made sure I knew exactly what he was going to be doing. The detailing was flawless, every inch of my car was cleaned leaving it looking brand new. The attention to detail was incredible, from the spotless interior to the sparkling exterior. It was clear that he uses top quality products and tools to get the job done. The ceramic coating gave it a glossy finish and extra protection from dirt and water, making it easier to clean and stay spotless longer. I highly recommend APX Car Solutions my car looks better than ever and is well protected for years! I highly recommend APX Car Solutions and I will definitely be coming back in the future!”",
+    initials: "AM",
+    name: "Ariana Mariani",
+    date: "January 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“A full correction and coating on my SUV done right in front of the garage. The finish looks deeper than the day I picked it up.”",
-    initials: "MD",
-    name: "Marcus D.",
-    town: "Tenafly, NJ",
+    quote: "“Great job! Highly recommend. Courteous efficient team!”",
+    initials: "LG",
+    name: "Lana Gofman Rosenson",
+    date: "September 2025",
+    color: "#1f4d7a",
+  },
+  {
+    quote: "“Matt did an excellent job very professional and definitely took care of my truck he did a full ceramic coat and detail and etc. An amazing job would highly recommend to anyone.”",
+    initials: "DT",
+    name: "Dominick Tulipani",
+    date: "March 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“They came to me, set up entirely from the van, and left the area spotless. No hauling cars to a shop, no waiting around. Exactly what I wanted.”",
-    initials: "SP",
-    name: "Sandra P.",
-    town: "Cresskill, NJ",
+    quote: "“Brought my Chevy in to be detailed and they could not have done a better job! Car came out looking brand new.”",
+    initials: "KG",
+    name: "Katerina Grammatikos",
+    date: "January 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“We keep them on a regular schedule for the whole household fleet. The cars stay showroom fresh and I've stopped thinking about it entirely.”",
-    initials: "TN",
-    name: "Thomas N.",
-    town: "Demarest, NJ",
+    quote: "“Huge Thanks to Matt! He did an incredible job detailing my Honda Accord, My car looks and feels brand new.The interior is spotless, and the exterior has a perfect shine. Very professional and on time. Highly recommend APX car solutions for anyone looking for a nice car detailing.”",
+    initials: "LC",
+    name: "Lizet Carreon",
+    date: "February 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“Booked a detail before a private sale and the buyer commented on how immaculate it was. Professional from the first call to the final walkaround.”",
-    initials: "EF",
-    name: "Elaine F.",
-    town: "Haworth, NJ",
-    color: "#2f6e4a",
+    quote: "“Matt and his team did an incredible job cleaning and applying ceramic coating on my car. It was done in less than 2 hours, amazing work!”",
+    initials: "JB",
+    name: "James Buntar",
+    date: "May 2026",
+    color: "#7a1f1f",
   },
 ];
 
@@ -195,8 +188,8 @@ export default function AlpinePage() {
         copy="Alpine is the most private town we serve, and our work fits right in. White-glove ceramic coating, paint correction, and detailing in your driveway, from the daily SUV to the collector car."
         image={{
           // Placeholder pending a real Alpine job photo from the owner.
-          src: rollsRoyceCeramic,
-          alt: "Black Rolls-Royce Ghost with a deep-gloss finish in the driveway of an Alpine home",
+          src: rangeRoverApxVans,
+          alt: "Two APX vans on site detailing a black Range Rover outside an Alpine home",
           tag: "Alpine, NJ · Fully mobile",
         }}
       />
@@ -212,8 +205,8 @@ export default function AlpinePage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Alpine clients say"
-        subtext="Notes from homeowners in Alpine and the towns that border it."
+        heading="Reviews from drivers around Alpine"
+        subtext="Real Google reviews from APX clients across our Bergen County routes."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

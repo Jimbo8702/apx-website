@@ -9,15 +9,15 @@ import { ReviewsWall } from "./_components/reviews-wall";
 const META = {
   title: "Reviews",
   description:
-    "150+ five-star reviews from APX Mobile Detailing clients across Dumont and Bergen County, NJ: ceramic coatings, paint correction, details, and maintenance.",
+    "140+ five-star reviews from APX Mobile Detailing clients across Dumont and Bergen County, NJ: ceramic coatings, paint correction, details, and maintenance.",
   path: "/reviews",
 };
 
 export const metadata = pageMetadata(META);
 
 /* WebPage + breadcrumb only — deliberately NO Review/AggregateRating markup:
-   self-serving review stars are dead since 2019 and these reviews are
-   placeholders (see the SEO audit). Don't add review schema here. */
+   self-serving review stars are dead since 2019 (see the SEO audit). The
+   reviews are real Google exports now, but don't add review schema here. */
 export default function ReviewsPage() {
   return (
     <main>
@@ -30,7 +30,7 @@ export default function ReviewsPage() {
         <Container>
           <Eyebrow>What clients say</Eyebrow>
           <h1 className="text-[clamp(2rem,4vw,2.8rem)] font-bold">
-            150+ five-star reviews, from Alpine to Woodcliff Lake
+            140+ five-star reviews, from Alpine to Woodcliff Lake
           </h1>
           <p className="text-muted mt-3.5 text-[1.05rem] max-w-[40em]">
             Coatings, corrections, details, and maintenance visits across the 27 towns we serve,

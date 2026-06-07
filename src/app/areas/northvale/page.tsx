@@ -1,8 +1,9 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
+import mercedesCClassInterior from "@public/media/images/mercedes-benz-c-class-amg-interior.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
 import { ServiceProcess } from "@/app/services/_components/service-process";
@@ -88,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“I'm on the road into the city every day and the interior showed every mile of it. They reset the whole cabin and it feels like a different car now.”",
-    initials: "KW",
-    name: "Kyle W.",
-    town: "Northvale, NJ",
+    quote: "“Had the pleasure of working with APX Mobile Detailing. I scheduled a total of 4 cars to be ceramic coated and Matt made the process smooth and easy. He's a very responsive person and really tires his best to put you first. I am really happy with the outcome of my ceramic coating. Matt is very passionate about his work and appreciate his attention to detail. I highly recommend working with APX Mobile Detailing!”",
+    initials: "PP",
+    name: "Philip Park",
+    date: "May 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Years of highway driving had hazed the paint. A correction and coating brought the shine back and now the road grime just washes away.”",
-    initials: "BT",
-    name: "Bianca T.",
-    town: "Northvale, NJ",
+    quote: "“A wonderful job with my car! Highly recommend.”",
+    initials: "KK",
+    name: "Kirk Kushnerick",
+    date: "October 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“My commuter clears the odometer fast, so I keep it on a plan with them. Regular visits mean it never looks like the workhorse it actually is.”",
-    initials: "JS",
-    name: "Joel S.",
-    town: "Northvale, NJ",
+    quote: "“Matt and his team did a wonderful job detailing my car. He was professional, helpful, and made the whole experience easy and stress-free. I’m very happy with the results!”",
+    initials: "KB",
+    name: "Kaylee Babasade",
+    date: "July 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Coffee spills, gym bags, the works after months of driving. They pulled it all out and protected the seats so the next mess wipes up easy.”",
-    initials: "RC",
-    name: "Renee C.",
-    town: "Old Tappan, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“No need to drop it anywhere on my packed schedule. They came to the driveway and handled everything while I worked. Total time-saver.”",
-    initials: "MF",
-    name: "Mark F.",
-    town: "Norwood, NJ",
+    quote: "“Great communication Did a spectacular job on my new ride. I will be recommending them to my friends.”",
+    initials: "TB",
+    name: "Timothy Buccigrossi",
+    date: "January 2026",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“High miles and it still turns heads now. The protection they put on has held up through a brutal stretch of daily driving.”",
-    initials: "AD",
-    name: "Aisha D.",
-    town: "Harrington Park, NJ",
+    quote: "“My son and I built a custom motorcycle 25 years ago. It was beginning to look a bit tired. Matt and his tech came to my house and did a detail and ceramic application. The bike looks brand new. I could not be more pleased.”",
+    initials: "JQ",
+    name: "Jack Quigley",
+    date: "October 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Great detailing and cleaning services provided for my car! Great customer service and value for your money! Definitely the best around!”",
+    initials: "PK",
+    name: "Peter Kretschmer",
+    date: "October 2024",
     color: "#7a1f1f",
   },
 ];
@@ -194,8 +189,8 @@ export default function NorthvalePage() {
         copy="Northvale commutes pile on miles fast. We bring interior resets, paint protection, and steady maintenance to your driveway so a high-mileage car stays sharp no matter the odometer."
         image={{
           // Placeholder pending a real Northvale job photo from the owner.
-          src: bmwX5Corrected,
-          alt: "Dark blue BMW X5 with mirror-finish corrected paint in a Northvale driveway",
+          src: mercedesCClassInterior,
+          alt: "Black leather Mercedes-AMG C-Class interior detailed and conditioned in Northvale",
           tag: "Northvale, NJ · Fully mobile",
         }}
       />
@@ -211,8 +206,8 @@ export default function NorthvalePage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Northvale commuters report"
-        subtext="From high-mileage drivers up here and across the towns next door."
+        heading="What drivers near Northvale report"
+        subtext="A sample of the five-star Google reviews APX has earned across the county."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

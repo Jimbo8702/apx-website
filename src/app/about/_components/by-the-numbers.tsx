@@ -1,9 +1,9 @@
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 
-/* Figures pending owner confirmation; each mirrors a claim already used elsewhere on the site. */
+/* Review count matches the real Google exports (141); other figures mirror claims used elsewhere on the site. */
 const STATS = [
-  { value: "150+", label: "5-star reviews on Google & Yelp" },
+  { value: "140+", label: "5-star reviews on Google" },
   { value: "100%", label: "Satisfaction guarantee" },
   { value: "8+", label: "Bergen County towns served" },
   { value: "Small team", label: "Big attention to detail" },

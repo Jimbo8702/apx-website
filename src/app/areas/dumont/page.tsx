@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
 import porscheCayenneDetail from "@public/media/images/silver-porsche-cayenne-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Having a detailer based right here in town is a game changer. They were in my driveway twenty minutes after I called about a same-week opening.”",
-    initials: "DM",
-    name: "Dana M.",
-    town: "Dumont, NJ",
+    quote: "“I couldn’t be happier with the service from APX Mobile Detailing! I had them do a leather interior coating, and the results are honestly better than I expected. The attention to detail was top-notch—every seat looks brand new, feels protected, and has a clean, rich finish without being greasy or overdone. They showed up on time, were super professional, and clearly take pride in their work. You can tell they use high-quality products and really know what they’re doing. My interior not only looks amazing but is now much easier to maintain. If you’re thinking about protecting your leather, don’t hesitate—APX Mobile Detailing is 100% worth it. Highly recommend”",
+    initials: "RE",
+    name: "Robert Emord",
+    date: "February 2026",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Full detail on my Pilot in my own driveway while I worked from home. The kids' backseat disaster zone looks brand new again.”",
-    initials: "CR",
-    name: "Chris R.",
-    town: "Dumont, NJ",
+    quote: "“Had my boat detailed. They did an amazing job will be bringing them more business soon.”",
+    initials: "AM",
+    name: "Aidan McKenna",
+    date: "October 2024",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“They handled a 1-step correction and ceramic coating on my Audi in my office lot. Watching the swirls disappear panel by panel was worth the price alone.”",
-    initials: "SK",
-    name: "Steve K.",
-    town: "New Milford, NJ",
+    quote: "“APX did a great job detailing my Family's car. It had been sitting in our driveway for a while and when we decided to sell it, APX came and worked miracles to clean the car, detail and get us ready for a sale.”",
+    initials: "KM",
+    name: "Kevin Milgram",
+    date: "June 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“No hose, no outdoor outlet, no problem. Everything came out of the van. My building's lot has nothing and the wash still came out spotless.”",
-    initials: "AV",
-    name: "Ana V.",
-    town: "Bergenfield, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“On the monthly plan for both cars now. They show up on schedule, the cars always look freshly detailed, and I haven't touched a wash mitt in months.”",
-    initials: "JL",
-    name: "Jim L.",
-    town: "Cresskill, NJ",
+    quote: "“They detailed my jeep and did an incredible job. Very careful and took their time to make sure nothing was missed. Highly recommend”",
+    initials: "CG",
+    name: "Charlea Graf",
+    date: "September 2024",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Booked the full premium detail before selling my Lexus. Two offers above asking within a week. The detail paid for itself several times over.”",
-    initials: "PH",
-    name: "Priya H.",
-    town: "Tenafly, NJ",
-    color: "#1f4d7a",
+    quote: "“Had APX come right to my driveway to do a full detail and ceramic coating on my Chevy traverse. It looks absolutely incredible and I’m super happy with the results. Matt is very professional and cares about the results / outcome of our cars. Thanks!”",
+    initials: "MP",
+    name: "Marcello Prestigiacomo",
+    date: "September 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“APX did an incredible job on my brand new forester. I booked in a ceramic coating as well as a windshield coating and it came out great! Highly recommend to anyone.”",
+    initials: "C",
+    name: "cait",
+    date: "July 2025",
+    color: "#7a1f1f",
   },
 ];
 
@@ -212,8 +206,8 @@ export default function DumontPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Dumont drivers say"
-        subtext="Feedback from neighbors in Dumont and the towns next door."
+        heading="Reviews from our Dumont home base"
+        subtext="Dumont is where APX parks the van. Here is what clients across the county say."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

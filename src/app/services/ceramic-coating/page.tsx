@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import porsche911Coated from "@public/media/images/blue-porsche-911-turbo-s-cabriolet-front.jpeg";
-import blackSedanCoated from "@public/media/images/image_12.jpg";
+import blackPorscheMacan from "@public/media/images/black-porsche-macan-front.jpeg";
 import { ClockIcon, DropletIcon, SparklesIcon, SunIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
@@ -108,51 +108,45 @@ const STEPS = [
 
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“APX coated my Model 3 last spring and it still beads like day one. Pollen season used to mean weekly washes. Now everything rinses off with a garden hose.”",
-    initials: "KT",
-    name: "Kevin T.",
-    town: "Demarest, NJ",
-    color: "#1f4d7a",
-  },
-  {
-    quote:
-      "“Did the 5-year ceramic on our Range Rover. The gloss is deeper than it was on the showroom floor, and winter salt wipes off with zero effort.”",
-    initials: "LB",
-    name: "Lauren B.",
-    town: "Dumont, NJ",
+    quote: "“I had APX Mobil Detailing do work on two of my cars and in each case I was extremely pleased especially with the detailing and ceramic coating on my 1976 Corvette. To say that it looks like it is brand new is an understatement. It actually looks better than when I drove it out of the dealer’s showroom 29 years ago. The ceramic coating has added a shine that the car never had before and this was all done in the driveway of my home using advanced equipment and materials. I highly recommend APX if you’re looking to improve the look of your car and preserve and protect the interior and exterior of your vehicle.”",
+    initials: "WB",
+    name: "William Berenbroick",
+    date: "May 2026",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Went with the System X 10-year on my Corvette. The prep work was meticulous, hours of decon before the coating even came out. You can tell they take it seriously.”",
-    initials: "RD",
-    name: "Rich D.",
-    town: "Haworth, NJ",
+    quote: "“I recently had a ceramic coating done on my car, and I couldn’t be happier with the results! The attention to detail was incredible — every inch of the paint looks flawless and has that deep, mirror-like shine. The surface feels so smooth, and water just beads right off. They took their time to explain the whole process and made sure I understood how to care for it afterward. The car honestly looks better than the day I picked it up from the dealership. I can already tell the coating will make maintenance so much easier. Highly recommend to anyone who loves keeping their car looking pristine — worth every penny!”",
+    initials: "SS",
+    name: "SuSu SeaSky",
+    date: "October 2025",
+    color: "#1f4d7a",
+  },
+  {
+    quote: "“I had APX come to my apartment complex to do a ceramic coating on my Range Rover HSE. I was really concerned about the upcoming winter months with the salt and snow so I wanted to protect it for years. They did a fantastic job. Matt and his team were incredible, super knowledgeable and overall just a great experience. Thank you guys so much!”",
+    initials: "GR",
+    name: "Gianni Rockette",
+    date: "November 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Coated my wife's white Lexus and mine a month later. Bug splatter and bird droppings wipe off with a single pass now. Should have done this years ago.”",
-    initials: "JP",
-    name: "James P.",
-    town: "Tenafly, NJ",
+    quote: "“I just got my car ceramic coated here and I couldn’t be happier with the results! The paint looks like glass, and the shine is unbelievable. The team walked me through the whole process and explained how to take care of it. Super professional and worth every penny. Highly recommend!”",
+    initials: "DH",
+    name: "Declan Huss",
+    date: "September 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“They explained the difference between the 2 and 5-year options without any upsell pressure. Coating went on in my office parking lot while I worked. Flawless.”",
-    initials: "MS",
-    name: "Melissa S.",
-    town: "Cresskill, NJ",
+    quote: "“I was on the fence about ceramic coating, but I’m glad I finally did it. The finish is flawless, and the protection gives me peace of mind. Customer service was friendly, honest, and they answered all my questions. Definitely recommend to anyone considering it!”",
+    initials: "H",
+    name: "hussam",
+    date: "August 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“Black paint, daily driver, parked outside: the worst combo. Six months after the coating it still looks freshly detailed after a quick rinse.”",
-    initials: "OG",
-    name: "Omar G.",
-    town: "Bergenfield, NJ",
+    quote: "“Matt and crew were prompt at my house. Everything is self contained on his truck and my two cars were ceramic coated in less than 2 hours. The cars both look great and I look forward to keeping them clean for years to come.”",
+    initials: "HF",
+    name: "Howard Falkow",
+    date: "May 2026",
     color: "#7a1f1f",
   },
 ];
@@ -234,8 +228,8 @@ export default function CeramicCoatingPage() {
         ]}
         benefits={BENEFITS}
         image={{
-          src: blackSedanCoated,
-          alt: "Mirror-gloss black sedan after ceramic coating, reflections visible across the rear panel",
+          src: blackPorscheMacan,
+          alt: "Black Porsche Macan with a deep wet-look gloss across the hood and front end",
           tag: "Freshly coated · wet-look gloss",
         }}
       />

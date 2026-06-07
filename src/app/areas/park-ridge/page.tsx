@@ -1,6 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
+import porsche911BrownInterior from "@public/media/images/porsche-911-turbo-s-brown-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -88,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“They detailed my car during a Tuesday full of meetings and I never had to step outside. By my lunch break it was done and looked incredible.”",
-    initials: "AC",
-    name: "Adam C.",
-    town: "Park Ridge, NJ",
+    quote: "“Very professional staff and hard workers. They arrived on time and did a phenomenal job on our suv and truck. I Highly recommend APX for mobile detailing and ceramic coating. It was a breeze getting the appointment set up and Matt was very knowledgeable. He spent the time to explain the process and why ceramic coating is beneficial. Thanks again”",
+    initials: "T",
+    name: "tonnic",
+    date: "May 2026",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Working from home means my car barely moves, so I just had them come to it. Quiet, tidy, and finished before my afternoon block of calls.”",
-    initials: "SN",
-    name: "Sheila N.",
-    town: "Park Ridge, NJ",
+    quote: "“Did a phenomenal job.”",
+    initials: "JP",
+    name: "Justin Perez",
+    date: "October 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“I booked a coating for a weekday and kept right on working. They were considerate about the time and the result speaks for itself.”",
+    quote: "“Had a great experience with APX got my truck cleaned inside and out as well as a ceramic coating and my truck looks like new. Definitely would recommend them!!”",
     initials: "MR",
-    name: "Marco R.",
-    town: "Park Ridge, NJ",
+    name: "Matt Ruglio",
+    date: "March 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Loved not losing half a Saturday at a shop. They handled my SUV midweek while I was on a deadline and I never broke focus.”",
-    initials: "JB",
-    name: "Janet B.",
-    town: "Woodcliff Lake, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“Everything ran from their van, so my home office stayed undisturbed. The wash and interior came out cleaner than any place I've used.”",
-    initials: "CL",
-    name: "Curt L.",
-    town: "Hillsdale, NJ",
+    quote: "“The car looks fabulous and it’s amazing. I would recommend to my family and friends.”",
+    initials: "JR",
+    name: "Jacqueline Ramirez",
+    date: "May 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Had a correction done on a workday and the swirls just vanished. Friendly, low-key, and zero disruption to my schedule.”",
-    initials: "AP",
-    name: "Asha P.",
-    town: "Emerson, NJ",
+    quote: "“Just had APX Mobile do my Harley ! They knocked it out of the park! I am blown away by the job they did and time spent on it for the price ! Super professional and I can’t tell enough people to try them !!!”",
+    initials: "MR",
+    name: "mark roskowsky",
+    date: "April 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“I work from home so it was nice getting the service done mobile. They did a ceramic coating on my mom’s car and did an amazing job”",
+    initials: "A",
+    name: "anastasia",
+    date: "November 2025",
     color: "#7a1f1f",
   },
 ];
@@ -194,8 +189,8 @@ export default function ParkRidgePage() {
         copy="Park Ridge keeps a quiet, work-from-home pace, and so do we. Ceramic coating, paint correction, and detailing handled in your driveway midweek while you stay on your calls inside."
         image={{
           // Placeholder pending a real Park Ridge job photo from the owner.
-          src: astonMartinInterior,
-          alt: "Deep-cleaned red leather interior of an Aston Martin V8 Vantage after a full detail in a Park Ridge driveway",
+          src: porsche911BrownInterior,
+          alt: "Brown leather Porsche 911 interior freshly conditioned in Park Ridge",
           tag: "Park Ridge, NJ · Fully mobile",
         }}
       />
@@ -211,8 +206,8 @@ export default function ParkRidgePage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Park Ridge professionals say"
-        subtext="Comments from neighbors here and around the borough's edges."
+        heading="What clients around Park Ridge say"
+        subtext="Recent Google reviews from drivers APX serves nearby."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

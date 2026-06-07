@@ -1,6 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import grayPorscheMacanWheel from "@public/media/images/gray-porsche-macan-wheel-detail.jpeg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -88,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Three cars knocked out in one afternoon without any of us leaving the house. The convenience of doing the whole family's vehicles at once is hard to beat.”",
-    initials: "VA",
-    name: "Vince A.",
-    town: "Old Tappan, NJ",
+    quote: "“I had my car detailed and ceramic coated by APX Car Solutions, and I’m beyond impressed! Matt is such a sweetheart!! The detailing was thorough, leaving my car spotless inside and out. The ceramic coating gives it a perfect, glossy finish and offers fantastic protection. My car’s exterior still looks spotless weeks later! I Highly recommend their professional service!”",
+    initials: "LR",
+    name: "Lisa Remmich",
+    date: "January 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“My SUV and my husband's sedan both came out flawless on the same visit. They planned the day around our cars and never rushed a single panel.”",
-    initials: "SR",
-    name: "Susan R.",
-    town: "Old Tappan, NJ",
+    quote: "“My car is so clean and smells amazing !”",
+    initials: "KE",
+    name: "Kimberly Etkin",
+    date: "May 2026",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“The kids' minivan was a lost cause until they got into it. Doing it alongside my own car in one stop saved me a whole weekend of errands.”",
-    initials: "TH",
-    name: "Tariq H.",
-    town: "Old Tappan, NJ",
+    quote: "“APX did an incredible job on my brand new forester. I booked in a ceramic coating as well as a windshield coating and it came out great! Highly recommend to anyone.”",
+    initials: "C",
+    name: "cait",
+    date: "July 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Had them coat my coupe and detail the daily on the same morning. Two very different jobs handled back to back without a hiccup.”",
-    initials: "MD",
-    name: "Margo D.",
-    town: "Northvale, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“They came out to our place and worked through both of our cars while we got the kids ready for the day. Couldn't have been smoother.”",
-    initials: "EL",
-    name: "Eddie L.",
-    town: "Norwood, NJ",
+    quote: "“Had my boat detailed. They did an amazing job will be bringing them more business soon.”",
+    initials: "AM",
+    name: "Aidan McKenna",
+    date: "October 2024",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Booked them for a correction on the wife's car and a quick refresh on mine. Friendly crew, immaculate results, and zero hassle on our end.”",
-    initials: "CF",
-    name: "Christine F.",
-    town: "Harrington Park, NJ",
+    quote: "“Matt and his team came on a same day call. More than pleased with the work they provided. Will definitely be reaching out again in the future. Along with great work, pricing, job details etc were all communicated!!!”",
+    initials: "CR",
+    name: "Cyclenatti. rich",
+    date: "July 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“He treats and disinfects the leather very well unlike most detailers , has a great attitude and a great deal on the paint protection”",
+    initials: "MS",
+    name: "Meme Scrap",
+    date: "April 2025",
     color: "#7a1f1f",
   },
 ];
@@ -194,8 +189,8 @@ export default function OldTappanPage() {
         copy="Old Tappan runs on multi-car households, and we work that way too. Ceramic coating, paint correction, and detailing for every vehicle in the driveway, all in one scheduled visit."
         image={{
           // Placeholder pending a real Old Tappan job photo from the owner.
-          src: rollsRoyceCeramic,
-          alt: "Black Rolls-Royce Ghost with a deep-gloss finish in an Old Tappan driveway",
+          src: grayPorscheMacanWheel,
+          alt: "Detailed Porsche Macan wheel and freshly dressed tire in an Old Tappan driveway",
           tag: "Old Tappan, NJ · Fully mobile",
         }}
       />
@@ -211,8 +206,8 @@ export default function OldTappanPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Old Tappan families tell us"
-        subtext="Words from households here and in the towns just up the road."
+        heading="What clients near Old Tappan tell us"
+        subtext="Real five-star reviews from the APX Google profile."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

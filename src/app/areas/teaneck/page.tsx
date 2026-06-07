@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import teslaModelY from "@public/media/images/gray-tesla-model-y-rear-2.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
@@ -89,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Between two jobs and three kids I never have time for a car wash. They came to the house on a Saturday and the SUV looks brand new again.”",
-    initials: "MJ",
-    name: "Malik J.",
-    town: "Teaneck, NJ",
+    quote: "“So impressed by Matt’s professionalism and attention to detail (no pun intended). I was overwhelmingly satisfied with the quality of the detailing—my car looks and feels brand new. He was punctual, thorough, and clearly takes pride in his work. Highly recommend to anyone looking for top-tier service!”",
+    initials: "AB",
+    name: "Amanda Bernard",
+    date: "June 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“They detailed both our cars in the driveway while dinner was on the stove. Easy to schedule and worked completely around our chaos.”",
-    initials: "RT",
-    name: "Rosa T.",
-    town: "Teaneck, NJ",
+    quote: "“My car is so clean and smells amazing !”",
+    initials: "KE",
+    name: "Kimberly Etkin",
+    date: "May 2026",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“I was sure my street parking would be a problem and it wasn't. They set up curbside, knocked out a full detail, and left no trace behind.”",
-    initials: "SB",
-    name: "Steve B.",
-    town: "Teaneck, NJ",
+    quote: "“Great experience. Showed up on time and was very professional. Payed attention to details. Truck looked great. Will definitely use them again.”",
+    initials: "GR",
+    name: "George Ruth",
+    date: "March 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“A coating on my sedan booked around my late shifts without a hitch. Communication was clear and the finish is genuinely stunning.”",
-    initials: "YK",
-    name: "Yael K.",
-    town: "Hackensack, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“On the monthly plan now since my schedule never lets up. The car stays clean and I've handed the whole chore off to them.”",
-    initials: "CD",
-    name: "Chris D.",
-    town: "New Milford, NJ",
+    quote: "“They did an amazing job - car looks brand new and staff was very friendly”",
+    initials: "SG",
+    name: "Steven Gatanas",
+    date: "May 2026",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Paint correction turned my dull hood back to a mirror. They explained each step so I knew exactly what I was paying for.”",
-    initials: "IW",
-    name: "Imani W.",
-    town: "Bergenfield, NJ",
+    quote: "“APX performed a miracle on my 2016 Impala. The team was informed, capable, and passionate about the work. And it showed in the result. Excellent value for the job and highly recommended.”",
+    initials: "MS",
+    name: "Michael Savage",
+    date: "July 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“I brought my ram truck in for a detail last month I dealt with Matt it turned out great and he is very professional”",
+    initials: "P",
+    name: "Perry",
+    date: "February 2025",
     color: "#7a1f1f",
   },
 ];
@@ -212,8 +206,8 @@ export default function TeaneckPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Teaneck families say"
-        subtext="Comments from busy households across Teaneck and the towns beside it."
+        heading="What clients near Teaneck tell Google"
+        subtext="A handful of the five-star reviews APX has earned across the county."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

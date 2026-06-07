@@ -1,7 +1,8 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
+import subaruLegacyInterior from "@public/media/images/subaru-legacy-interior-front-seats.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
@@ -88,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“I've had my wagon fifteen years and figured the paint was just done. They corrected it and the color came back like new. No reason to trade it in now.”",
-    initials: "GP",
-    name: "Gary P.",
-    town: "Hillsdale, NJ",
+    quote: "“I have a 2025 Chevy trax (white paint) this is my first purchased car and the car I had prior was a beater so I didn’t have to clean at all or all that much. When. I got my new car it instantly got filthy both interior and exterior I called my boy Matt at APX car detailing, when I say my car was clean! I had a new car all over again, if you are looking for a quick convenient and most important quality detail on your car… CALL APX NOW.”",
+    initials: "BF",
+    name: "BAM Fitness",
+    date: "November 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“The interior of my old commuter was rough after a decade of school runs. They reset every surface and it smells and feels brand new again.”",
-    initials: "MF",
-    name: "Maria F.",
-    town: "Hillsdale, NJ",
+    quote: "“He cleaned my truck really good and made it look like new”",
+    initials: "AK",
+    name: "Adrian Kida",
+    date: "April 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“I plan to keep this car as long as it runs, so a maintenance plan made sense. It looks better now in year twelve than it did in year three.”",
-    initials: "SB",
-    name: "Stan B.",
-    town: "Hillsdale, NJ",
+    quote: "“I booked an appointment for a 5 year ceramic coating and wheels coating with APX Mobile Detailing. Came out really well and I’m happy with the results. Will be using them again”",
+    initials: "J",
+    name: "Jacoby",
+    date: "July 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“They treated a well-loved older sedan with the same care a new one would get. That attention is exactly why I called them in the first place.”",
-    initials: "CW",
-    name: "Carolyn W.",
-    town: "Woodcliff Lake, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“A correction and coating turned my faded daily into something I'm proud to park out front again. Worth every minute they spent on it.”",
-    initials: "PD",
-    name: "Phil D.",
-    town: "Park Ridge, NJ",
+    quote: "“Matt and the team do amazing work. They ceramic coated my m240i and it came out amazing. Highly recommend them”",
+    initials: "MR",
+    name: "Moe Robert",
+    date: "May 2026",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“No hauling it anywhere, no waiting room. They did the whole revival in my driveway while I went about my day. Couldn't be easier.”",
-    initials: "TR",
-    name: "Tessa R.",
-    town: "Emerson, NJ",
+    quote: "“Honestly both me and my brother-in-law are overly satisfied with how the final result came out. Worth the price, service was A1. And understanding when I had to make a last minute change to the appointment. Will be doing my Harley next.”",
+    initials: "JL",
+    name: "Justin LoVecchio",
+    date: "August 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Very thorough and detailed with his cleaning helped talked me through exactly what he would do before cleaning and executed to perfection”",
+    initials: "RG",
+    name: "Ryan Gilmartin",
+    date: "May 2025",
     color: "#7a1f1f",
   },
 ];
@@ -194,8 +189,8 @@ export default function HillsdalePage() {
         copy="Hillsdale drivers keep their cars for years, and so do we. Paint correction, interior revival, and maintenance that bring an older daily driver back and hold that look for seasons to come."
         image={{
           // Placeholder pending a real Hillsdale job photo from the owner.
-          src: lotusEmiraDriveway,
-          alt: "Black Lotus Emira kept in showroom condition on a brick paver driveway in Hillsdale",
+          src: subaruLegacyInterior,
+          alt: "Freshly deep-cleaned Subaru Legacy interior in a Hillsdale driveway",
           tag: "Hillsdale, NJ · Fully mobile",
         }}
       />
@@ -211,8 +206,8 @@ export default function HillsdalePage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="Hillsdale owners on keeping their cars"
-        subtext="From drivers who've held onto their cars, here and in the towns nearby."
+        heading="What owners around Hillsdale say"
+        subtext="Notes from our Google reviews, written by clients across the area."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

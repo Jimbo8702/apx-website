@@ -1,8 +1,9 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
+import fordF150Lifted from "@public/media/images/black-ford-f150-lifted-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
 import { ServiceProcess } from "@/app/services/_components/service-process";
@@ -88,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“My commute on 80 cakes the car in salt every winter. After their decon and sealant, the grime rinses off instead of baking into the paint.”",
-    initials: "PW",
-    name: "Pam W.",
-    town: "Saddle Brook, NJ",
+    quote: "“I recently hired APX mobile detailing to clean my mother's car. I spoke with Matt who quoted me a reasonable price and booked a date. His communication, promptness and work ethic was excellent. I highly recommend APX and Matt and will definitely use him again. Can't beat the convenience of mobile detailing .”",
+    initials: "CG",
+    name: "carolyn griffenkranz",
+    date: "May 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Brake dust and road film had my wheels and lower panels looking rough. They got everything spotless and added protection that's holding up.”",
-    initials: "VL",
-    name: "Victor L.",
-    town: "Saddle Brook, NJ",
+    quote: "“A wonderful job with my car! Highly recommend.”",
+    initials: "KK",
+    name: "Kirk Kushnerick",
+    date: "October 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“Living off Route 46 means the car takes a beating. A coating later, winter salt no longer eats at the finish the way it used to.”",
-    initials: "KD",
-    name: "Kara D.",
-    town: "Saddle Brook, NJ",
+    quote: "“Had my Jeep Gladiator ceramic coated a few weeks ago and it looks fantastic. The team was very responsive, knowledgeable and very friendly. Thanks again”",
+    initials: "KV",
+    name: "Kennedy Veatch",
+    date: "August 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“They came out and pulled months of highway film off my truck in the driveway. No shop trip, no hose of mine, just a clean truck by the end.”",
-    initials: "LF",
-    name: "Lou F.",
-    town: "Maywood, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“On a seasonal schedule now so the salt never gets ahead of me. The car looks consistently sharp no matter how rough the roads get.”",
-    initials: "AR",
-    name: "Angela R.",
-    town: "Fair Lawn, NJ",
+    quote: "“Matt is easy to work with. My car looks great with the coating. Thank you, Matt!”",
+    initials: "JW",
+    name: "Joan Wang",
+    date: "October 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“A correction lifted the etching the road spray had left behind. Professional crew, fair process, and the gloss came right back.”",
-    initials: "SM",
-    name: "Seth M.",
-    town: "Hackensack, NJ",
+    quote: "“Amazing service ! My car came out brand new ! I have 3 kids and I’m a shame of the mess I always have ! They told me not to worry “ we don’t judge “ 😂 and started working on it ! Is worth every penny !”",
+    initials: "IF",
+    name: "Ivette Fernandez",
+    date: "January 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Recently had my car detailed by APX, and it was fantastic! 10/10 would recommend will be using them again in the future!”",
+    initials: "KM",
+    name: "kelsey mcomish",
+    date: "February 2025",
     color: "#7a1f1f",
   },
 ];
@@ -194,8 +189,8 @@ export default function SaddleBrookPage() {
         copy="Saddle Brook sits where I-80 meets Route 46, and the road shows on your paint. Ceramic coating, paint correction, and detailing that strip away salt, film, and brake dust season after season."
         image={{
           // Placeholder pending a real Saddle Brook job photo from the owner.
-          src: bmwX5Corrected,
-          alt: "Dark blue BMW X5 with mirror-finish corrected paint in a Saddle Brook driveway",
+          src: fordF150Lifted,
+          alt: "Lifted black Ford F-150 with a deep-gloss finish in a Saddle Brook driveway",
           tag: "Saddle Brook, NJ · Fully mobile",
         }}
       />
@@ -211,8 +206,8 @@ export default function SaddleBrookPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Saddle Brook commuters say"
-        subtext="Feedback from drivers here and the towns just off the highway."
+        heading="What drivers near Saddle Brook say"
+        subtext="Verbatim from Google: clients on APX quality and care."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

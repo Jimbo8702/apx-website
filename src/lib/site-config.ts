@@ -91,4 +91,7 @@ export const siteConfig = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
+
+  /** Google Ads tag (gtag.js), rendered site-wide in the root layout. */
+  googleTagId: process.env.NEXT_PUBLIC_GOOGLE_TAG_ID ?? "AW-16923048772",
 } as const;

@@ -1,6 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import mercedesAmgWheelDetail from "@public/media/images/gray-mercedes-amg-wheel-detail.jpeg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -88,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“They prepped my 911 for a concours weekend and the judges noticed. Calm, meticulous work done right on the estate without any commotion.”",
-    initials: "CB",
-    name: "Charles B.",
-    town: "Saddle River, NJ",
+    quote: "“485 detailing with Matt always delivers!! He regularly details my truck and trailer and would recommend him to anyone! Takes his time and throughly makes every look, feel, and smell brand new! Fair priced and worth every penny! Support local business and from one business to another... super professional”",
+    initials: "GE",
+    name: "GBE Events",
+    date: "October 2024",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Two collector cars coated in my own garage over an afternoon. They worked quietly, respected the property, and the results are flawless.”",
-    initials: "VL",
-    name: "Vivian L.",
-    town: "Saddle River, NJ",
+    quote: "“Got two cars done with APX. Excellent job”",
+    initials: "NM",
+    name: "NAZAR MAKOHIN",
+    date: "May 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“I don't let just anyone near the convertible. After one visit Matt and the team have my full confidence, and the paint has never looked deeper.”",
-    initials: "RK",
-    name: "Roger K.",
-    town: "Saddle River, NJ",
+    quote: "“Great detailing work! Arrived on time, very professional, and decently priced. I highly recommend and will definitely use their services again.”",
+    initials: "JL",
+    name: "Javier L. Orellana",
+    date: "September 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Full correction on my coupe before a private auction. The finish photographed beautifully and helped close the sale above where I'd hoped.”",
-    initials: "SD",
-    name: "Simone D.",
-    town: "Waldwick, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“They keep the whole garage on a quiet rotation. The cars stay ready to drive or show and I never have to think about it.”",
-    initials: "HW",
-    name: "Hank W.",
-    town: "Woodcliff Lake, NJ",
+    quote: "“Nice guys, fair pricing. Came right to my job and did the work. Very happy”",
+    initials: "MD",
+    name: "Mike DeNardo",
+    date: "June 2026",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Detailed a long-stored roadster down to the door jambs and wheel wells. It came back looking like it just left the dealership.”",
-    initials: "AM",
-    name: "Audrey M.",
-    town: "Ridgewood, NJ",
+    quote: "“I brought in my Mazda CX-30 and my Porsche 911 to get detailed. They did a wonderful job on both and they look brand new. I highly recommend their services to anyone looking for luxury detailing!!”",
+    initials: "CO",
+    name: "Corie OBrien",
+    date: "January 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Amazing job 🤩 My car has never looked better, looks brand new! Matt is so professional i would recommend him anyday!”",
+    initials: "EA",
+    name: "Emily Amaya",
+    date: "June 2025",
     color: "#7a1f1f",
   },
 ];
@@ -194,8 +189,8 @@ export default function SaddleRiverPage() {
         copy="Saddle River estates deserve careful, private work. APX brings ceramic coating, paint correction, and show-ready detailing to your garage, from the daily to the collector kept under cover."
         image={{
           // Placeholder pending a real Saddle River job photo from the owner.
-          src: rollsRoyceCeramic,
-          alt: "Black Rolls-Royce Ghost with a deep-gloss finish in the driveway of a Saddle River home",
+          src: mercedesAmgWheelDetail,
+          alt: "Polished Mercedes-AMG wheel beside the fully stocked APX van in Saddle River",
           tag: "Saddle River, NJ · Fully mobile",
         }}
       />
@@ -211,8 +206,8 @@ export default function SaddleRiverPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Saddle River owners say"
-        subtext="Words from estate owners in Saddle River and the towns around it."
+        heading="Reviews from around Saddle River"
+        subtext="What owners across the area say about trusting APX with their cars."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

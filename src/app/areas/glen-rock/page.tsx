@@ -1,9 +1,9 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
-import handFinishingTruck from "@public/media/images/image_11.jpg";
+import foamWashWheelDetail from "@public/media/images/blue-sports-car-foam-wash-wheel-detail.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
 import { ServiceProcess } from "@/app/services/_components/service-process";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“My car sits at the Glen Rock platform five days a week, so weekends are the only window. They came Saturday morning and had it done before lunch.”",
-    initials: "NA",
-    name: "Neil A.",
-    town: "Glen Rock, NJ",
+    quote: "“We are very happy with the work that Matt and his team did for us. He followed through on everything he promised, and we’re thrilled with the results! We had Matt do a full detail, an exterior detail, and a light clean on another vehicle. We also had him apply 5-year ceramic coatings, and everything turned out beautifully. Matt was flexible with scheduling, arrived on time, and was a pleasure to work with. We will definitely be using APX again and highly recommend them!”",
+    initials: "RH",
+    name: "Regina H",
+    date: "July 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Booked them on a remote-work Thursday and barely looked up from my desk. By my afternoon meeting the car outside looked brand new.”",
-    initials: "DR",
-    name: "Dana R.",
-    town: "Glen Rock, NJ",
+    quote: "“Matt is easy to work with. My car looks great with the coating. Thank you, Matt!”",
+    initials: "JW",
+    name: "Joan Wang",
+    date: "October 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“Years of parking outside left the clear coat hazy. Their correction brought the depth right back and the coating should keep it that way.”",
-    initials: "TB",
-    name: "Trevor B.",
-    town: "Glen Rock, NJ",
+    quote: "“I brought in my Mazda CX-30 and my Porsche 911 to get detailed. They did a wonderful job on both and they look brand new. I highly recommend their services to anyone looking for luxury detailing!!”",
+    initials: "CO",
+    name: "Corie OBrien",
+    date: "January 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Scheduling around a commuter's week is impossible for most services. These guys actually worked with my calendar and showed up exactly when promised.”",
-    initials: "HG",
-    name: "Holly G.",
-    town: "Ridgewood, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“On a weekend maintenance plan now and my car never looks like it's been baking at a train lot all week. Honestly the best money I spend on it.”",
-    initials: "MJ",
-    name: "Marcus J.",
-    town: "Fair Lawn, NJ",
+    quote: "“Amazing job 🤩 My car has never looked better, looks brand new! Matt is so professional i would recommend him anyday!”",
+    initials: "EA",
+    name: "Emily Amaya",
+    date: "June 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“They detailed both our cars in one weekend visit while we ran errands. Came home to a spotless driveway and two cars that looked showroom fresh.”",
-    initials: "FN",
-    name: "Faith N.",
-    town: "Waldwick, NJ",
-    color: "#1f4d7a",
+    quote: "“I brought my jeep in for Ceramic Window tints to match the back. It came out great!!! I dealt with Matt and he even vacuumed my interior as well. He is extremely professional and is amazing at what he does. Totally recommend him and his company!”",
+    initials: "RG",
+    name: "Rebecca Graf",
+    date: "January 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Had my Jeep Gladiator ceramic coated a few weeks ago and it looks fantastic. The team was very responsive, knowledgeable and very friendly. Thanks again”",
+    initials: "KV",
+    name: "Kennedy Veatch",
+    date: "August 2025",
+    color: "#7a1f1f",
   },
 ];
 
@@ -195,8 +189,8 @@ export default function GlenRockPage() {
         copy="Between the train and the desk, there's no time to chase a detail shop. APX comes to your Glen Rock home on a remote-work day or a weekend for detailing, paint correction, and ceramic coating."
         image={{
           // Placeholder pending a real Glen Rock job photo from the owner.
-          src: handFinishingTruck,
-          alt: "APX detailer hand-polishing the emblem and trim on a black Ford truck in a Glen Rock driveway",
+          src: foamWashWheelDetail,
+          alt: "APX detailer hand-washing a foam-covered sports car wheel in Glen Rock",
           tag: "Glen Rock, NJ · Fully mobile",
         }}
       />
@@ -212,8 +206,8 @@ export default function GlenRockPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Glen Rock commuters say"
-        subtext="Words from riders and remote workers in Glen Rock and the towns nearby."
+        heading="Google reviews around Glen Rock"
+        subtext="Honest words from APX clients across northern New Jersey."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

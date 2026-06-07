@@ -1,27 +1,27 @@
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
 import porsche911Cabriolet from "@public/media/images/blue-porsche-911-turbo-s-cabriolet-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
-import dodgeCharger from "@public/media/images/silver-dodge-charger-scat-pack-rear.jpeg";
-import teslaModelY from "@public/media/images/gray-tesla-model-y-rear-2.jpeg";
+import mercedesCClassInterior from "@public/media/images/mercedes-benz-c-class-amg-interior.jpeg";
+import porscheHoodFoamWash from "@public/media/images/blue-porsche-hood-emblem-foam-wash.jpeg";
+import redCaliperWheelDetail from "@public/media/images/black-sports-car-red-caliper-wheel-detail.jpeg";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Photo } from "@/components/ui/photo";
 
 const SHOTS = [
   {
-    src: astonMartinInterior,
-    alt: "Aston Martin red leather interior, deep cleaned and conditioned",
+    src: mercedesCClassInterior,
+    alt: "Black leather Mercedes-AMG C-Class interior detailed and conditioned",
     tag: "Interior detail",
   },
   {
-    src: teslaModelY,
-    alt: "Gray Tesla Model Y, detailed with the APX van on site",
-    tag: "Tesla Model Y",
+    src: porscheHoodFoamWash,
+    alt: "Foam wash swirling over the Porsche crest on a deep blue hood",
+    tag: "Foam hand wash",
   },
   {
-    src: dodgeCharger,
-    alt: "Silver Dodge Charger rear with the APX van in the background",
-    tag: "Dodge Charger",
+    src: redCaliperWheelDetail,
+    alt: "Glossy black sports car wheel with a red brake caliper at golden hour",
+    tag: "Wheel detail",
   },
   {
     src: rollsRoyceCeramic,

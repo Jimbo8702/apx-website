@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Hanken_Grotesk } from "next/font/google";
 import Script from "next/script";
@@ -81,6 +82,8 @@ export default function RootLayout({
           data-source="WEB_USER"
           strategy="lazyOnload"
         />
+        {/* Google Ads tag (gtag.js); loads after hydration, off the critical path. */}
+        <GoogleAnalytics gaId={siteConfig.googleTagId} />
       </body>
     </html>
   );

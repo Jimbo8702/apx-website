@@ -1,8 +1,8 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
-import porsche911Coated from "@public/media/images/blue-porsche-911-turbo-s-cabriolet-front.jpeg";
+import blackPorscheMacan from "@public/media/images/black-porsche-macan-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
 import { ServiceHero } from "@/app/services/_components/service-hero";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“I'm on the fourteenth floor with no driveway and figured mobile detailing was off the table. They met me in the garage and handled the whole thing by my spot.”",
-    initials: "GH",
-    name: "Grace H.",
-    town: "Fort Lee, NJ",
+    quote: "“Had my BMW X5 ceramic coated and it looks amazing. My main concern was how I was going to protect my car for the years to come and Matt helped and guided me every step of the way. He educated me on what the best option would be for what I was looking for and I truly appreciate that. You don't really come across a lot of young people who truly care about the service and customer care they provide. Will defnitely recommend their services to anybody and everybody I know. Thank you again!”",
+    initials: "NB",
+    name: "NM Booths Co",
+    date: "October 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Cleared it with my building first and they set up right on the parking deck. Quiet, tidy, and my BMW came out looking better than the day I bought it.”",
-    initials: "LP",
-    name: "Leo P.",
-    town: "Fort Lee, NJ",
+    quote: "“Matt did an amazing work on my vehicle. Looks like it came off the showroom floor”",
+    initials: "DF",
+    name: "Dan F",
+    date: "April 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“A pillar in my garage had left a scrape down the door. They polished it out right there in my assigned spot. Genuinely didn't think that was possible.”",
-    initials: "MS",
-    name: "Mina S.",
-    town: "Fort Lee, NJ",
+    quote: "“Amazing service ! My car came out brand new ! I have 3 kids and I’m a shame of the mess I always have ! They told me not to worry “ we don’t judge “ 😂 and started working on it ! Is worth every penny !”",
+    initials: "IF",
+    name: "Ivette Fernandez",
+    date: "January 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“No outlet, no hose, just a concrete deck and they made it work. Everything came off the van and the car looked incredible. Apartment life finally caught a break.”",
-    initials: "JF",
-    name: "Jordan F.",
-    town: "Teaneck, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“Got my coupe coated without ever moving it out of the building. They were careful in the tight space and the finish is glass-smooth. Couldn't recommend more.”",
-    initials: "CO",
-    name: "Cathy O.",
-    town: "Hackensack, NJ",
+    quote: "“Recently had my car detailed by APX, and it was fantastic! 10/10 would recommend will be using them again in the future!”",
+    initials: "KM",
+    name: "kelsey mcomish",
+    date: "February 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“On a plan now and they come right to my deck spot each visit. The car stays spotless even living in a city garage. Exactly what I was hoping to find.”",
-    initials: "VS",
-    name: "Viktor S.",
-    town: "Alpine, NJ",
-    color: "#1f4d7a",
+    quote: "“APX did an excellent job, Matt’s attention to detail is incredible. Having three dogs means our interior was an absolute mess. After APX, my Chevy Traverse looks brand new, inside and out. Highly recommend APX for anyone looking for car detailing.”",
+    initials: "JS",
+    name: "James Sgarella",
+    date: "March 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“I would highly recommend APX mobile detailing for all of your car care needs. Matt and team did an amazing job on my car and they are extremely professional!”",
+    initials: "SP",
+    name: "Satyam Prasad",
+    date: "May 2026",
+    color: "#7a1f1f",
   },
 ];
 
@@ -195,8 +189,8 @@ export default function FortLeePage() {
         copy="High-rise living by the GW Bridge doesn't mean skipping the detail. APX brings ceramic coating, paint correction, and full details to your Fort Lee garage, deck, or lot, no driveway needed."
         image={{
           // Placeholder pending a real Fort Lee job photo from the owner.
-          src: porsche911Coated,
-          alt: "Dark blue Porsche 911 Turbo S freshly ceramic coated in a Fort Lee parking garage",
+          src: blackPorscheMacan,
+          alt: "Black Porsche Macan glossy after an evening detail outside a Fort Lee garage",
           tag: "Fort Lee, NJ · Fully mobile",
         }}
       />
@@ -212,8 +206,8 @@ export default function FortLeePage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Fort Lee residents tell us"
-        subtext="Feedback from condo and apartment dwellers in Fort Lee and nearby towns."
+        heading="What drivers near Fort Lee say"
+        subtext="From our Google profile: clients on the work APX delivers around the county."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

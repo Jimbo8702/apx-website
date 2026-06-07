@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
-import porscheCayenneDetail from "@public/media/images/silver-porsche-cayenne-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import foamWashWheelDetail from "@public/media/images/blue-sports-car-foam-wash-wheel-detail.jpeg";
+import alfaGiuliaBrownInterior from "@public/media/images/alfa-romeo-giulia-brown-leather-interior.jpeg";
 import { ClockIcon, DropletIcon, ShieldIcon, SparklesIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
@@ -47,7 +47,8 @@ const BENEFITS = [
 const TIERS: PricingTier[] = [
   {
     name: "Interior Detail",
-    tagline: "Our standard interior service: a thorough top-to-bottom clean-up for cabins that need a reset.",
+    tagline:
+      "Our standard interior service: a thorough top-to-bottom clean-up for cabins that need a reset.",
     startingPrice: "$195.00",
     startingLabel: "Coupe/Sedan",
     prices: [
@@ -99,51 +100,45 @@ const STEPS = [
 
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Two kids, one dog, and three years of commuting. After the Luxury Detail my Pilot honestly looked better than the day I bought it.”",
-    initials: "DM",
-    name: "Dana M.",
-    town: "Closter, NJ",
-    color: "#1f4d7a",
-  },
-  {
-    quote:
-      "“Ran my hand over the hood after the clay treatment and couldn't believe it was the same car. It feels like glass and the black paint finally pops again.”",
-    initials: "GK",
-    name: "Greg K.",
-    town: "Alpine, NJ",
+    quote: "“Very nice and professional. Did the exterior wash, clay, and seal along with the interior deep clean. I have 3 kids so you can imagine the mess. They came to my home and took 3.5 hours or so. Did a great job inside and out. Highly recommend.”",
+    initials: "JR",
+    name: "John Rubio",
+    date: "April 2026",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“My golden retriever rides shotgun every day. They got every strand of hair out of the seats and carpet, places I'd given up on years ago.”",
-    initials: "JF",
-    name: "Jess F.",
-    town: "Emerson, NJ",
+    quote: "“I scheduled an appointment with APX and they did an INCREDIBLE job. I really needed my Toyota cleaned throughly. I have 3 dogs and they are in the car all of the time. Matt took his time going through and cleaning every spot. The car looks like I just picked it up from the dealership. I highly recommend to anyone, especially someone with dogs!! Haha”",
+    initials: "YM",
+    name: "Yolanda Martinez",
+    date: "March 2025",
+    color: "#1f4d7a",
+  },
+  {
+    quote: "“Needed an interior clean with seat steaming and sanitizing for my daily driver. WOW. This guy goes all in and my car is cleaner than it was when I purchased it. Amazing work - OCD caliber cleaning... love it - thank you!!!”",
+    initials: "NC",
+    name: "Nicolas Colletto",
+    date: "October 2024",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Three months in and rain still beads off like the day they sealed it. Quick rinse and the car looks freshly washed. Best $200 I've spent on this car.”",
-    initials: "LM",
-    name: "Lisa M.",
-    town: "Norwood, NJ",
+    quote: "“Right to my house, no need to go to a site. ant husband’s Dodge Charger Scat Pack was scheduled for a full detail and I couldn’t be happier with the results. The car looks absolutely brand new—inside and out. The attention to detail was incredible, from the deep clean of the interior to the flawless shine on the paint. They really brought out the muscle and gloss of the car, and even little things like the wheels and trim look showroom fresh. Professional, efficient, and passionate about their work—exactly what you want when trusting someone with your car. I’ll definitely be coming back and recommending them to anyone looking to keep their ride in top condition.”",
+    initials: "SM",
+    name: "Savannah Moreno",
+    date: "August 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Coffee stains, crumbs in every seam, winter salt ground into the carpet. All gone. The sanitation step makes a real difference, the car even smells new.”",
-    initials: "AK",
-    name: "Anna K.",
-    town: "River Edge, NJ",
+    quote: "“Matt was great to work with! Was looking for a premium interior detail and APX Mobile Detailing has some of the most reasonable prices around with great quality work. Would highly recommend to anyone looking for a detail.”",
+    initials: "CC",
+    name: "Christina Carpio",
+    date: "February 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“Did the interior detail before listing my Camry for sale. It sold in two days and the buyer specifically mentioned how clean the inside was.”",
-    initials: "RC",
-    name: "Ray C.",
-    town: "Englewood, NJ",
+    quote: "“I had my Tahoe detailed by Matt after the summer season. Matt was able to accommodate me, where he detailed my vehicle on a work day, so I didn’t need access to my vehicle. When he picked it up dirty and it had sand in it, and when he brought it back a few hours later, the Tahoe looked great and I couldn’t find any sand.”",
+    initials: "EJ",
+    name: "Edward J Kneisler III",
+    date: "January 2025",
     color: "#7a1f1f",
   },
 ];
@@ -211,9 +206,9 @@ export default function DetailingPage() {
         }
         copy="Interior, exterior, or the complete inside-and-out detail, done in your driveway. Deep cleaning, sanitation, and lasting protection at the level your car needs."
         image={{
-          src: porscheCayenneDetail,
-          alt: "Freshly detailed silver Porsche Cayenne coupe in a paver driveway with the APX mobile detailing van behind it",
-          tag: "Full detail · Porsche Cayenne",
+          src: alfaGiuliaBrownInterior,
+          alt: "Deep-cleaned brown leather interior of an Alfa Romeo Giulia after a full detail",
+          tag: "Interior detailed · Alfa Romeo Giulia",
         }}
       />
       <ServiceBenefits
@@ -224,9 +219,9 @@ export default function DetailingPage() {
         ]}
         benefits={BENEFITS}
         image={{
-          src: astonMartinInterior,
-          alt: "Deep-cleaned red leather interior of an Aston Martin V8 Vantage after a full detail",
-          tag: "Leather cleaned & conditioned · Aston Martin",
+          src: foamWashWheelDetail,
+          alt: "Foam wash covering a blue sports car's wheel during a hand wash on an exterior detail",
+          tag: "Foam bath & wheel detail",
         }}
       />
       <PricingTiers
@@ -236,11 +231,7 @@ export default function DetailingPage() {
         tiers={TIERS}
         footnote="Want protection on every surface? Upgrade the Full Premium to our Luxury Detail for $100 more. It adds a more durable sealant plus SiO2 leather protection, UV protection for the dash and doors, and stain guard for fabric and carpet."
       />
-      <ServiceProcess
-        eyebrow="Our process"
-        heading="What to expect on detail day"
-        steps={STEPS}
-      />
+      <ServiceProcess eyebrow="Our process" heading="What to expect on detail day" steps={STEPS} />
       <Testimonials
         heading="What clients say after an APX detail"
         subtext="Real reviews from interior, exterior, and full details."

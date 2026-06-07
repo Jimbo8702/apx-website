@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import teslaModelY from "@public/media/images/gray-tesla-model-y-rear-2.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Our minivan takes a beating from three kids and a dog. Matt and the team got the interior looking like the dealership lot again without me leaving the house.”",
-    initials: "MB",
-    name: "Monica B.",
-    town: "New Milford, NJ",
-    color: "#2f6e4a",
-  },
-  {
-    quote:
-      "“They're basically around the corner, so booking was painless and they showed up right on time. My Highlander hasn't looked this good since the day I bought it.”",
-    initials: "MD",
-    name: "Mike D.",
-    town: "New Milford, NJ",
+    quote: "“I recently had my car detailed by APX and couldn’t be happier with the results! The attention to detail was truly impressive — every inch of the car looks brand new. Matt was professional, thorough, and clearly takes great pride in his work. It’s rare to find someone who goes above and beyond like he did. I highly recommend this mobile car wash and detailing service to anyone who wants their vehicle looking brand new 🤩”",
+    initials: "KP",
+    name: "Kelly P",
+    date: "April 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Had a ceramic coating put on my daily driver to fight the road salt all winter. Beads water like crazy now and the rinse-offs take half the time.”",
-    initials: "KT",
-    name: "Karen T.",
-    town: "Dumont, NJ",
+    quote: "“Great job! Highly recommend. Courteous efficient team!”",
+    initials: "LG",
+    name: "Lana Gofman Rosenson",
+    date: "September 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“Paint correction on my SUV erased years of scratches I figured were permanent. They worked it panel by panel right in my driveway and the gloss is unreal.”",
-    initials: "OF",
-    name: "Omar F.",
-    town: "Bergenfield, NJ",
+    quote: "“Last week I scheduled an appointment with Matt and his team. I have an Audi Q5 that I wanted ceramic coated… I got the glass, rims and paint done and it came out amazing!!”",
+    initials: "RA",
+    name: "Rey Aldana",
+    date: "November 2025",
+    color: "#2f6e4a",
+  },
+  {
+    quote: "“Matt and his team did an amazing job on my 2008 Accord. I'll be using them again. Highly recommend them.”",
+    initials: "OM",
+    name: "Omar Munoz",
+    date: "September 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“We signed both cars up for the maintenance plan. They circle back like clockwork and the cars always look freshly done. Easiest decision we've made.”",
-    initials: "LC",
-    name: "Lauren C.",
-    town: "Haworth, NJ",
+    quote: "“APX Detailing did an awesome job ceramic coating my 2024 Mustang! They came right to my house, were super professional, and made my car look better than brand new. The shine and protection are insane, I couldn’t be happier!”",
+    initials: "JL",
+    name: "Joseph Langschultz",
+    date: "October 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“No spigot at my place and they didn't blink. Water, power, all of it came off the van and the wash still turned out spotless. Truly nothing to set up.”",
-    initials: "DN",
-    name: "David N.",
-    town: "Tenafly, NJ",
-    color: "#2f6e4a",
+    quote: "“Matt and his team did an incredible job cleaning and applying ceramic coating on my car. It was done in less than 2 hours, amazing work!”",
+    initials: "JB",
+    name: "James Buntar",
+    date: "May 2026",
+    color: "#7a1f1f",
   },
 ];
 
@@ -212,8 +206,8 @@ export default function NewMilfordPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What New Milford drivers say"
-        subtext="Notes from families and daily drivers around New Milford and the towns nearby."
+        heading="Reviews from the New Milford area"
+        subtext="What clients across our routes tell Google about APX."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

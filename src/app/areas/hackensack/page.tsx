@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import teslaModelY from "@public/media/images/gray-tesla-model-y-rear-2.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“They detailed my car in the office lot while I sat in back-to-back meetings. I walked out at five to a vehicle that looked like it just left the dealer.”",
-    initials: "AL",
-    name: "Andre L.",
-    town: "Hackensack, NJ",
+    quote: "“APX is a trustworthy, high-quality detailer. Matt & Nick took great care of my car. I got a full detail & trim restoration. The car looks brand new and the trim looks even darker than when I bought it! They checked in with me throughout the detail to ensure my satisfaction, which was greatly appreciated. Highly recommend if you want to feel confident your car is in good hands. Will definitely be getting another detail from APX in the future.”",
+    initials: "MF",
+    name: "Michael Fusco",
+    date: "May 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Best use of a workday I can think of. Handed over the keys at nine, got them back spotless before my afternoon calls. Didn't lose a minute of productivity.”",
-    initials: "KB",
-    name: "Keisha B.",
-    town: "Hackensack, NJ",
+    quote: "“Nice guys, fair pricing. Came right to my job and did the work. Very happy”",
+    initials: "MD",
+    name: "Mike DeNardo",
+    date: "June 2026",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“A few door dings from the garage downstairs had been bugging me for months. They buffed them out right in my reserved spot while I worked upstairs.”",
-    initials: "TR",
-    name: "Tom R.",
-    town: "Hackensack, NJ",
+    quote: "“APX performed a miracle on my 2016 Impala. The team was informed, capable, and passionate about the work. And it showed in the result. Excellent value for the job and highly recommended.”",
+    initials: "MS",
+    name: "Michael Savage",
+    date: "July 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“Cleared it with our building manager and they set up in the lot no problem. My SUV came out flawless and I never had to take time off to make it happen.”",
-    initials: "VS",
-    name: "Valerie S.",
-    town: "Teaneck, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“Got a coating done on my sedan during a regular Tuesday at the office. Watching it go from dull to glossy on my lunch break was honestly the highlight.”",
-    initials: "HM",
-    name: "Hector M.",
-    town: "Maywood, NJ",
+    quote: "“I brought my ram truck in for a detail last month I dealt with Matt it turned out great and he is very professional”",
+    initials: "P",
+    name: "Perry",
+    date: "February 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“We put the whole department's lease cars on a plan and they rotate through the lot on schedule. The fleet has never looked this consistently clean.”",
-    initials: "JP",
-    name: "June P.",
-    town: "Saddle Brook, NJ",
-    color: "#1f4d7a",
+    quote: "“Recently had my car detailed and am so happy with the results! Arrived on time and did a great job! They paid great attention to detail and the car looks amazing. I would highly recommend them to anyone looking for a great detailing service!!”",
+    initials: "SG",
+    name: "Sara Gardner",
+    date: "October 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Great detailing work! Arrived on time, very professional, and decently priced. I highly recommend and will definitely use their services again.”",
+    initials: "JL",
+    name: "Javier L. Orellana",
+    date: "September 2025",
+    color: "#7a1f1f",
   },
 ];
 
@@ -212,8 +206,8 @@ export default function HackensackPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Hackensack professionals say"
-        subtext="Feedback from people who got it done at work, in Hackensack and beyond."
+        heading="What clients near Hackensack report"
+        subtext="Five-star Google feedback from across the towns APX serves."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import porsche911Cabriolet from "@public/media/images/blue-porsche-911-turbo-s-cabriolet-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import redMercedesGlc from "@public/media/images/red-mercedes-benz-glc-coupe-front.jpeg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -89,54 +89,48 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“The maples out front coat my car in sap every spring. After a coating from APX the gunk just rinses away now instead of baking into the paint.”",
-    initials: "CM",
-    name: "Colin M.",
-    town: "Harrington Park, NJ",
+    quote: "“Recently, I had both of my cars cleaned, detailed and Ceramic coating applied and couldn’t be more pleased by the work that Matt and his team have done. I’m a repeat customer and will continue to utilize the services of APX Mobile Detailing and I highly recommend those who see this review to do the same. One highlight is they come to you and perform the work utilizing their customized van that has everything necessary to get the job done.”",
+    initials: "BD",
+    name: "Bill D",
+    date: "September 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Bird droppings had already etched a couple spots on my hood. They corrected the marks and sealed it so the next mess wipes off clean.”",
-    initials: "BA",
-    name: "Beth A.",
-    town: "Harrington Park, NJ",
+    quote: "“They did an amazing job - car looks brand new and staff was very friendly”",
+    initials: "SG",
+    name: "Steven Gatanas",
+    date: "May 2026",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“Our street is wall-to-wall shade trees and the car showed it. A full detail pulled out all the pollen and pine, inside and out.”",
-    initials: "SR",
-    name: "Sanjay R.",
-    town: "Harrington Park, NJ",
+    quote: "“Matt is a professional at what he does!!! He detailed my Honda Civic and I couldn't believe the after, what an amazing transformation!! my car looked like it just left the dealership!”",
+    initials: "KS",
+    name: "Katie Sullivan",
+    date: "January 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“They came to the house, parked on our narrow lane, and never asked for a hose or an outlet. Polished and effortless from start to finish.”",
-    initials: "EK",
-    name: "Erin K.",
-    town: "Norwood, NJ",
-    color: "#5a2f6e",
-  },
-  {
-    quote:
-      "“Put both of ours on a regular plan so the tree mess never gets a head start anymore. They show up like clockwork and the cars stay spotless.”",
-    initials: "WF",
-    name: "Walt F.",
-    town: "Old Tappan, NJ",
+    quote: "“I had my brand new Chevy Silverado ceramic coated for 2 years. The quality came out great and they do amazing work.”",
+    initials: "MP",
+    name: "Michael Prestigiacomo",
+    date: "February 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“Years of swirls gone in an afternoon, right in my driveway. The paint has a depth to it now that I honestly forgot it had.”",
-    initials: "DL",
-    name: "Donna L.",
-    town: "Demarest, NJ",
+    quote: "“I am very happy with the ceramic coating and detailing on my brand new Audi RSQ8. Matt was very thorough and knowledgeable and he answered all my questions that I had. Going to be using them for 2 of my other cars back at home. Thanks again!”",
+    initials: "VS",
+    name: "viktoria stolarz",
+    date: "July 2025",
+    color: "#5a2f6e",
+  },
+  {
+    quote: "“Great experience. Showed up on time and was very professional. Payed attention to details. Truck looked great. Will definitely use them again.”",
+    initials: "GR",
+    name: "George Ruth",
+    date: "March 2025",
     color: "#7a1f1f",
   },
 ];
@@ -195,8 +189,8 @@ export default function HarringtonParkPage() {
         copy="APX works out of nearby Dumont, so Harrington Park is right next door. Ceramic coatings, paint correction, and detailing that shield tree-lined-street cars from sap, pollen, and droppings."
         image={{
           // Placeholder pending a real Harrington Park job photo from the owner.
-          src: porsche911Cabriolet,
-          alt: "Navy Porsche 911 Turbo S cabriolet freshly detailed in a Harrington Park driveway",
+          src: redMercedesGlc,
+          alt: "Red Mercedes-Benz GLC coupe shining after a detail on a Harrington Park street",
           tag: "Harrington Park, NJ · Fully mobile",
         }}
       />
@@ -212,8 +206,8 @@ export default function HarringtonParkPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="Harrington Park neighbors weigh in"
-        subtext="Words from drivers near the reservoirs and the towns just over the line."
+        heading="Reviews from around Harrington Park"
+        subtext="What clients say on Google after APX works on their cars."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

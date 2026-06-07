@@ -1,5 +1,5 @@
 import { pageMetadata } from "@/lib/page-metadata";
-import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
+import mercedesWheelApxVan from "@public/media/images/black-mercedes-benz-wheel-with-apx-van.jpeg";
 import dodgeCharger from "@public/media/images/silver-dodge-charger-scat-pack-rear.jpeg";
 import { CalendarIcon, ClockIcon, ShieldIcon, SparklesIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
@@ -111,51 +111,45 @@ const STEPS = [
 
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“Black Escalade, three kids, two dogs. The bi-weekly plan is the only reason it looks like a luxury car instead of a school bus. Best money I spend each month.”",
-    initials: "MR",
-    name: "Mike R.",
-    town: "Saddle River, NJ",
-    color: "#1f4d7a",
-  },
-  {
-    quote:
-      "“They've come every two weeks for six months, same day, same time, rain or shine. I genuinely never think about my car being dirty anymore.”",
-    initials: "EC",
-    name: "Elena C.",
-    town: "Ho-Ho-Kus, NJ",
+    quote: "“Had my vehicle detailed and ceramic coated. The service is unmatched and I am very pleased with the results. Will be going to them again for their maintenance plan. They’re one of the best!”",
+    initials: "RS",
+    name: "Rachael Sullivan",
+    date: "August 2025",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Got the monthly plan after my ceramic coating and it's the perfect pairing. Proper hand washes keep the coating beading like new, and I never touch a brush wash.”",
-    initials: "DP",
-    name: "Dan P.",
-    town: "Allendale, NJ",
+    quote: "“I had Matt and the APX team come to my house and 2 year ceramic coat my ford ranger as well as detail my cousins car. The customer service was excellent and I signed up for their maintenance plan for both vehicles. I’d recommend them to everyone!”",
+    initials: "SS",
+    name: "Steven Spina",
+    date: "February 2025",
+    color: "#1f4d7a",
+  },
+  {
+    quote: "“Been using APX for some time now and can definitely say Matt is the real deal, extremely reliable and communicative. I would definitely recommend APX to the next guy, make sure to get the ceramic coating!”",
+    initials: "AM",
+    name: "Anthony Moubayed",
+    date: "February 2025",
     color: "#2f6e4a",
   },
   {
-    quote:
-      "“My lease turn-in inspection took five minutes. Three years of monthly maintenance and the inspector said it was the cleanest return he'd seen all month.”",
-    initials: "SL",
-    name: "Sue L.",
-    town: "Woodcliff Lake, NJ",
+    quote: "“Matt came to my location to detail 3 of my cars and made them all look better than new! Very thorough, friendly, knowledgable and addressed any questions or areas that needed extra attention or required a delicate approach. He had a wide range of products to tackle the different types materials he came across on the 3 vehicles to ensure each one was detailed appropriately. Can't wait to have Matt come back and maintain their incredible appearance.”",
+    initials: "TD",
+    name: "Taso Dakas",
+    date: "April 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“I host clients in my car weekly and the monthly plan keeps it spotless without me ever planning for it. The sealant touch-ups keep the paint popping too.”",
-    initials: "JT",
-    name: "James T.",
-    town: "River Vale, NJ",
+    quote: "“Matt was excellent. The wash and mini detail was amazing. The job was perfection as it's best. Will be using APX on a regular basis.”",
+    initials: "RK",
+    name: "Raj Khubani",
+    date: "July 2025",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“Started bi-weekly for the summer show season. The car is always event-ready and the interior smells like the day I bought it. Zero effort on my end.”",
-    initials: "TB",
-    name: "Tony B.",
-    town: "Waldwick, NJ",
+    quote: "“Matt and his team were prompt, polite, easy to work with and did a great job! I’ve used them a few times and they always leave my car so clean! Highly recommend.”",
+    initials: "JF",
+    name: "Jess Ford",
+    date: "May 2026",
     color: "#7a1f1f",
   },
 ];
@@ -241,9 +235,9 @@ export default function MaintenancePlansPage() {
         ]}
         benefits={BENEFITS}
         image={{
-          src: lotusEmiraDriveway,
-          alt: "Black Lotus Emira kept in showroom condition on a brick paver driveway",
-          tag: "Kept showroom-ready · Lotus Emira",
+          src: mercedesWheelApxVan,
+          alt: "Spotless Mercedes-Benz wheel and gloss-black paint with the APX van parked behind it",
+          tag: "Kept showroom-ready · Mercedes-Benz",
         }}
       />
       <PricingTiers
@@ -258,7 +252,7 @@ export default function MaintenancePlansPage() {
       <ServiceProcess eyebrow="How it works" heading="How maintenance plans work" steps={STEPS} />
       <Testimonials
         heading="Cars that never have a bad day"
-        subtext="What clients on APX maintenance programs say."
+        subtext="From repeat clients and APX maintenance plan members."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />

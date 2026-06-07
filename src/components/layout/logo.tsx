@@ -1,14 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
+import logo from "@public/media/logo.png";
 
 export function Logo() {
   return (
-    <Link href="/" className="inline-flex flex-col leading-none" aria-label="APX Car Solutions">
-      <span className="font-display font-extrabold text-[1.55rem] tracking-[-.01em]">
-        AP<span className="text-crimson-soft">X</span>
-      </span>
-      <span className="text-[.52rem] tracking-[.42em] text-muted mt-[3px] pl-[2px]">
-        CAR SOLUTIONS
-      </span>
+    <Link href="/" className="inline-flex" aria-label="APX Car Solutions">
+      <Image src={logo} alt="APX Car Solutions" priority className="h-10 w-auto" />
     </Link>
   );
 }

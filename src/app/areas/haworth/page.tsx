@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import rollsRoyceCeramic from "@public/media/images/black-rolls-royce-ghost-black-badge-front.jpeg";
-import porsche911Cabriolet from "@public/media/images/blue-porsche-911-turbo-s-cabriolet-front.jpeg";
-import astonMartinInterior from "@public/media/images/image_4.jpg";
+import porsche911RearSpoiler from "@public/media/images/blue-porsche-911-turbo-s-rear-spoiler.jpeg";
+import astonMartinInterior from "@public/media/images/aston-martin-vantage-red-interior.jpeg";
 import lotusEmiraDriveway from "@public/media/images/black-lotus-emira-front.jpeg";
 import bmwX5Corrected from "@public/media/images/blue-bmw-x5-front.jpeg";
 import { ServiceFaq, type Faq } from "@/app/services/_components/service-faq";
@@ -89,55 +89,49 @@ const STEPS = [
   },
 ];
 
-// Placeholder reviews pending owner sign-off, same status as the service-page reviews.
+// Real Google reviews from the APX profile; some also appear on one other area page.
 const REVIEWS: Review[] = [
   {
-    quote:
-      "“The maples by our driveway coat everything in sap each spring. Matt and the crew sealed both cars and the gunk just rinses off now. Huge relief.”",
-    initials: "GT",
-    name: "Gail T.",
-    town: "Haworth, NJ",
-    color: "#2f6e4a",
-  },
-  {
-    quote:
-      "“They washed my wife's SUV entirely by hand and you can tell. No new scratches, just a clean, even shine. Quiet, polite, in and out without a fuss.”",
-    initials: "MB",
-    name: "Marcus B.",
-    town: "Haworth, NJ",
+    quote: "“APX Mobile Detailing absolutely knocked it out of the park with the ceramic coating on my Yukon Denali. Matt and Max were incredible—professional, polite, and clearly take pride in their work. The finish looks amazing, with a deep shine and flawless detail that truly stands out. You can tell they go the extra mile to make sure everything is perfect. Highly recommend APX Mobile Detailing if you want your vehicle looking its absolute best!”",
+    initials: "DS",
+    name: "Darren Shaw",
+    date: "April 2026",
     color: "#7a1f1f",
   },
   {
-    quote:
-      "“Booked a paint correction on my weekend coupe and watched years of swirl marks vanish. Worth every minute. The before and after was unreal.”",
-    initials: "ED",
-    name: "Eric D.",
-    town: "Dumont, NJ",
+    quote: "“APX did a fantastic job Inside and out. Definitely recommend using them”",
+    initials: "SY",
+    name: "susan yirce",
+    date: "September 2025",
     color: "#1f4d7a",
   },
   {
-    quote:
-      "“No outdoor faucet at our place and it didn't matter at all. Everything they needed came off the van. The car looked showroom-ready when they finished.”",
-    initials: "SF",
-    name: "Sandra F.",
-    town: "Demarest, NJ",
+    quote: "“I brought a car to detail at APX Mobile off word of mouth, and it turned our fantastic. Thinking about inquiring further business at the moment, and felt I should drop a review.”",
+    initials: "SN",
+    name: "Scott Noto",
+    date: "January 2025",
+    color: "#2f6e4a",
+  },
+  {
+    quote: "“This was a great quality detail. Service was unmatched and very professional will be using their services again.”",
+    initials: "EF",
+    name: "Evan Frie",
+    date: "February 2025",
     color: "#6a4d1f",
   },
   {
-    quote:
-      "“We keep both family cars on the monthly plan now. They turn up on schedule, the kids' mess disappears, and I've stopped dreading the bird droppings.”",
-    initials: "PN",
-    name: "Paul N.",
-    town: "Cresskill, NJ",
+    quote: "“485 detailed my entire truck from wheels all the way up to the interior. There was not a spot missed and was very detailed into his work. Great communication skills with him as well. Definitely recommend him to others. Great job as always.”",
+    initials: "N",
+    name: "NickDFD",
+    date: "October 2024",
     color: "#5a2f6e",
   },
   {
-    quote:
-      "“Had the full detail done before listing my Range Rover. It photographed beautifully and sold fast. The crew was professional from start to finish.”",
-    initials: "LK",
-    name: "Lena K.",
-    town: "Alpine, NJ",
-    color: "#2f6e4a",
+    quote: "“Matt is an amazing detailer… he detailed one of my Audis and it looked absolutely flawless. One of the best details and excellent service.”",
+    initials: "BP",
+    name: "Bella Polizzi",
+    date: "October 2024",
+    color: "#7a1f1f",
   },
 ];
 
@@ -195,8 +189,8 @@ export default function HaworthPage() {
         copy="Haworth's mature trees keep dropping sap, pollen, and bird droppings on your paint. We come over from neighboring Dumont with water and power on board and handle it all by hand."
         image={{
           // Placeholder pending a real Haworth job photo from the owner.
-          src: porsche911Cabriolet,
-          alt: "Navy Porsche 911 Turbo S cabriolet freshly detailed on a Haworth driveway",
+          src: porsche911RearSpoiler,
+          alt: "Rear wing of a blue Porsche 911 Turbo S detailed in Haworth with the APX van on site",
           tag: "Haworth, NJ · Fully mobile",
         }}
       />
@@ -212,8 +206,8 @@ export default function HaworthPage() {
         steps={STEPS}
       />
       <Testimonials
-        heading="What Haworth drivers say"
-        subtext="Notes from folks in Haworth and the quiet towns around it."
+        heading="Feedback from drivers near Haworth"
+        subtext="Every quote below is a real Google review from an APX client."
         reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
