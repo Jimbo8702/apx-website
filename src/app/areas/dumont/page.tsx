@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“I couldn’t be happier with the service from APX Mobile Detailing! I had them do a leather interior coating, and the results are honestly better than I expected. The attention to detail was top-notch—every seat looks brand new, feels protected, and has a clean, rich finish without being greasy or overdone. They showed up on time, were super professional, and clearly take pride in their work. You can tell they use high-quality products and really know what they’re doing. My interior not only looks amazing but is now much easier to maintain. If you’re thinking about protecting your leather, don’t hesitate—APX Mobile Detailing is 100% worth it. Highly recommend”",
-    initials: "RE",
-    name: "Robert Emord",
-    date: "February 2026",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Had my boat detailed. They did an amazing job will be bringing them more business soon.”",
-    initials: "AM",
-    name: "Aidan McKenna",
-    date: "October 2024",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“APX did a great job detailing my Family's car. It had been sitting in our driveway for a while and when we decided to sell it, APX came and worked miracles to clean the car, detail and get us ready for a sale.”",
-    initials: "KM",
-    name: "Kevin Milgram",
-    date: "June 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“They detailed my jeep and did an incredible job. Very careful and took their time to make sure nothing was missed. Highly recommend”",
-    initials: "CG",
-    name: "Charlea Graf",
-    date: "September 2024",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Had APX come right to my driveway to do a full detail and ceramic coating on my Chevy traverse. It looks absolutely incredible and I’m super happy with the results. Matt is very professional and cares about the results / outcome of our cars. Thanks!”",
-    initials: "MP",
-    name: "Marcello Prestigiacomo",
-    date: "September 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“APX did an incredible job on my brand new forester. I booked in a ceramic coating as well as a windshield coating and it came out great! Highly recommend to anyone.”",
-    initials: "C",
-    name: "cait",
-    date: "July 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Do you charge a travel fee in Dumont?",
@@ -208,7 +162,6 @@ export default function DumontPage() {
       <Testimonials
         heading="Reviews from our Dumont home base"
         subtext="Dumont is where APX parks the van. Here is what clients across the county say."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

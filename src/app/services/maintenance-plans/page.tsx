@@ -4,7 +4,7 @@ import dodgeCharger from "@public/media/images/silver-dodge-charger-scat-pack-re
 import { CalendarIcon, ClockIcon, ShieldIcon, SparklesIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { PricingTiers, type PricingTier } from "../_components/pricing-tiers";
 import { ServiceBenefits } from "../_components/service-benefits";
@@ -109,51 +109,6 @@ const STEPS = [
   },
 ];
 
-const REVIEWS: Review[] = [
-  {
-    quote: "“Had my vehicle detailed and ceramic coated. The service is unmatched and I am very pleased with the results. Will be going to them again for their maintenance plan. They’re one of the best!”",
-    initials: "RS",
-    name: "Rachael Sullivan",
-    date: "August 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“I had Matt and the APX team come to my house and 2 year ceramic coat my ford ranger as well as detail my cousins car. The customer service was excellent and I signed up for their maintenance plan for both vehicles. I’d recommend them to everyone!”",
-    initials: "SS",
-    name: "Steven Spina",
-    date: "February 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Been using APX for some time now and can definitely say Matt is the real deal, extremely reliable and communicative. I would definitely recommend APX to the next guy, make sure to get the ceramic coating!”",
-    initials: "AM",
-    name: "Anthony Moubayed",
-    date: "February 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Matt came to my location to detail 3 of my cars and made them all look better than new! Very thorough, friendly, knowledgable and addressed any questions or areas that needed extra attention or required a delicate approach. He had a wide range of products to tackle the different types materials he came across on the 3 vehicles to ensure each one was detailed appropriately. Can't wait to have Matt come back and maintain their incredible appearance.”",
-    initials: "TD",
-    name: "Taso Dakas",
-    date: "April 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Matt was excellent. The wash and mini detail was amazing. The job was perfection as it's best. Will be using APX on a regular basis.”",
-    initials: "RK",
-    name: "Raj Khubani",
-    date: "July 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Matt and his team were prompt, polite, easy to work with and did a great job! I’ve used them a few times and they always leave my car so clean! Highly recommend.”",
-    initials: "JF",
-    name: "Jess Ford",
-    date: "May 2026",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "How do the maintenance programs work?",
@@ -253,7 +208,6 @@ export default function MaintenancePlansPage() {
       <Testimonials
         heading="Cars that never have a bad day"
         subtext="From repeat clients and APX maintenance plan members."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <Quote />

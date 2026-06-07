@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“Matt always delivers!! He came to my house and detailed the interior of my Chevy Trax. He did an amazing job and was super professional. I would definitely recommend him to anyone! Takes his time and throughly makes every look, feel, and smell brand new! Fair priced and worth every penny!”",
-    initials: "KE",
-    name: "Kayley Ebenhack",
-    date: "February 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Did a phenomenal job.”",
-    initials: "JP",
-    name: "Justin Perez",
-    date: "October 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Very thorough and detailed with his cleaning helped talked me through exactly what he would do before cleaning and executed to perfection”",
-    initials: "RG",
-    name: "Ryan Gilmartin",
-    date: "May 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“He cleaned my truck really good and made it look like new”",
-    initials: "AK",
-    name: "Adrian Kida",
-    date: "April 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“I brought a car to detail at APX Mobile off word of mouth, and it turned our fantastic. Thinking about inquiring further business at the moment, and felt I should drop a review.”",
-    initials: "SN",
-    name: "Scott Noto",
-    date: "January 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“This was a great quality detail. Service was unmatched and very professional will be using their services again.”",
-    initials: "EF",
-    name: "Evan Frie",
-    date: "February 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there an extra charge to come to Waldwick?",
@@ -208,7 +162,6 @@ export default function WaldwickPage() {
       <Testimonials
         heading="What drivers around Waldwick say"
         subtext="First visits and repeat clients alike, straight from our Google reviews."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

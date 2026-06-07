@@ -4,7 +4,7 @@ import alfaGiuliaBrownInterior from "@public/media/images/alfa-romeo-giulia-brow
 import { ClockIcon, DropletIcon, ShieldIcon, SparklesIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { PricingTiers, type PricingTier } from "../_components/pricing-tiers";
 import { ServiceBenefits } from "../_components/service-benefits";
@@ -95,51 +95,6 @@ const STEPS = [
   {
     title: "Protect & walk through",
     text: "Leather is conditioned, glass is cleaned, and the paint is sealed so the gloss outlasts the wash. Then we walk the car with you panel by panel before handing back the keys.",
-  },
-];
-
-const REVIEWS: Review[] = [
-  {
-    quote: "“Very nice and professional. Did the exterior wash, clay, and seal along with the interior deep clean. I have 3 kids so you can imagine the mess. They came to my home and took 3.5 hours or so. Did a great job inside and out. Highly recommend.”",
-    initials: "JR",
-    name: "John Rubio",
-    date: "April 2026",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“I scheduled an appointment with APX and they did an INCREDIBLE job. I really needed my Toyota cleaned throughly. I have 3 dogs and they are in the car all of the time. Matt took his time going through and cleaning every spot. The car looks like I just picked it up from the dealership. I highly recommend to anyone, especially someone with dogs!! Haha”",
-    initials: "YM",
-    name: "Yolanda Martinez",
-    date: "March 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Needed an interior clean with seat steaming and sanitizing for my daily driver. WOW. This guy goes all in and my car is cleaner than it was when I purchased it. Amazing work - OCD caliber cleaning... love it - thank you!!!”",
-    initials: "NC",
-    name: "Nicolas Colletto",
-    date: "October 2024",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Right to my house, no need to go to a site. ant husband’s Dodge Charger Scat Pack was scheduled for a full detail and I couldn’t be happier with the results. The car looks absolutely brand new—inside and out. The attention to detail was incredible, from the deep clean of the interior to the flawless shine on the paint. They really brought out the muscle and gloss of the car, and even little things like the wheels and trim look showroom fresh. Professional, efficient, and passionate about their work—exactly what you want when trusting someone with your car. I’ll definitely be coming back and recommending them to anyone looking to keep their ride in top condition.”",
-    initials: "SM",
-    name: "Savannah Moreno",
-    date: "August 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Matt was great to work with! Was looking for a premium interior detail and APX Mobile Detailing has some of the most reasonable prices around with great quality work. Would highly recommend to anyone looking for a detail.”",
-    initials: "CC",
-    name: "Christina Carpio",
-    date: "February 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“I had my Tahoe detailed by Matt after the summer season. Matt was able to accommodate me, where he detailed my vehicle on a work day, so I didn’t need access to my vehicle. When he picked it up dirty and it had sand in it, and when he brought it back a few hours later, the Tahoe looked great and I couldn’t find any sand.”",
-    initials: "EJ",
-    name: "Edward J Kneisler III",
-    date: "January 2025",
-    color: "#7a1f1f",
   },
 ];
 
@@ -235,7 +190,6 @@ export default function DetailingPage() {
       <Testimonials
         heading="What clients say after an APX detail"
         subtext="Real reviews from interior, exterior, and full details."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <Quote />

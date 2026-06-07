@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“Matt did an incredible job ceramic coating my Mazda! The car looks amazing! It’s super glossy and clean, like it just came off the lot. He was professional, prompt, and extremely detail-oriented throughout the whole process. What really sets Matt apart is his passion for what he does. You can tell he truly loves detailing, and it shows in the quality of his work. He treats every car like it’s his own and takes real pride in making sure everything is perfect. I’m beyond happy with how my car turned out. If you’re looking for top-tier detailing from someone who genuinely cares, Matt is the one to go to. Highly recommend! Now I get to go cruise down the road in style! Thanks Matt!!”",
-    initials: "CF",
-    name: "Carlo Francavilla",
-    date: "July 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Great communication Did a spectacular job on my new ride. I will be recommending them to my friends.”",
-    initials: "TB",
-    name: "Timothy Buccigrossi",
-    date: "January 2026",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Matt and the team at APX were great, they helped us with a ceramic coating on our new Mercedes and the car looks fantastic! Very knowledgeable, friendly and you can feel his love for keeping cars looking at their best!”",
-    initials: "JN",
-    name: "Janel Nese",
-    date: "January 2026",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Got a ceramic coat for my sedan, car was washed thoroughly and the coating applied, came out amazing and very shiny. Highly Recommend”",
-    initials: "F",
-    name: "FlyingWithMar",
-    date: "April 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Had my vehicle ceramic coated. Matt and Nick did an amazing job. They came to me, arrived two minutes early and completed the job on time. Their attention to detail was second to none, scheduling was a breeze and they over delivered. Would absolutely recommend and use again!”",
-    initials: "AM",
-    name: "A. Milena Goncalves",
-    date: "October 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Matt and his team did a wonderful job detailing my car. He was professional, helpful, and made the whole experience easy and stress-free. I’m very happy with the results!”",
-    initials: "KB",
-    name: "Kaylee Babasade",
-    date: "July 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there an extra charge to come to Cresskill?",
@@ -208,7 +162,6 @@ export default function CresskillPage() {
       <Testimonials
         heading="Five-star feedback near Cresskill"
         subtext="Verbatim Google reviews from APX clients around the county."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

@@ -9,7 +9,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -88,52 +88,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“I recently had my car detailed and ceramic coated by APX Car Solutions, and the results are amazing! Matt was professional, friendly, and extremely knowledgeable. He took the time to walk me through the entire process and made sure I knew exactly what he was going to be doing. The detailing was flawless, every inch of my car was cleaned leaving it looking brand new. The attention to detail was incredible, from the spotless interior to the sparkling exterior. It was clear that he uses top quality products and tools to get the job done. The ceramic coating gave it a glossy finish and extra protection from dirt and water, making it easier to clean and stay spotless longer. I highly recommend APX Car Solutions my car looks better than ever and is well protected for years! I highly recommend APX Car Solutions and I will definitely be coming back in the future!”",
-    initials: "AM",
-    name: "Ariana Mariani",
-    date: "January 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Great job! Highly recommend. Courteous efficient team!”",
-    initials: "LG",
-    name: "Lana Gofman Rosenson",
-    date: "September 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Matt did an excellent job very professional and definitely took care of my truck he did a full ceramic coat and detail and etc. An amazing job would highly recommend to anyone.”",
-    initials: "DT",
-    name: "Dominick Tulipani",
-    date: "March 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Brought my Chevy in to be detailed and they could not have done a better job! Car came out looking brand new.”",
-    initials: "KG",
-    name: "Katerina Grammatikos",
-    date: "January 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Huge Thanks to Matt! He did an incredible job detailing my Honda Accord, My car looks and feels brand new.The interior is spotless, and the exterior has a perfect shine. Very professional and on time. Highly recommend APX car solutions for anyone looking for a nice car detailing.”",
-    initials: "LC",
-    name: "Lizet Carreon",
-    date: "February 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Matt and his team did an incredible job cleaning and applying ceramic coating on my car. It was done in less than 2 hours, amazing work!”",
-    initials: "JB",
-    name: "James Buntar",
-    date: "May 2026",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there a travel charge for coming to Alpine?",
@@ -207,7 +161,6 @@ export default function AlpinePage() {
       <Testimonials
         heading="Reviews from drivers around Alpine"
         subtext="Real Google reviews from APX clients across our Bergen County routes."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

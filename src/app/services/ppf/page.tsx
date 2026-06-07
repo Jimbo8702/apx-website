@@ -4,7 +4,7 @@ import grayBmwM4 from "@public/media/images/gray-bmw-m4-front.jpeg";
 import { DropletIcon, ShieldIcon, SparklesIcon, SunIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { PricingTiers, type PricingTier } from "../_components/pricing-tiers";
 import { ServiceBenefits } from "../_components/service-benefits";
@@ -100,51 +100,6 @@ const STEPS = [
   {
     title: "Precision install & aftercare",
     text: "Each piece is aligned, squeegeed, and inspected under lighting, with edges wrapped wherever the panel allows. We finish with a walkthrough of the cure window and simple care rules.",
-  },
-];
-
-const REVIEWS: Review[] = [
-  {
-    quote: "“Amazing professional service! The team are true experts when it comes to high-end luxury vehicles—extremely knowledgeable, precise, and detail-oriented. I’ll definitely be using their services again in the future!”",
-    initials: "C",
-    name: "Claudia",
-    date: "October 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Look no further for the best in mobile detailing for high end cars. Matt is polite, punctual, detail oriented, and honest.”",
-    initials: "GA",
-    name: "Gil Altman",
-    date: "May 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Now, I understand why the name is Apex. These guys are at the top of their game, very professional. Completed the work efficiently, they also provided me with explanations on certain things and answered some questions that I had. Highly recommend!”",
-    initials: "NL",
-    name: "Nick Lardieri",
-    date: "May 2026",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Very professional. End results came out better than I expected, and I had high expectations to begin with. Thanks guys!!”",
-    initials: "GB",
-    name: "Gil Broitman",
-    date: "May 2026",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Matt is a very respectful and diligent man. He made my car look brand new. Any one who gets Matt’s services will not be disappointed.”",
-    initials: "TO",
-    name: "Tyler Oliver",
-    date: "February 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“I recently had the pleasure of having my car detailed by Matt, and I must say, the results were exceptional. His attention to detail was remarkable, and he exhibited a commendable level of flexibility in accommodating all my specific requests. I wholeheartedly recommend his services to anyone seeking top-notch car detailing.”",
-    initials: "JD",
-    name: "Jess DiCostanzo",
-    date: "March 2025",
-    color: "#7a1f1f",
   },
 ];
 
@@ -248,7 +203,6 @@ export default function PpfPage() {
       <Testimonials
         heading="Why drivers trust APX with their paint"
         subtext="Real Google reviews from APX clients. Film or coating, the standard of care is the same."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <Quote />

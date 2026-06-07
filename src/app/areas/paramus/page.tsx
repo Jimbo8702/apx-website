@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“Had my Ram truck detailed by these guys. They were able to get my appoint scheduled quickly, completed the work as they said they would and did it all at a very fair price. Detail of my truck both inside and out came out top-notch. I had some very particular requests and they were able to handle all of them. Highly recommend. Will continue to use them in the future.”",
-    initials: "SH",
-    name: "Steven Hegel",
-    date: "March 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Very professional and great work.”",
-    initials: "AA",
-    name: "Ademola Adeniyi",
-    date: "January 2026",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“APX was Amazing, never have had a better service from someone in this area. Cleaned my car to perfection, got a stain out and took their time to work on my vehicle.”",
-    initials: "LL",
-    name: "Leonardo LaSpisa",
-    date: "June 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“My truck looks amazing, did a great job. I would recommend to everyone else, thank you.”",
-    initials: "MR",
-    name: "Matt Rajner",
-    date: "October 2024",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“APX did a great job detailing my Family's car. It had been sitting in our driveway for a while and when we decided to sell it, APX came and worked miracles to clean the car, detail and get us ready for a sale.”",
-    initials: "KM",
-    name: "Kevin Milgram",
-    date: "June 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“They detailed my jeep and did an incredible job. Very careful and took their time to make sure nothing was missed. Highly recommend”",
-    initials: "CG",
-    name: "Charlea Graf",
-    date: "September 2024",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Does coming out to Paramus add a fee to the bill?",
@@ -208,7 +162,6 @@ export default function ParamusPage() {
       <Testimonials
         heading="Reviews from drivers around Paramus"
         subtext="Words from APX clients across the service area, via Google."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

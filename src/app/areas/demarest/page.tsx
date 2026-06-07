@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“My experience with Matt at APX was very professional. Matt took the time to explain all of his services in detail. As well he asked what areas of the vehicle I thought would need more attention. Not only that , Matt was able to fit me into his schedule knowing I was pressed for time because I'd be leaving for a road trip. After having the vehicle with him he realized that indeed he needed a little more time to get the car right so he communicated with me to let me know what had to be done and how much longer his team would need . Professional equipment,service and communication is hard to find these days. I found all three with APX and was very pleased with the results.”",
-    initials: "BN",
-    name: "Bart Nativo",
-    date: "September 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Detailed Car inside and out. Car was very dirty. Car now looks brand new. Fantastic job!”",
-    initials: "D",
-    name: "danvan590",
-    date: "May 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Matt and his team came on a same day call. More than pleased with the work they provided. Will definitely be reaching out again in the future. Along with great work, pricing, job details etc were all communicated!!!”",
-    initials: "CR",
-    name: "Cyclenatti. rich",
-    date: "July 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“He treats and disinfects the leather very well unlike most detailers , has a great attitude and a great deal on the paint protection”",
-    initials: "MS",
-    name: "Meme Scrap",
-    date: "April 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Had my car detailed by APX mobile detailing and my car looks like new. Matt was friendly, knowledgeable and paid attention to detail while working on the car. Prices were great and best of all I did not have to drop my car off anywhere. Would highly recommend APX!”",
-    initials: "G",
-    name: "G",
-    date: "April 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“I highly recommend APX Mobile Detailing. Quick response, polite, and on time. Excellent job detailing interior and exterior of my car. I will definitely use them again.”",
-    initials: "JA",
-    name: "John Arlin",
-    date: "July 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there a travel charge for coming to Demarest?",
@@ -208,7 +162,6 @@ export default function DemarestPage() {
       <Testimonials
         heading="Google reviews from the Demarest area"
         subtext="What clients across our service area say after an APX visit."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“Had my new truck ceramic coated by APX Mobile Detailing and couldn’t be happier with the experience. Matt was awesome from the very first interaction all the way through the completion of the job. He showed up with professional, top-of-the-line equipment and took the time to thoroughly explain the entire process to me. His attention to detail and professionalism really stood out. The truck came out amazing. I would highly recommend APX Mobile Detailing to anyone in Bergen County looking for high-quality detailing and ceramic coating services.”",
-    initials: "JH",
-    name: "john H",
-    date: "May 2026",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“My truck looks amazing, did a great job. I would recommend to everyone else, thank you.”",
-    initials: "MR",
-    name: "Matt Rajner",
-    date: "October 2024",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Just had APX Mobile do my Harley ! They knocked it out of the park! I am blown away by the job they did and time spent on it for the price ! Super professional and I can’t tell enough people to try them !!!”",
-    initials: "MR",
-    name: "mark roskowsky",
-    date: "April 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“I work from home so it was nice getting the service done mobile. They did a ceramic coating on my mom’s car and did an amazing job”",
-    initials: "A",
-    name: "anastasia",
-    date: "November 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“matt made it effortless to schedule an appointment and get the car finished. fantastic work. would recommend to family and friends. he was very informative and took the time to answer all my questions, would definitely get work done by matt again.”",
-    initials: "SA",
-    name: "Steven Ang",
-    date: "November 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“APX was Amazing, never have had a better service from someone in this area. Cleaned my car to perfection, got a stain out and took their time to work on my vehicle.”",
-    initials: "LL",
-    name: "Leonardo LaSpisa",
-    date: "June 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there an added fee for coming out to Emerson?",
@@ -208,7 +162,6 @@ export default function EmersonPage() {
       <Testimonials
         heading="What clients around Emerson tell us"
         subtext="A few of the 140+ five-star Google reviews APX has earned nearby."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

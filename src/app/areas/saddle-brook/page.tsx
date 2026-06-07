@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“I recently hired APX mobile detailing to clean my mother's car. I spoke with Matt who quoted me a reasonable price and booked a date. His communication, promptness and work ethic was excellent. I highly recommend APX and Matt and will definitely use him again. Can't beat the convenience of mobile detailing .”",
-    initials: "CG",
-    name: "carolyn griffenkranz",
-    date: "May 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“A wonderful job with my car! Highly recommend.”",
-    initials: "KK",
-    name: "Kirk Kushnerick",
-    date: "October 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Had my Jeep Gladiator ceramic coated a few weeks ago and it looks fantastic. The team was very responsive, knowledgeable and very friendly. Thanks again”",
-    initials: "KV",
-    name: "Kennedy Veatch",
-    date: "August 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Matt is easy to work with. My car looks great with the coating. Thank you, Matt!”",
-    initials: "JW",
-    name: "Joan Wang",
-    date: "October 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Amazing service ! My car came out brand new ! I have 3 kids and I’m a shame of the mess I always have ! They told me not to worry “ we don’t judge “ 😂 and started working on it ! Is worth every penny !”",
-    initials: "IF",
-    name: "Ivette Fernandez",
-    date: "January 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Recently had my car detailed by APX, and it was fantastic! 10/10 would recommend will be using them again in the future!”",
-    initials: "KM",
-    name: "kelsey mcomish",
-    date: "February 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Will there be a travel fee for Saddle Brook?",
@@ -208,7 +162,6 @@ export default function SaddleBrookPage() {
       <Testimonials
         heading="What drivers near Saddle Brook say"
         subtext="Verbatim from Google: clients on APX quality and care."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

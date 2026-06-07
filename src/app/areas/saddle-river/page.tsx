@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“485 detailing with Matt always delivers!! He regularly details my truck and trailer and would recommend him to anyone! Takes his time and throughly makes every look, feel, and smell brand new! Fair priced and worth every penny! Support local business and from one business to another... super professional”",
-    initials: "GE",
-    name: "GBE Events",
-    date: "October 2024",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Got two cars done with APX. Excellent job”",
-    initials: "NM",
-    name: "NAZAR MAKOHIN",
-    date: "May 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Great detailing work! Arrived on time, very professional, and decently priced. I highly recommend and will definitely use their services again.”",
-    initials: "JL",
-    name: "Javier L. Orellana",
-    date: "September 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Nice guys, fair pricing. Came right to my job and did the work. Very happy”",
-    initials: "MD",
-    name: "Mike DeNardo",
-    date: "June 2026",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“I brought in my Mazda CX-30 and my Porsche 911 to get detailed. They did a wonderful job on both and they look brand new. I highly recommend their services to anyone looking for luxury detailing!!”",
-    initials: "CO",
-    name: "Corie OBrien",
-    date: "January 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Amazing job 🤩 My car has never looked better, looks brand new! Matt is so professional i would recommend him anyday!”",
-    initials: "EA",
-    name: "Emily Amaya",
-    date: "June 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Will a Saddle River address add a travel fee?",
@@ -208,7 +162,6 @@ export default function SaddleRiverPage() {
       <Testimonials
         heading="Reviews from around Saddle River"
         subtext="What owners across the area say about trusting APX with their cars."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

@@ -4,7 +4,7 @@ import grayBmwM4 from "@public/media/images/gray-bmw-m4-front.jpeg";
 import { CheckIcon, ShieldIcon, SparklesIcon, SunIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { PricingTiers, type PricingTier } from "../_components/pricing-tiers";
 import { ServiceBenefits } from "../_components/service-benefits";
@@ -91,51 +91,6 @@ const STEPS = [
   {
     title: "Check & protect",
     text: "Every panel is re-checked under lighting from multiple angles. Freshly corrected paint is bare, so we'll recommend a sealant or ceramic coating to lock the new finish in.",
-  },
-];
-
-const REVIEWS: Review[] = [
-  {
-    quote: "“Amazing paint correction and ceramic coating process. Smooth appointment setting, easy drop off, worked well with my schedule and took care of the car. Couldn’t be more pleased”",
-    initials: "J",
-    name: "Joshua",
-    date: "January 2026",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Did a full paint correction and ceramic coating on my 1972 Seat 600 E. The car glows! And water beads right off! Also did an emergency polish at 10pm one night when acid from a garage leaked on the hood of my Bentley. Saved the day!!!”",
-    initials: "BA",
-    name: "Benjamin Avital",
-    date: "October 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“I brought my car to Matt a week after buying it and he made it look way better than when I drove it off the lot! He was very informative from the beginning. He explained the process of the exterior ceramic coating, wheel and glass coating and went into great detail. I dropped it off with hard water spots on the paint and the windows, and to my surprise, Matt also found a scratch on the roof going across the sun roof. When I picked up my car, it was like I was picking it up brand new again. Him and his team superseded my expectations! They do an amazing job and pay attention to all of the small, but important details.”",
-    initials: "CL",
-    name: "Courtney Leach",
-    date: "November 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Matt did an awesome job with my 2010 Camaro. There were some swell marks that he was able to get out and make the car look like I just pulled it out of the showroom. Thank you matt”",
-    initials: "AM",
-    name: "alex myack",
-    date: "September 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Matt was very professional. My car he took great care of. Scratches came out. Looked like new!! Very happy from start to finish!! Would recommend highly!!”",
-    initials: "RC",
-    name: "Raymond Coleman",
-    date: "November 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“On time, made 8 year old car look like new. Some blemish could not be removed but from a distance of 4-5 ft can’t see any issues with paint .”",
-    initials: "ZW",
-    name: "zev wachtel",
-    date: "November 2025",
-    color: "#7a1f1f",
   },
 ];
 
@@ -235,7 +190,6 @@ export default function PaintCorrectionPage() {
       <Testimonials
         heading="From our clients"
         subtext="What clients say after an APX paint correction."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <Quote />

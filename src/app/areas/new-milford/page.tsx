@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“I recently had my car detailed by APX and couldn’t be happier with the results! The attention to detail was truly impressive — every inch of the car looks brand new. Matt was professional, thorough, and clearly takes great pride in his work. It’s rare to find someone who goes above and beyond like he did. I highly recommend this mobile car wash and detailing service to anyone who wants their vehicle looking brand new 🤩”",
-    initials: "KP",
-    name: "Kelly P",
-    date: "April 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Great job! Highly recommend. Courteous efficient team!”",
-    initials: "LG",
-    name: "Lana Gofman Rosenson",
-    date: "September 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Last week I scheduled an appointment with Matt and his team. I have an Audi Q5 that I wanted ceramic coated… I got the glass, rims and paint done and it came out amazing!!”",
-    initials: "RA",
-    name: "Rey Aldana",
-    date: "November 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Matt and his team did an amazing job on my 2008 Accord. I'll be using them again. Highly recommend them.”",
-    initials: "OM",
-    name: "Omar Munoz",
-    date: "September 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“APX Detailing did an awesome job ceramic coating my 2024 Mustang! They came right to my house, were super professional, and made my car look better than brand new. The shine and protection are insane, I couldn’t be happier!”",
-    initials: "JL",
-    name: "Joseph Langschultz",
-    date: "October 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Matt and his team did an incredible job cleaning and applying ceramic coating on my car. It was done in less than 2 hours, amazing work!”",
-    initials: "JB",
-    name: "James Buntar",
-    date: "May 2026",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there an extra charge to come to New Milford?",
@@ -208,7 +162,6 @@ export default function NewMilfordPage() {
       <Testimonials
         heading="Reviews from the New Milford area"
         subtext="What clients across our routes tell Google about APX."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

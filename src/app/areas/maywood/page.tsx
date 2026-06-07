@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“I had an outstanding experience with Matt from start to finish. His professionalism and clear dedication to his craft really stood out to me. I had ceramic coating applied to my vehicle, and the entire process was smooth, hassle-free, and completed to perfection. Matt’s attention to detail and commitment to quality made all the difference. I’ll definitely be returning in the future for any additional services. Highly recommend!”",
-    initials: "LC",
-    name: "Lisa Cordova",
-    date: "October 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Great work detailing my car!!! Highly recommend!! A++++✅”",
-    initials: "CS",
-    name: "carol sanchez",
-    date: "May 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Matt did an excellent job very professional and definitely took care of my truck he did a full ceramic coat and detail and etc. An amazing job would highly recommend to anyone.”",
-    initials: "DT",
-    name: "Dominick Tulipani",
-    date: "March 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Brought my Chevy in to be detailed and they could not have done a better job! Car came out looking brand new.”",
-    initials: "KG",
-    name: "Katerina Grammatikos",
-    date: "January 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Matt was a really great person to work with. Easy to book, everything was on time as scheduled and the process was easy and my car looks amazing. Would absolutely recommend anyone who cares about their car to have it detailed at APX.”",
-    initials: "HR",
-    name: "Hailey Ryan",
-    date: "August 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Recently got my car ceramic coated by APX Mobile Detailing. They did such an amazing job! Quality service, and they got my car done fast.”",
-    initials: "AE",
-    name: "Abraham Ehiosa",
-    date: "February 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Does coming to Maywood add anything to the bill?",
@@ -208,7 +162,6 @@ export default function MaywoodPage() {
       <Testimonials
         heading="Straight talk from the Maywood area"
         subtext="Unedited Google reviews from APX clients around Bergen County."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

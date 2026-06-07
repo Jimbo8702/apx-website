@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“Had the pleasure of working with APX Mobile Detailing. I scheduled a total of 4 cars to be ceramic coated and Matt made the process smooth and easy. He's a very responsive person and really tires his best to put you first. I am really happy with the outcome of my ceramic coating. Matt is very passionate about his work and appreciate his attention to detail. I highly recommend working with APX Mobile Detailing!”",
-    initials: "PP",
-    name: "Philip Park",
-    date: "May 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“A wonderful job with my car! Highly recommend.”",
-    initials: "KK",
-    name: "Kirk Kushnerick",
-    date: "October 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Matt and his team did a wonderful job detailing my car. He was professional, helpful, and made the whole experience easy and stress-free. I’m very happy with the results!”",
-    initials: "KB",
-    name: "Kaylee Babasade",
-    date: "July 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Great communication Did a spectacular job on my new ride. I will be recommending them to my friends.”",
-    initials: "TB",
-    name: "Timothy Buccigrossi",
-    date: "January 2026",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“My son and I built a custom motorcycle 25 years ago. It was beginning to look a bit tired. Matt and his tech came to my house and did a detail and ceramic application. The bike looks brand new. I could not be more pleased.”",
-    initials: "JQ",
-    name: "Jack Quigley",
-    date: "October 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Great detailing and cleaning services provided for my car! Great customer service and value for your money! Definitely the best around!”",
-    initials: "PK",
-    name: "Peter Kretschmer",
-    date: "October 2024",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Will you tack on a fee for driving up to Northvale?",
@@ -208,7 +162,6 @@ export default function NorthvalePage() {
       <Testimonials
         heading="What drivers near Northvale report"
         subtext="A sample of the five-star Google reviews APX has earned across the county."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“Had my BMW X5 ceramic coated and it looks amazing. My main concern was how I was going to protect my car for the years to come and Matt helped and guided me every step of the way. He educated me on what the best option would be for what I was looking for and I truly appreciate that. You don't really come across a lot of young people who truly care about the service and customer care they provide. Will defnitely recommend their services to anybody and everybody I know. Thank you again!”",
-    initials: "NB",
-    name: "NM Booths Co",
-    date: "October 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Matt did an amazing work on my vehicle. Looks like it came off the showroom floor”",
-    initials: "DF",
-    name: "Dan F",
-    date: "April 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Amazing service ! My car came out brand new ! I have 3 kids and I’m a shame of the mess I always have ! They told me not to worry “ we don’t judge “ 😂 and started working on it ! Is worth every penny !”",
-    initials: "IF",
-    name: "Ivette Fernandez",
-    date: "January 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Recently had my car detailed by APX, and it was fantastic! 10/10 would recommend will be using them again in the future!”",
-    initials: "KM",
-    name: "kelsey mcomish",
-    date: "February 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“APX did an excellent job, Matt’s attention to detail is incredible. Having three dogs means our interior was an absolute mess. After APX, my Chevy Traverse looks brand new, inside and out. Highly recommend APX for anyone looking for car detailing.”",
-    initials: "JS",
-    name: "James Sgarella",
-    date: "March 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“I would highly recommend APX mobile detailing for all of your car care needs. Matt and team did an amazing job on my car and they are extremely professional!”",
-    initials: "SP",
-    name: "Satyam Prasad",
-    date: "May 2026",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Do you tack on a travel cost for Fort Lee?",
@@ -208,7 +162,6 @@ export default function FortLeePage() {
       <Testimonials
         heading="What drivers near Fort Lee say"
         subtext="From our Google profile: clients on the work APX delivers around the county."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

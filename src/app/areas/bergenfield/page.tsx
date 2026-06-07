@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“I recently had my Mazda CX-30 detailed by APX Mobile Detailing, and I couldn't be more impressed with their exceptional work. The team's attention to detail was remarkable - they transformed my vehicle’s appearance, leaving every surface spotless and looking better than new. Beyond the thorough detailing service, they also applied a ceramic coating to my car, which not only enhanced the paint's shine and depth but will provide long-lasting protection against the elements. The convenience of their mobile service meant I didn't have to disrupt my schedule, and the quality of their craftsmanship truly exceeded my expectations. I would highly recommend APX Mobile Detailing to anyone looking for professional, top-tier automotive care.”",
-    initials: "KS",
-    name: "Kyle Simmons",
-    date: "July 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Matt and his team did an amazing job on my 2008 Accord. I'll be using them again. Highly recommend them.”",
-    initials: "OM",
-    name: "Omar Munoz",
-    date: "September 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“My son and I built a custom motorcycle 25 years ago. It was beginning to look a bit tired. Matt and his tech came to my house and did a detail and ceramic application. The bike looks brand new. I could not be more pleased.”",
-    initials: "JQ",
-    name: "Jack Quigley",
-    date: "October 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Great detailing and cleaning services provided for my car! Great customer service and value for your money! Definitely the best around!”",
-    initials: "PK",
-    name: "Peter Kretschmer",
-    date: "October 2024",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Matt and his team did such an amazing job on my black Ford Escape . The detail and time he put in on the interior of my car looks like the day I bought it. Between the great work he put in and how I didn't even have to leave the house made it worth every penny. Highly Recommend!!”",
-    initials: "JD",
-    name: "Joey Dale Music",
-    date: "February 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Last week I scheduled an appointment with Matt and his team. I have an Audi Q5 that I wanted ceramic coated… I got the glass, rims and paint done and it came out amazing!!”",
-    initials: "RA",
-    name: "Rey Aldana",
-    date: "November 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there a travel fee for Bergenfield?",
@@ -208,7 +162,6 @@ export default function BergenfieldPage() {
       <Testimonials
         heading="What drivers near Bergenfield say"
         subtext="Pulled straight from our Google profile, from clients all over the service area."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

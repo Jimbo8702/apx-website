@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“We are very happy with the work that Matt and his team did for us. He followed through on everything he promised, and we’re thrilled with the results! We had Matt do a full detail, an exterior detail, and a light clean on another vehicle. We also had him apply 5-year ceramic coatings, and everything turned out beautifully. Matt was flexible with scheduling, arrived on time, and was a pleasure to work with. We will definitely be using APX again and highly recommend them!”",
-    initials: "RH",
-    name: "Regina H",
-    date: "July 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Matt is easy to work with. My car looks great with the coating. Thank you, Matt!”",
-    initials: "JW",
-    name: "Joan Wang",
-    date: "October 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“I brought in my Mazda CX-30 and my Porsche 911 to get detailed. They did a wonderful job on both and they look brand new. I highly recommend their services to anyone looking for luxury detailing!!”",
-    initials: "CO",
-    name: "Corie OBrien",
-    date: "January 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Amazing job 🤩 My car has never looked better, looks brand new! Matt is so professional i would recommend him anyday!”",
-    initials: "EA",
-    name: "Emily Amaya",
-    date: "June 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“I brought my jeep in for Ceramic Window tints to match the back. It came out great!!! I dealt with Matt and he even vacuumed my interior as well. He is extremely professional and is amazing at what he does. Totally recommend him and his company!”",
-    initials: "RG",
-    name: "Rebecca Graf",
-    date: "January 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Had my Jeep Gladiator ceramic coated a few weeks ago and it looks fantastic. The team was very responsive, knowledgeable and very friendly. Thanks again”",
-    initials: "KV",
-    name: "Kennedy Veatch",
-    date: "August 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Does a Glen Rock visit come with any travel cost?",
@@ -208,7 +162,6 @@ export default function GlenRockPage() {
       <Testimonials
         heading="Google reviews around Glen Rock"
         subtext="Honest words from APX clients across northern New Jersey."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

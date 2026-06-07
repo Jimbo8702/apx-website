@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“Very professional staff and hard workers. They arrived on time and did a phenomenal job on our suv and truck. I Highly recommend APX for mobile detailing and ceramic coating. It was a breeze getting the appointment set up and Matt was very knowledgeable. He spent the time to explain the process and why ceramic coating is beneficial. Thanks again”",
-    initials: "T",
-    name: "tonnic",
-    date: "May 2026",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Did a phenomenal job.”",
-    initials: "JP",
-    name: "Justin Perez",
-    date: "October 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Had a great experience with APX got my truck cleaned inside and out as well as a ceramic coating and my truck looks like new. Definitely would recommend them!!”",
-    initials: "MR",
-    name: "Matt Ruglio",
-    date: "March 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“The car looks fabulous and it’s amazing. I would recommend to my family and friends.”",
-    initials: "JR",
-    name: "Jacqueline Ramirez",
-    date: "May 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Just had APX Mobile do my Harley ! They knocked it out of the park! I am blown away by the job they did and time spent on it for the price ! Super professional and I can’t tell enough people to try them !!!”",
-    initials: "MR",
-    name: "mark roskowsky",
-    date: "April 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“I work from home so it was nice getting the service done mobile. They did a ceramic coating on my mom’s car and did an amazing job”",
-    initials: "A",
-    name: "anastasia",
-    date: "November 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there a surcharge for a trip out to Park Ridge?",
@@ -208,7 +162,6 @@ export default function ParkRidgePage() {
       <Testimonials
         heading="What clients around Park Ridge say"
         subtext="Recent Google reviews from drivers APX serves nearby."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“So impressed by Matt’s professionalism and attention to detail (no pun intended). I was overwhelmingly satisfied with the quality of the detailing—my car looks and feels brand new. He was punctual, thorough, and clearly takes pride in his work. Highly recommend to anyone looking for top-tier service!”",
-    initials: "AB",
-    name: "Amanda Bernard",
-    date: "June 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“My car is so clean and smells amazing !”",
-    initials: "KE",
-    name: "Kimberly Etkin",
-    date: "May 2026",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Great experience. Showed up on time and was very professional. Payed attention to details. Truck looked great. Will definitely use them again.”",
-    initials: "GR",
-    name: "George Ruth",
-    date: "March 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“They did an amazing job - car looks brand new and staff was very friendly”",
-    initials: "SG",
-    name: "Steven Gatanas",
-    date: "May 2026",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“APX performed a miracle on my 2016 Impala. The team was informed, capable, and passionate about the work. And it showed in the result. Excellent value for the job and highly recommended.”",
-    initials: "MS",
-    name: "Michael Savage",
-    date: "July 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“I brought my ram truck in for a detail last month I dealt with Matt it turned out great and he is very professional”",
-    initials: "P",
-    name: "Perry",
-    date: "February 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Does coming out to Teaneck cost extra?",
@@ -208,7 +162,6 @@ export default function TeaneckPage() {
       <Testimonials
         heading="What clients near Teaneck tell Google"
         subtext="A handful of the five-star reviews APX has earned across the county."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

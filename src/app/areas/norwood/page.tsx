@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“Huge shout-out to Matt at APX Detailing! He recently worked on two of my cars—one getting a full ceramic coating and the other a interior/exterior detail. Both came out looking flawless. Matt made the process seamless and sent regular photo/video updates, so I could see the progress. If you want a detailer who is professional, communicative, and does incredible work, APX is the place. Highly recommend!”",
-    initials: "KK",
-    name: "Ken Karwowski",
-    date: "February 2026",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Got two cars done with APX. Excellent job”",
-    initials: "NM",
-    name: "NAZAR MAKOHIN",
-    date: "May 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“I highly recommend APX Mobile Detailing. Quick response, polite, and on time. Excellent job detailing interior and exterior of my car. I will definitely use them again.”",
-    initials: "JA",
-    name: "John Arlin",
-    date: "July 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Detailed Car inside and out. Car was very dirty. Car now looks brand new. Fantastic job!”",
-    initials: "D",
-    name: "danvan590",
-    date: "May 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Matt and the team at APX were great, they helped us with a ceramic coating on our new Mercedes and the car looks fantastic! Very knowledgeable, friendly and you can feel his love for keeping cars looking at their best!”",
-    initials: "JN",
-    name: "Janel Nese",
-    date: "January 2026",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Got a ceramic coat for my sedan, car was washed thoroughly and the coating applied, came out amazing and very shiny. Highly Recommend”",
-    initials: "F",
-    name: "FlyingWithMar",
-    date: "April 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there a travel charge to reach Norwood?",
@@ -208,7 +162,6 @@ export default function NorwoodPage() {
       <Testimonials
         heading="Google feedback around Norwood"
         subtext="Households and businesses on the work APX delivers."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“The guys showed up exactly on time to detail and coat my work truck in a specialized vehicle of their own, equipped with everything they would need. They carefully cleaned my truck and applied the coating as discussed, and took the time to explain what was done and how best to care for it. Very satisfied. Glad to recommend.”",
-    initials: "MF",
-    name: "Mayer Fertig",
-    date: "November 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“great, quick service”",
-    initials: "KN",
-    name: "Kaitlyn Neeb",
-    date: "January 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“I would highly recommend APX mobile detailing for all of your car care needs. Matt and team did an amazing job on my car and they are extremely professional!”",
-    initials: "SP",
-    name: "Satyam Prasad",
-    date: "May 2026",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Matt did an amazing work on my vehicle. Looks like it came off the showroom floor”",
-    initials: "DF",
-    name: "Dan F",
-    date: "April 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Brought in my daughter's 2024 Audi RS 7 for a Luxury Detailing, I am so impressed by Matt's eye for details!! The car looks brand new! I will definitely be back with my vehicle. Thanks for your hard work!!”",
-    initials: "M",
-    name: "Milly",
-    date: "March 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Had my vehicle detailed by APX and everything came out great! Very affordable and fantastic customer service. Highly recommend!”",
-    initials: "N",
-    name: "NMedina90",
-    date: "January 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Do you tack on a travel charge for Ridgewood?",
@@ -208,7 +162,6 @@ export default function RidgewoodPage() {
       <Testimonials
         heading="Feedback from the Ridgewood area"
         subtext="Five-star Google reviews from across the APX coverage map."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

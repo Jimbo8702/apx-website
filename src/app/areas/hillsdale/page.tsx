@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“I have a 2025 Chevy trax (white paint) this is my first purchased car and the car I had prior was a beater so I didn’t have to clean at all or all that much. When. I got my new car it instantly got filthy both interior and exterior I called my boy Matt at APX car detailing, when I say my car was clean! I had a new car all over again, if you are looking for a quick convenient and most important quality detail on your car… CALL APX NOW.”",
-    initials: "BF",
-    name: "BAM Fitness",
-    date: "November 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“He cleaned my truck really good and made it look like new”",
-    initials: "AK",
-    name: "Adrian Kida",
-    date: "April 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“I booked an appointment for a 5 year ceramic coating and wheels coating with APX Mobile Detailing. Came out really well and I’m happy with the results. Will be using them again”",
-    initials: "J",
-    name: "Jacoby",
-    date: "July 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Matt and the team do amazing work. They ceramic coated my m240i and it came out amazing. Highly recommend them”",
-    initials: "MR",
-    name: "Moe Robert",
-    date: "May 2026",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Honestly both me and my brother-in-law are overly satisfied with how the final result came out. Worth the price, service was A1. And understanding when I had to make a last minute change to the appointment. Will be doing my Harley next.”",
-    initials: "JL",
-    name: "Justin LoVecchio",
-    date: "August 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Very thorough and detailed with his cleaning helped talked me through exactly what he would do before cleaning and executed to perfection”",
-    initials: "RG",
-    name: "Ryan Gilmartin",
-    date: "May 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there an added charge to reach Hillsdale?",
@@ -208,7 +162,6 @@ export default function HillsdalePage() {
       <Testimonials
         heading="What owners around Hillsdale say"
         subtext="Notes from our Google reviews, written by clients across the area."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

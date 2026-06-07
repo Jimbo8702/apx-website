@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“APX is a trustworthy, high-quality detailer. Matt & Nick took great care of my car. I got a full detail & trim restoration. The car looks brand new and the trim looks even darker than when I bought it! They checked in with me throughout the detail to ensure my satisfaction, which was greatly appreciated. Highly recommend if you want to feel confident your car is in good hands. Will definitely be getting another detail from APX in the future.”",
-    initials: "MF",
-    name: "Michael Fusco",
-    date: "May 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Nice guys, fair pricing. Came right to my job and did the work. Very happy”",
-    initials: "MD",
-    name: "Mike DeNardo",
-    date: "June 2026",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“APX performed a miracle on my 2016 Impala. The team was informed, capable, and passionate about the work. And it showed in the result. Excellent value for the job and highly recommended.”",
-    initials: "MS",
-    name: "Michael Savage",
-    date: "July 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“I brought my ram truck in for a detail last month I dealt with Matt it turned out great and he is very professional”",
-    initials: "P",
-    name: "Perry",
-    date: "February 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Recently had my car detailed and am so happy with the results! Arrived on time and did a great job! They paid great attention to detail and the car looks amazing. I would highly recommend them to anyone looking for a great detailing service!!”",
-    initials: "SG",
-    name: "Sara Gardner",
-    date: "October 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Great detailing work! Arrived on time, very professional, and decently priced. I highly recommend and will definitely use their services again.”",
-    initials: "JL",
-    name: "Javier L. Orellana",
-    date: "September 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Is there a surcharge for a Hackensack appointment?",
@@ -208,7 +162,6 @@ export default function HackensackPage() {
       <Testimonials
         heading="What clients near Hackensack report"
         subtext="Five-star Google feedback from across the towns APX serves."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

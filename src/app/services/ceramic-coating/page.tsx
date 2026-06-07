@@ -4,7 +4,7 @@ import blackPorscheMacan from "@public/media/images/black-porsche-macan-front.jp
 import { ClockIcon, DropletIcon, SparklesIcon, SunIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { PricingTiers, type PricingTier } from "../_components/pricing-tiers";
 import { ServiceBenefits } from "../_components/service-benefits";
@@ -106,51 +106,6 @@ const STEPS = [
   },
 ];
 
-const REVIEWS: Review[] = [
-  {
-    quote: "“I had APX Mobil Detailing do work on two of my cars and in each case I was extremely pleased especially with the detailing and ceramic coating on my 1976 Corvette. To say that it looks like it is brand new is an understatement. It actually looks better than when I drove it out of the dealer’s showroom 29 years ago. The ceramic coating has added a shine that the car never had before and this was all done in the driveway of my home using advanced equipment and materials. I highly recommend APX if you’re looking to improve the look of your car and preserve and protect the interior and exterior of your vehicle.”",
-    initials: "WB",
-    name: "William Berenbroick",
-    date: "May 2026",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“I recently had a ceramic coating done on my car, and I couldn’t be happier with the results! The attention to detail was incredible — every inch of the paint looks flawless and has that deep, mirror-like shine. The surface feels so smooth, and water just beads right off. They took their time to explain the whole process and made sure I understood how to care for it afterward. The car honestly looks better than the day I picked it up from the dealership. I can already tell the coating will make maintenance so much easier. Highly recommend to anyone who loves keeping their car looking pristine — worth every penny!”",
-    initials: "SS",
-    name: "SuSu SeaSky",
-    date: "October 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“I had APX come to my apartment complex to do a ceramic coating on my Range Rover HSE. I was really concerned about the upcoming winter months with the salt and snow so I wanted to protect it for years. They did a fantastic job. Matt and his team were incredible, super knowledgeable and overall just a great experience. Thank you guys so much!”",
-    initials: "GR",
-    name: "Gianni Rockette",
-    date: "November 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“I just got my car ceramic coated here and I couldn’t be happier with the results! The paint looks like glass, and the shine is unbelievable. The team walked me through the whole process and explained how to take care of it. Super professional and worth every penny. Highly recommend!”",
-    initials: "DH",
-    name: "Declan Huss",
-    date: "September 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“I was on the fence about ceramic coating, but I’m glad I finally did it. The finish is flawless, and the protection gives me peace of mind. Customer service was friendly, honest, and they answered all my questions. Definitely recommend to anyone considering it!”",
-    initials: "H",
-    name: "hussam",
-    date: "August 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Matt and crew were prompt at my house. Everything is self contained on his truck and my two cars were ceramic coated in less than 2 hours. The cars both look great and I look forward to keeping them clean for years to come.”",
-    initials: "HF",
-    name: "Howard Falkow",
-    date: "May 2026",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "How long does a ceramic coating actually last?",
@@ -249,7 +204,6 @@ export default function CeramicCoatingPage() {
       <Testimonials
         heading="Why customers choose APX"
         subtext="What clients say after living with an APX ceramic coating."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <Quote />

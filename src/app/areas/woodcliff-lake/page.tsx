@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“Matt did a great job! The ceramic coating exceeded all expectations! They also did the interior for maximum protection! Very wee way to work with and got me back In My truck asap! Definitely plan on using them for all coatings and maintenance on my interior and exterior moving forward!”",
-    initials: "P",
-    name: "Paul",
-    date: "February 2026",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“great, quick service”",
-    initials: "KN",
-    name: "Kaitlyn Neeb",
-    date: "January 2025",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Recently got my car ceramic coated by APX Mobile Detailing. They did such an amazing job! Quality service, and they got my car done fast.”",
-    initials: "AE",
-    name: "Abraham Ehiosa",
-    date: "February 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Great work detailing my car!!! Highly recommend!! A++++✅”",
-    initials: "CS",
-    name: "carol sanchez",
-    date: "May 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“I booked an appointment for a 5 year ceramic coating and wheels coating with APX Mobile Detailing. Came out really well and I’m happy with the results. Will be using them again”",
-    initials: "J",
-    name: "Jacoby",
-    date: "July 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“Matt and the team do amazing work. They ceramic coated my m240i and it came out amazing. Highly recommend them”",
-    initials: "MR",
-    name: "Moe Robert",
-    date: "May 2026",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Will you add a travel fee for Woodcliff Lake?",
@@ -208,7 +162,6 @@ export default function WoodcliffLakePage() {
       <Testimonials
         heading="Google reviews around Woodcliff Lake"
         subtext="What clients across the service area say about APX workmanship."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -89,52 +89,6 @@ const STEPS = [
   },
 ];
 
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“I had my car detailed and ceramic coated by APX Car Solutions, and I’m beyond impressed! Matt is such a sweetheart!! The detailing was thorough, leaving my car spotless inside and out. The ceramic coating gives it a perfect, glossy finish and offers fantastic protection. My car’s exterior still looks spotless weeks later! I Highly recommend their professional service!”",
-    initials: "LR",
-    name: "Lisa Remmich",
-    date: "January 2025",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“My car is so clean and smells amazing !”",
-    initials: "KE",
-    name: "Kimberly Etkin",
-    date: "May 2026",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“APX did an incredible job on my brand new forester. I booked in a ceramic coating as well as a windshield coating and it came out great! Highly recommend to anyone.”",
-    initials: "C",
-    name: "cait",
-    date: "July 2025",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“Had my boat detailed. They did an amazing job will be bringing them more business soon.”",
-    initials: "AM",
-    name: "Aidan McKenna",
-    date: "October 2024",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Matt and his team came on a same day call. More than pleased with the work they provided. Will definitely be reaching out again in the future. Along with great work, pricing, job details etc were all communicated!!!”",
-    initials: "CR",
-    name: "Cyclenatti. rich",
-    date: "July 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“He treats and disinfects the leather very well unlike most detailers , has a great attitude and a great deal on the paint protection”",
-    initials: "MS",
-    name: "Meme Scrap",
-    date: "April 2025",
-    color: "#7a1f1f",
-  },
-];
-
 const FAQS: Faq[] = [
   {
     question: "Will I pay extra for you to drive out to Old Tappan?",
@@ -208,7 +162,6 @@ export default function OldTappanPage() {
       <Testimonials
         heading="What clients near Old Tappan tell us"
         subtext="Real five-star reviews from the APX Google profile."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas

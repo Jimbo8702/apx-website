@@ -1,10 +1,10 @@
 import { JsonLd } from "@/components/json-ld";
 import { pageMetadata } from "@/lib/page-metadata";
 import { Quote } from "@/components/sections/quote";
+import { ReviewWidget } from "@/components/sections/review-widget";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { ReviewsWall } from "./_components/reviews-wall";
 
 const META = {
   title: "Reviews",
@@ -38,7 +38,13 @@ export default function ReviewsPage() {
           </p>
         </Container>
       </section>
-      <ReviewsWall />
+      {/* Live Google reviews via the larger "section" Reputation Hub widget
+          (the compact default embed is what every Testimonials section uses). */}
+      <section className="py-[72px]">
+        <Container>
+          <ReviewWidget widgetId="6a24cd8525f9e2486a9b9dc8" />
+        </Container>
+      </section>
       <Quote />
     </main>
   );

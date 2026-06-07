@@ -10,7 +10,7 @@ import { ServiceProcess } from "@/app/services/_components/service-process";
 import { JsonLd } from "@/components/json-ld";
 import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
-import { Testimonials, type Review } from "@/components/sections/testimonials";
+import { Testimonials } from "@/components/sections/testimonials";
 import { breadcrumbSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { AreaServices, type AreaServiceCard } from "../_components/area-services";
 
@@ -86,52 +86,6 @@ const STEPS = [
   {
     title: "We hand your keys back better than new",
     text: "We walk the finish with you panel by panel, explain aftercare for any coating or interior work, and make sure the result is something you'd be proud to show off.",
-  },
-];
-
-// Real Google reviews from the APX profile; some also appear on one other area page.
-const REVIEWS: Review[] = [
-  {
-    quote: "“I previously had a lexus and was looking to get a full detail and some things wrapped but I was a bit skeptical taking it to a lesser known place. However the way they handled everything and the product they left me with certainly turned me into a client. Definitely bringing my jeep here next!!!”",
-    initials: "NC",
-    name: "Nestor Coll",
-    date: "October 2024",
-    color: "#7a1f1f",
-  },
-  {
-    quote: "“Very professional and great work.”",
-    initials: "AA",
-    name: "Ademola Adeniyi",
-    date: "January 2026",
-    color: "#1f4d7a",
-  },
-  {
-    quote: "“Matt is an amazing detailer… he detailed one of my Audis and it looked absolutely flawless. One of the best details and excellent service.”",
-    initials: "BP",
-    name: "Bella Polizzi",
-    date: "October 2024",
-    color: "#2f6e4a",
-  },
-  {
-    quote: "“APX did a fantastic job Inside and out. Definitely recommend using them”",
-    initials: "SY",
-    name: "susan yirce",
-    date: "September 2025",
-    color: "#6a4d1f",
-  },
-  {
-    quote: "“Matt is a professional at what he does!!! He detailed my Honda Civic and I couldn't believe the after, what an amazing transformation!! my car looked like it just left the dealership!”",
-    initials: "KS",
-    name: "Katie Sullivan",
-    date: "January 2025",
-    color: "#5a2f6e",
-  },
-  {
-    quote: "“I had my brand new Chevy Silverado ceramic coated for 2 years. The quality came out great and they do amazing work.”",
-    initials: "MP",
-    name: "Michael Prestigiacomo",
-    date: "February 2025",
-    color: "#7a1f1f",
   },
 ];
 
@@ -213,7 +167,6 @@ export default function TenaflyPage() {
       <Testimonials
         heading="Five-star reviews near Tenafly"
         subtext="Google feedback from APX clients across our Bergen County towns."
-        reviews={REVIEWS}
       />
       <ServiceFaq heading="Common questions" faqs={FAQS} />
       <ServiceAreas
