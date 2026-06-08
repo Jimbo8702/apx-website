@@ -1,37 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# APX Mobile Detailing — Website
 
-## Getting Started
+Marketing site for **APX Mobile Detailing / APX Car Solutions**, a mobile car detailing business serving Dumont and Bergen County, NJ. Built as a fast, content-focused site: home, about, service pages, 27 town/area pages, reviews, and legal pages.
 
-First, run the development server:
+**Live:** https://www.apxcarsolutions.com
+
+## Stack
+
+- **Next.js 16** (App Router) + **React 19**, **TypeScript** (strict)
+- **Tailwind CSS v4** — theme tokens live in `src/app/globals.css` (`@theme` block); there is no `tailwind.config`
+- Runtime deps kept deliberately minimal: `clsx` + `tailwind-merge` (the `cn` helper), `marked` (renders legal markdown at build), `@next/third-parties` (Google tag)
+- **pnpm** for package management
+- Deployed on **Vercel**
+
+No component library — only small hand-rolled UI primitives in `src/components/ui/`.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm build      # production build
+pnpm start      # serve the production build
+pnpm lint       # eslint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+There is no test suite — verify changes with `pnpm lint`, plus `pnpm build` when imports change, and a `pnpm dev` smoke check for new or changed layouts.
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+Set locally in a gitignored `.env`, and in the **Vercel dashboard** for production. All are optional (sensible defaults in `src/lib/site-config.ts`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable | Purpose | Default |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin (canonical tags, OG, sitemap, JSON-LD) | `https://www.apxcarsolutions.com` |
+| `NEXT_PUBLIC_GOOGLE_TAG_ID` | Google Ads / gtag.js id | `G-NB6BZVNDGZ` |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Google Search Console token | unset |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> The local `.env` does **not** deploy. Production reads these from Vercel's env settings — keep `NEXT_PUBLIC_SITE_URL` on the `www` host (or unset) to match the canonical domain.
 
-## Deploy on Vercel
+## Project structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+  app/                  # App Router: routes + route-local _components/
+    (home)/             #   landing page sections
+    about/              #   founder story
+    services/           #   /services index + one folder per service
+    areas/              #   27 town pages (+ shared area-services)
+    reviews/            #   reviews page
+    (policy)/           #   privacy + terms (rendered from markdown)
+    layout.tsx          #   fonts, header/footer, site-wide JSON-LD, 3rd-party scripts
+    globals.css         #   Tailwind v4 @theme tokens + base styles
+  components/
+    layout/             #   topbar, header, footer, logo
+    sections/           #   shared page sections (quote, testimonials, service-areas, …)
+    ui/                 #   primitives: button, input, field, badge, container, photo, …
+    icons.tsx           #   all SVG icons
+  lib/
+    site-config.ts      #   business facts (phone, email, service areas, URLs)
+    schema.ts           #   JSON-LD builders
+    page-metadata.ts    #   per-page metadata/canonical/OG helper
+    policy/             #   legal page markdown (source of truth)
+public/media/           # images, logo, hero video, OG image
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# apx-website
+## Domain & SEO
+
+- **`www` is the canonical host.** The apex `apxcarsolutions.com` 308-redirects to `www` (configured in Vercel), and the production Vercel alias `apx-website.vercel.app` 308-redirects to `www` (`next.config.ts`) so it never gets indexed.
+- Every page sets metadata via `pageMetadata(...)` (canonical + OG + Twitter) and emits JSON-LD from `src/lib/schema.ts`.
+- `sitemap.ts` and `robots.ts` are generated from `siteConfig`. Old-site URLs are 308-redirected to their closest new pages in `next.config.ts`.
+
+## Content & integrations
+
+- **Business facts** (phone, email, service areas, social) come from `src/lib/site-config.ts` — read from there, don't hardcode.
+- **Reviews** render via the live LeadConnector (HighLevel) Reputation Hub widget, synced with Google.
+- **Quote form** is the live GoHighLevel (LeadConnector) inline form embed; submissions land in the HighLevel dashboard.
+- The mailing-list form is currently mock-only (no backend wired).
+
+## Contributing
+
+Conventions, architecture decisions, owner content rules, and current known gaps are documented in **[`CLAUDE.md`](./CLAUDE.md)** (and **[`AGENTS.md`](./AGENTS.md)**). Read those before making changes — they capture deliberate decisions (pricing accuracy, SEO/anti-doorway rules, copy style) that aren't obvious from the code alone.

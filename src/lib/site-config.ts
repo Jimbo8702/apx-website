@@ -3,7 +3,10 @@ export const siteConfig = {
   legalName: "APX Car Solutions",
   shortName: "APX",
   // Canonical production origin; the env var is an override for previews.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://apxcarsolutions.com",
+  // www is the canonical host (the apex apxcarsolutions.com 308-redirects to
+  // www in Vercel), so canonical tags / OG / sitemap / JSON-LD all use www to
+  // match the final non-redirecting URL.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.apxcarsolutions.com",
 
   defaultTitle: "Mobile Detailing & Ceramic Coating in Bergen County, NJ | APX",
   titleTemplate: "%s | APX Car Solutions",
@@ -93,5 +96,5 @@ export const siteConfig = {
   },
 
   /** Google Ads tag (gtag.js), rendered site-wide in the root layout. */
-  googleTagId: process.env.NEXT_PUBLIC_GOOGLE_TAG_ID ?? "AW-16923048772",
+  googleTagId: process.env.NEXT_PUBLIC_GOOGLE_TAG_ID ?? "G-NB6BZVNDGZ",
 } as const;

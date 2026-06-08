@@ -4,7 +4,8 @@ import Script from "next/script";
    as the chat + review widgets. The companion form_embed.js listens to the
    iframe via postMessage and auto-resizes its height; without it the frame
    renders at a fixed height. Submissions land in the "APX Website Quote Form"
-   in the dashboard. Replaces the mock form (quote-form-mock.tsx, preserved). */
+   in the dashboard. Replaced the old mock form (submit just flipped useState;
+   nothing was sent) — see git history pre-2026-06-08 if it's ever needed. */
 export function QuoteEmbed() {
   return (
     <>

@@ -4,6 +4,18 @@ const nextConfig: NextConfig = {
   // Old-site URLs (see .claude/old_urls.md) → their closest new pages.
   async redirects() {
     return [
+      // Canonicalize the production Vercel alias to the real domain: keeps
+      // apx-website.vercel.app out of the index (Google consolidates to the
+      // canonical) and bounces any visitor to the site, path preserved.
+      // Targets www directly (the canonical host) to avoid a double hop
+      // through the apex's www redirect. Exact host match so preview/branch
+      // *.vercel.app deploys (which Vercel already noindexes) load normally.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "apx-website.vercel.app" }],
+        destination: "https://www.apxcarsolutions.com/:path*",
+        permanent: true,
+      },
       // The old town/location pages
       ...["alpine", "demarest", "dumont", "haworth", "new-milford"].map((town) => ({
         source: `/${town}`,
