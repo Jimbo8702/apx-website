@@ -36,7 +36,7 @@ export default function Home() {
         copy="Not sure if we reach you? Send your zip in the quote form and we'll confirm same-day. Most of northeast New Jersey is covered."
       />
       <Quote />
-      <MailingList />
+      {/* <MailingList /> */}
     </main>
   );
 }

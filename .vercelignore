@@ -1,0 +1,32 @@
+# Tests
+
+./**/**tests**/
+./**/_.test.ts
+./\*\*/_.test.tsx
+./**/\*.spec.ts
+./**/\*.spec.tsx
+./vitest.config.ts
+
+# Local Supabase (migrations ship via `supabase db push` from a dev machine)
+
+/supabase/
+
+# Dev scripts (db:seed, stripe:seed, catalog:snapshot, screenshot)
+
+/scripts/
+
+# Dev fixtures (written by scripts; runtime hits Supabase/Stripe directly)
+
+/.data/
+
+# Docs / agent workspace
+
+/README.md
+/CLAUDE.md
+/.claude/
+
+# Env templates (Vercel uses dashboard env vars)
+
+.env.example
+.env.prod
+.env.stage

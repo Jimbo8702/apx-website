@@ -6,7 +6,6 @@ import { Quote } from "@/components/sections/quote";
 import { ServiceAreas } from "@/components/sections/service-areas";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { AboutValues } from "./_components/about-values";
-import { ByTheNumbers } from "./_components/by-the-numbers";
 import { FounderStory } from "./_components/founder-story";
 
 const META = {
@@ -43,7 +42,6 @@ export default function AboutPage() {
       />
       <FounderStory />
       <AboutValues />
-      <ByTheNumbers />
       <ServiceAreas
         eyebrow="Where we work"
         heading="Bringing the studio to Bergen County"
