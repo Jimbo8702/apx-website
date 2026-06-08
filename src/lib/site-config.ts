@@ -23,7 +23,7 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/apxcarsolutions",
     // Google Maps place listing (from the old site's schema) — schema sameAs only.
     googleMaps:
-      "https://www.google.com/maps/place/APX+Mobile+Detailing/@40.9459301,-74.0042953,17z",
+      "https://www.google.com/maps/place/APX+Mobile+Detailing/data=!4m2!3m1!1s0x0:0xafe78540ae7d572f?sa=X&ved=1t:2428&hl=en-US&ictx=111",
   },
 
   contact: {
