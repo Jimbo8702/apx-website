@@ -27,8 +27,8 @@ export const siteConfig = {
   },
 
   contact: {
-    phone: "(201) 256-5995",
-    phoneHref: "tel:+12012565995",
+    phone: "(551) 224-0345",
+    phoneHref: "tel:+15512240345",
     email: "info@apxcarsolutions.com",
   },
 
@@ -95,6 +95,9 @@ export const siteConfig = {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 
-  /** Google Ads tag (gtag.js), rendered site-wide in the root layout. */
-  googleTagId: process.env.NEXT_PUBLIC_GOOGLE_TAG_ID ?? "G-NB6BZVNDGZ",
+  /** Google tag / GA4 (gtag.js), rendered site-wide in the root layout. */
+  googleTagId: process.env.NEXT_PUBLIC_GOOGLE_TAG_ID ?? "G-BDJNG58P64",
+
+  /** Meta (Facebook) Pixel id, rendered site-wide in the root layout. */
+  metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1501761381684218",
 } as const;

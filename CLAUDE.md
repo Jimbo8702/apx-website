@@ -14,7 +14,7 @@ Sources of truth:
 - `.claude/real_reviews/all_reviews.json` — all 141 real Google reviews (combined from the raw GBP exports beside it); review sections now render the live Reputation Hub widget instead, so this is reference data (count claims, topic research), not site copy
 - `.claude/design-reference/apx-website.html` — the design mockup (visual design, copy, Tailwind values); logos/video/map/photos live alongside it, the used ones are in `public/media/`
 - `.claude/context/handoffs/` — dated session notes with detail beyond this file (the first 8 town pages predate the handoff habit; their state lives here only)
-- `src/lib/site-config.ts` — business facts: phone (201) 256-5995, info@apxcarsolutions.com, IG @apxcarnj, Dumont NJ, canonical URL (`https://www.apxcarsolutions.com`, env-overridable; www is canonical, apex 308s to www in Vercel), all 27 `serviceAreas`, `googleTagId`. Read from here, don't hardcode.
+- `src/lib/site-config.ts` — business facts: phone (551) 224-0345, info@apxcarsolutions.com, IG @apxcarnj, Dumont NJ, canonical URL (`https://www.apxcarsolutions.com`, env-overridable; www is canonical, apex 308s to www in Vercel), all 27 `serviceAreas`, `googleTagId`. Read from here, don't hardcode.
 
 ## Commands
 

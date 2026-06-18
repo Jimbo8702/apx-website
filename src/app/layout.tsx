@@ -2,10 +2,12 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Hanken_Grotesk } from "next/font/google";
 import Script from "next/script";
+import { Suspense } from "react";
 import { JsonLd } from "@/components/json-ld";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { TopBar } from "@/components/layout/topbar";
+import { MetaPixel } from "@/components/meta-pixel";
 import { ogImage } from "@/lib/page-metadata";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
@@ -82,8 +84,12 @@ export default function RootLayout({
           data-source="WEB_USER"
           strategy="lazyOnload"
         />
-        {/* Google Ads tag (gtag.js); loads after hydration, off the critical path. */}
+        {/* Google tag / GA4 (gtag.js); loads after hydration, off the critical path. */}
         <GoogleAnalytics gaId={siteConfig.googleTagId} />
+        {/* Meta Pixel; Suspense is required because it reads useSearchParams. */}
+        <Suspense fallback={null}>
+          <MetaPixel />
+        </Suspense>
       </body>
     </html>
   );

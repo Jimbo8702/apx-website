@@ -170,5 +170,5 @@ By reading these Terms & Conditions or signing the approval, you, the Customer, 
 Thank you for taking the time to read through our Terms & Conditions. APX Car Solutions aims to provide the best service possible while protecting all parties and ensuring a safe and positive work environment for our valued employees. We look forward to serving you!
 
 **APX Car Solutions LLC**
-Phone: [(201) 256-5995](tel:+12012565995)
+Phone: [(551) 224-0345](tel:+15512240345)
 Email: info@apxcarsolutions.com
