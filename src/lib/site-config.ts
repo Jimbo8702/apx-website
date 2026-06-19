@@ -95,9 +95,10 @@ export const siteConfig = {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 
-  /** Google tag / GA4 (gtag.js), rendered site-wide in the root layout. */
-  googleTagId: process.env.NEXT_PUBLIC_GOOGLE_TAG_ID ?? "G-BDJNG58P64",
-
-  /** Meta (Facebook) Pixel id, rendered site-wide in the root layout. */
-  metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1501761381684218",
+  /**
+   * Google Tag Manager container, rendered site-wide in the root layout.
+   * GA4 and the Meta Pixel are configured inside this GTM container (in the
+   * GTM dashboard), not in code.
+   */
+  gtmId: process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-NVWR3RF2",
 } as const;

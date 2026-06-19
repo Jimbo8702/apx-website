@@ -1,21 +1,27 @@
 import type { NextConfig } from "next";
 
+// Vercel auto-assigns these *.vercel.app aliases to the production deployment,
+// so both serve the live, indexable site. 308 each to the canonical www host:
+// keeps them out of the index (Google consolidates to the canonical) and bounces
+// visitors to the real domain, path preserved. Targets www directly to avoid a
+// double hop through the apex's www redirect. Exact host match so preview/branch
+// *.vercel.app deploys keep loading normally for testing (the headers() rule
+// below noindexes those instead of redirecting them).
+const VERCEL_PROD_ALIASES = [
+  "apx-website.vercel.app",
+  "apx-website-apx-mobile-detaling-s-projects.vercel.app",
+];
+
 const nextConfig: NextConfig = {
   // Old-site URLs (see .claude/old_urls.md) → their closest new pages.
   async redirects() {
     return [
-      // Canonicalize the production Vercel alias to the real domain: keeps
-      // apx-website.vercel.app out of the index (Google consolidates to the
-      // canonical) and bounces any visitor to the site, path preserved.
-      // Targets www directly (the canonical host) to avoid a double hop
-      // through the apex's www redirect. Exact host match so preview/branch
-      // *.vercel.app deploys (which Vercel already noindexes) load normally.
-      {
+      ...VERCEL_PROD_ALIASES.map((host) => ({
         source: "/:path*",
-        has: [{ type: "host", value: "apx-website.vercel.app" }],
+        has: [{ type: "host" as const, value: host }],
         destination: "https://www.apxcarsolutions.com/:path*",
         permanent: true,
-      },
+      })),
       // The old town/location pages
       ...["alpine", "demarest", "dumont", "haworth", "new-milford"].map((town) => ({
         source: `/${town}`,
@@ -65,6 +71,20 @@ const nextConfig: NextConfig = {
         source: "/restore-vehicle-with-paint-correction-service",
         destination: "/services/paint-correction",
         permanent: true,
+      },
+    ];
+  },
+  async headers() {
+    return [
+      // Belt-and-suspenders no-index for every *.vercel.app host: preview/branch
+      // deploys plus any production alias the redirects above don't enumerate.
+      // Host-scoped via `has`, so the canonical www.apxcarsolutions.com is never
+      // affected and stays the only indexed host. The two redirected aliases 308
+      // before rendering; this catches everything else under vercel.app.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: ".*\\.vercel\\.app" }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
     ];
   },

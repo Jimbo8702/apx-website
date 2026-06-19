@@ -1,13 +1,11 @@
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Hanken_Grotesk } from "next/font/google";
 import Script from "next/script";
-import { Suspense } from "react";
 import { JsonLd } from "@/components/json-ld";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { TopBar } from "@/components/layout/topbar";
-import { MetaPixel } from "@/components/meta-pixel";
 import { ogImage } from "@/lib/page-metadata";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
@@ -67,7 +65,20 @@ export default function RootLayout({
       className={`${bricolage.variable} ${hanken.variable} scroll-smooth`}
       data-scroll-behavior="smooth"
     >
+      {/* Google Tag Manager (GA4 + Meta Pixel are configured inside the GTM
+          container, not in code). Loaded high + early via @next/third-parties. */}
+      <GoogleTagManager gtmId={siteConfig.gtmId} />
       <body className="bg-night text-ink font-sans leading-[1.6] antialiased overflow-x-hidden">
+        {/* GTM noscript fallback (the component omits it); goes first in <body>. */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${siteConfig.gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         {/* The site-wide business + website entities; page-level nodes
             reference them by @id (see src/lib/schema.ts). */}
         <JsonLd data={localBusinessSchema()} />
@@ -80,16 +91,10 @@ export default function RootLayout({
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="6a177a0b9defcaefa6dafc8d"
+          data-widget-id="6a34850b7214fce345802b1e"
           data-source="WEB_USER"
           strategy="lazyOnload"
         />
-        {/* Google tag / GA4 (gtag.js); loads after hydration, off the critical path. */}
-        <GoogleAnalytics gaId={siteConfig.googleTagId} />
-        {/* Meta Pixel; Suspense is required because it reads useSearchParams. */}
-        <Suspense fallback={null}>
-          <MetaPixel />
-        </Suspense>
       </body>
     </html>
   );
