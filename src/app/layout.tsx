@@ -70,7 +70,7 @@ export default function RootLayout({
       <GoogleTagManager gtmId={siteConfig.gtmId} />
       <body className="bg-night text-ink font-sans leading-[1.6] antialiased overflow-x-hidden">
         {/* GTM noscript fallback (the component omits it); goes first in <body>. */}
-        <noscript>
+        {/* <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${siteConfig.gtmId}`}
             height="0"
@@ -78,7 +78,7 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
             title="Google Tag Manager"
           />
-        </noscript>
+        </noscript> */}
         {/* The site-wide business + website entities; page-level nodes
             reference them by @id (see src/lib/schema.ts). */}
         <JsonLd data={localBusinessSchema()} />
